@@ -14,8 +14,8 @@ const Logo = ({ headerType, isStickyHeader }) => {
 							headerType === 9) &&
 						!isStickyHeader
 							
-							? "/images/logos/enfycon-white.png"
-							: "/images/logos/Small.svg"
+							? "/images/logos/logo-large.webp"
+							: "/images/logos/logo-2.webp"
 					}
 					alt=""
 					width={544}

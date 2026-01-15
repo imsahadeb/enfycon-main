@@ -24,13 +24,12 @@ const Team1 = ({ type }) => {
 	const totalItemsToShow = currentItems?.length;
 	return (
 		<section
-			className={` ${
-				type === 2
+			className={` ${type === 2
 					? "tj-team-section section-gap"
 					: type === 3
-					? "tj-team-section-3 section-gap section-gap-x"
-					: "tj-team-section section-separator"
-			}`}
+						? "tj-team-section-3 section-gap section-gap-x"
+						: "tj-team-section section-separator"
+				}`}
 		>
 			<div className="container">
 				{type === 2 ? (
@@ -39,9 +38,8 @@ const Team1 = ({ type }) => {
 					<div className="row">
 						<div className="col-12">
 							<div
-								className={`sec-heading text-center  ${
-									type === 3 ? "" : "style-2"
-								}`}
+								className={`sec-heading text-center  ${type === 3 ? "" : "style-2"
+									}`}
 							>
 								<span className="sub-title wow fadeInUp" data-wow-delay=".3s">
 									{type === 3 ? <i className="tji-box"></i> : ""}
@@ -53,11 +51,10 @@ const Team1 = ({ type }) => {
 									</h2>
 								) : (
 									<h2
-										className={`sec-title ${
-											type === 2 ? "title-anim" : "text-anim"
-										}`}
+										className={`sec-title ${type === 2 ? "title-anim" : "text-anim"
+											}`}
 									>
-										People Behind <span>Bexon.</span>
+										People Behind <span>enfycon.</span>
 									</h2>
 								)}
 							</div>
@@ -68,10 +65,10 @@ const Team1 = ({ type }) => {
 				<div className="row leftSwipeWrap">
 					{currentItems?.length
 						? currentItems.map((item, idx) => (
-								<div key={idx} className="col-lg-3 col-sm-6">
-									<TeamCard teamMember={item} />
-								</div>
-						  ))
+							<div key={idx} className="col-lg-3 col-sm-6">
+								<TeamCard teamMember={item} />
+							</div>
+						))
 						: ""}
 				</div>
 				{type === 2 ? (

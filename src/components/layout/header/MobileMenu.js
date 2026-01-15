@@ -13,9 +13,8 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
 				onClick={handleClick}
 			></div>
 			<div
-				className={`hamburger-area d-lg-none ${
-					isMobileMenuOpen ? "opened" : ""
-				}`}
+				className={`hamburger-area d-lg-none ${isMobileMenuOpen ? "opened" : ""
+					}`}
 			>
 				<div className="hamburger_bg"></div>
 				<div className="hamburger_wrapper">
@@ -23,7 +22,7 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
 						<div className="hamburger_top d-flex align-items-center justify-content-between">
 							<div className="hamburger_logo">
 								<Link href="/" className="mobile_logo">
-									<img src="/images/logos/logo-2.webp" alt="Logo" />
+									<img src="/images/logos/logo-large.webp" alt="Logo" />
 								</Link>
 							</div>
 							<div className="hamburger_close">
@@ -34,6 +33,7 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
 						</div>
 						<MobileNavbar />
 						<div className="hamburger-infos">
+						
 							<h5 className="hamburger-title">Contact Info</h5>
 							<div className="contact-info">
 								<div className="contact-item">
@@ -44,8 +44,8 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
 								</div>
 								<div className="contact-item">
 									<span className="subtitle">Email</span>
-									<Link className="contact-link" href="mailto:info@bexon.com">
-										info@bexon.com
+									<Link className="contact-link" href="mailto:info@enfycon.com">
+										info@enfycon.com
 									</Link>
 								</div>
 								<div className="contact-item">
