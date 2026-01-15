@@ -16,7 +16,7 @@ const Hero2 = () => {
 				</>
 			),
 			desc: "Committed to delivering innovative solutions that drive success. With a focus on quality.",
-			img: "/images/hero/slider-1.webp",
+			img: "/images/hero/slider-1.jpg",
 			thumbImg: "/images/hero/slider-thumb-1.webp",
 		},
 		{
@@ -27,7 +27,7 @@ const Hero2 = () => {
 				</>
 			),
 			desc: "Committed to delivering innovative solutions that drive success. With a focus on quality.",
-			img: "/images/hero/slider-2.webp",
+			img: "/images/hero/slider-2a.jpg",
 			thumbImg: "/images/hero/slider-thumb-2.webp",
 		},
 		{
@@ -38,7 +38,7 @@ const Hero2 = () => {
 				</>
 			),
 			desc: "Committed to delivering innovative solutions that drive success. With a focus on quality.",
-			img: "/images/hero/slider-3.webp",
+			img: "/images/hero/slider-3.jpg",
 			thumbImg: "/images/hero/slider-thumb-3.webp",
 		},
 	];
@@ -67,7 +67,7 @@ const Hero2 = () => {
 							className="slider-bg-image"
 							style={{
 								backgroundImage: `url('${
-									img ? img : "/images/hero/slider-1.webp"
+									img ? img : "/images/hero/slider-1.jpg"
 								}')`,
 							}}
 						></div>
