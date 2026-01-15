@@ -34,7 +34,7 @@ const Hero2 = () => {
 			subtitle: "number #1 solver agency",
 			title: (
 				<>
-					Leading Future for <span>Business.</span>
+					Leading Future for <span>Business with AI</span>
 				</>
 			),
 			desc: "Committed to delivering innovative solutions that drive success. With a focus on quality.",
