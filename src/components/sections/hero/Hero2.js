@@ -9,38 +9,39 @@ const Hero2 = () => {
 	const [controlledMainSwiper, setControlledMainSwiper] = useState(null);
 	const heroSlides = [
 		{
-			subtitle: "number #1 solver agency",
+			subtitle: "Artificial Intelligence",
 			title: (
 				<>
-					Leading Future for <span>Business.</span>
+					Personalized AI Services
 				</>
 			),
-			desc: "Committed to delivering innovative solutions that drive success. With a focus on quality.",
+			desc: "Leveraging advanced Artificial Intelligence to drive innovation and streamline your business operations.",
 			img: "/images/hero/slider-1.jpg",
-			thumbImg: "/images/hero/slider-thumb-1.webp",
+			thumbImg: "/images/hero/thumb-81x80-slider-1.jpg",
 		},
 		{
-			subtitle: "number #1 solver agency",
+			subtitle: "Cyber Security",
 			title: (
 				<>
-					Leading Future for <span>Business.</span>
+					Cyber Security
 				</>
 			),
-			desc: "Committed to delivering innovative solutions that drive success. With a focus on quality.",
-			img: "/images/hero/slider-2a.jpg",
-			thumbImg: "/images/hero/slider-thumb-2.webp",
-		},
-		{
-			subtitle: "number #1 solver agency",
-			title: (
-				<>
-					Leading Future for <span>Business.</span>
-				</>
-			),
-			desc: "Committed to delivering innovative solutions that drive success. With a focus on quality.",
+			desc: "Protecting your digital assets with robust security measures to ensure business continuity and safety.",
 			img: "/images/hero/slider-3.jpg",
-			thumbImg: "/images/hero/slider-thumb-3.webp",
+			thumbImg: "/images/hero/thumb-81x80-slider-3.jpg",
 		},
+		{
+			subtitle: "Talent Acquisition",
+			title: (
+				<>
+					IT Staffing
+				</>
+			),
+			desc: "Providing exceptional IT staffing solutions for both US and domestic markets to meet your workforce needs.",
+			img: "/images/hero/slider-2a.jpg",
+			thumbImg: "/images/hero/thumb-81x80-slider-2a.jpg",
+		},
+		
 	];
 	return (
 		<section className="tj-slider-section">
@@ -66,9 +67,8 @@ const Hero2 = () => {
 						<div
 							className="slider-bg-image"
 							style={{
-								backgroundImage: `url('${
-									img ? img : "/images/hero/slider-1.jpg"
-								}')`,
+								backgroundImage: `url('${img ? img : "/images/hero/slider-1.jpg"
+									}')`,
 							}}
 						></div>
 						<div className="container">
