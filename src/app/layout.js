@@ -14,8 +14,9 @@ import "./assets/css/glightbox.min.css";
 import "./assets/css/meanmenu.css";
 import "./assets/css/nice-select2.css";
 import "./assets/css/odometer-theme-default.css";
-import "./tailwind.css";
 import "./globals.scss";
+import "./tailwind.css";
+
 
 const bodyFont = Mona_Sans({
 	variable: "--tj-ff-body",
