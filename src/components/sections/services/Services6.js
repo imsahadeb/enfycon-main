@@ -1,10 +1,13 @@
 "use client";
 import ServicesSlider3 from "@/components/shared/services/ServicesSlider3";
 import getALlServices from "@/libs/getALlServices";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const Services6 = () => {
 	const [activeTab, setActiveTab] = useState(0);
+
+	const prevRef = useRef(null);
+	const nextRef = useRef(null);
 
 	const tabs = [
 		{
@@ -25,7 +28,7 @@ const Services6 = () => {
 			desc: "Unlock the power of your data with our advanced analytics solutions. We help you turn raw data into actionable insights that drive better business decisions.",
 			services: getALlServices()?.slice(2, 5),
 		},
-	
+
 		{
 			name: "IT Facilities, Cybersecurity & Partner Services",
 			title: "IT & Cybersecurity",
@@ -57,9 +60,9 @@ const Services6 = () => {
 							{tabs.map((tab, index) => (
 								<li key={index} className="nav-item">
 									<button
-										className={`nav-link bg-transparent border-0 px-3 py-2 w-full ${activeTab === index
-												? "text-white fw-bold"
-												: "tw:!text-gray-300"
+										className={`nav-link bg-transparent border-0 px-3 py-2 w-full service-tab-btn ${activeTab === index
+											? "text-white fw-bold active"
+											: "inactive-tab"
 											}`}
 										onClick={() => setActiveTab(index)}
 										style={{
@@ -69,7 +72,7 @@ const Services6 = () => {
 											position: "relative",
 											width: "100%",
 											textAlign: "left",
-											
+
 										}}
 									>
 										{tab.name}
@@ -93,9 +96,9 @@ const Services6 = () => {
 				</div>
 
 				{/* Tab Content */}
-				<div className="row mb-4">
-					<div className="col-12">
-						<div className="tab-content-header mb-4">
+				<div className="row mb-4 align-items-end justify-content-between">
+					<div className="col-lg-8 col-12">
+						<div className="tab-content-header mb-4 mb-lg-0">
 							<h3 className="section-title text-white mb-3 wow fadeInUp" data-wow-delay=".3s">
 								{tabs[activeTab].title}
 							</h3>
@@ -104,11 +107,27 @@ const Services6 = () => {
 							</p>
 						</div>
 					</div>
+					<div className="col-lg-4 col-12 text-end">
+						<div className="slider-navigation d-flex justify-content-lg-end justify-content-start mb-4 gap-2 wow fadeInUp" data-wow-delay=".5s">
+							<button ref={prevRef} className="service-3-prev slider-prev service-nav-btn">
+								<span className="anim-icon">
+									<i className="tji-arrow-left"></i>
+									<i className="tji-arrow-left"></i>
+								</span>
+							</button>
+							<button ref={nextRef} className="service-3-next slider-next service-nav-btn">
+								<span className="anim-icon">
+									<i className="tji-arrow-right"></i>
+									<i className="tji-arrow-right"></i>
+								</span>
+							</button>
+						</div>
+					</div>
 				</div>
 
 				<div className="row ">
 					<div className="col-12 ">
-						<ServicesSlider3 services={tabs[activeTab].services} />
+						<ServicesSlider3 services={tabs[activeTab].services} hideNavigation={true} prevRef={prevRef} nextRef={nextRef} />
 					</div>
 				</div>
 			</div>
