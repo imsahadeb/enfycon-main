@@ -1,8 +1,8 @@
 "use client";
-import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
+import { memo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
 import { Autoplay, EffectFade, Navigation, Thumbs } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 const Hero2 = () => {
@@ -41,7 +41,7 @@ const Hero2 = () => {
 			img: "/images/hero/slider-2a.jpg",
 			thumbImg: "/images/hero/thumb-81x80-slider-2a.jpg",
 		},
-		
+
 	];
 	return (
 		<section className="tj-slider-section">
@@ -119,10 +119,11 @@ const Hero2 = () => {
 						<SwiperSlide key={idx} className="thumb-item">
 							<Image
 								src={thumbImg}
-								alt="images"
+								alt={`${heroSlides[idx].subtitle} thumbnail`}
 								width={80}
 								height={80}
-								style={{ height: "auto" }}
+								quality={85}
+								style={{ width: "100%", height: "auto" }}
 							/>
 						</SwiperSlide>
 					)
@@ -142,4 +143,4 @@ const Hero2 = () => {
 	);
 };
 
-export default Hero2;
+export default memo(Hero2);

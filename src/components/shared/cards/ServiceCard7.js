@@ -1,5 +1,7 @@
-import modifyNumber from "@/libs/modifyNumber";
+import { memo } from "react";
+import Image from "next/image";
 import Link from "next/link";
+import modifyNumber from "@/libs/modifyNumber";
 
 const ServiceCard7 = ({ service, idx, lastItemIdx }) => {
 	const {
@@ -16,7 +18,16 @@ const ServiceCard7 = ({ service, idx, lastItemIdx }) => {
 		<div className="h6-service-item">
 			<div className="h6-service-thumb">
 				<Link href={`/services/${id}`}>
-					<img src={img4} alt="" />
+					<Image
+						src={img4}
+						alt={title || "Service image"}
+						width={400}
+						height={300}
+						quality={85}
+						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+						style={{ width: "100%", height: "auto" }}
+						priority={idx === 0}
+					/>
 				</Link>
 			</div>
 			<div className="h6-service-content">
@@ -36,4 +47,4 @@ const ServiceCard7 = ({ service, idx, lastItemIdx }) => {
 	);
 };
 
-export default ServiceCard7;
+export default memo(ServiceCard7);
