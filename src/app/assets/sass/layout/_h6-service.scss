@@ -6,7 +6,7 @@ START: Service CSS
 .h6-service {
 	&-item {
 		height: 100%;
-		padding: 5px;
+		padding: 10px;
 		padding-bottom: 0;
 		background-color: var(--tj-color-common-white);
 		border-radius: 10px;
@@ -15,7 +15,7 @@ START: Service CSS
 		.h6-service {
 			&-thumb {
 				// min-height: 280px;
-				max-height: 250px;
+				max-height: 240px	;
 				overflow: hidden;
 				position: relative;
 				border-radius: 10px;
@@ -23,7 +23,7 @@ START: Service CSS
 				img {
 					width: 100%;
 					// min-height: 280px;
-					max-height: 250px;
+					max-height: 240px;
 					// height: 100%;
 					object-fit: cover;
 					transition: transform 500ms;
@@ -33,10 +33,10 @@ START: Service CSS
 				}
 
 				@media #{$xl, $lg, $xs} {
-					min-height: 240px;
+					min-height: 220px;
 
 					img {
-						min-height: 240px;
+						min-height: 220px;
 					}
 				}
 			}

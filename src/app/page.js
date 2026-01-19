@@ -4,6 +4,7 @@ import About2 from "@/components/sections/about/About2";
 import Blogs2 from "@/components/sections/blogs/Blogs2";
 import Brands2 from "@/components/sections/brands/Brands2";
 import Hero2 from "@/components/sections/hero/Hero2";
+import Industries1 from "@/components/sections/industries/Industries1";
 import Portfolios2 from "@/components/sections/portfolios/Portfolios2";
 import PricingPlan from "@/components/sections/pricing-plan/PricingPlan";
 import Process from "@/components/sections/process/Process";
@@ -27,12 +28,14 @@ export default function Home() {
 						<Hero2 />
 						<Brands2 />
 						<Services6 />
+						<Industries1 />
 						<About2 />
 						<Services9 />
+					
 						<Services2 />
 						<Portfolios2 />
 						<Process />
-						
+
 						{/* <Team1 /> */}
 						{/* <PricingPlan /> */}
 						<Blogs2 />
