@@ -40,12 +40,37 @@ const Services6 = () => {
 		},
 		{
 			id: "ai-allied-services",
-			name: "AI & Allied Services",
-			title: "AI & Allied Services",
+			name: "Custom Professional AI Services",
+			title: "Custom Professional AI Services",
 			desc: "Transform your business with cutting-edge AI solutions. We harness machine learning and emerging technologies to build intelligent systems that automate processes, enhance decision-making, and drive innovation.",
-			services: getALlServices()?.slice(0, 3),
+			services: [
+				{
+					id: 1,
+					title: "AI & Agentic Solutions Service",
+					desc3: "Leverage autonomous AI agents and intelligent systems to automate complex workflows and enhance operational efficiency.",
+					img4: "/images/service/ai-agentic-solutions.png",
+				},
+				{
+					id: 2,
+					title: "AI-First Platforms Engineering",
+					desc3: "Design and build AI-native platforms that integrate machine learning capabilities at their core for scalable intelligent solutions.",
+					img4: "/images/service/ai-first-platforms.png",
+				},
+				{
+					id: 3,
+					title: "Personalized Customer Engagement",
+					desc3: "Create personalized customer experiences using AI-driven insights and intelligent engagement strategies.",
+					img4: "/images/service/personalized-customer-engagement.png",
+				},
+				{
+					id: 4,
+					title: "Data, Cloud & Enterprise Modernization",
+					desc3: "Modernize your enterprise infrastructure with cloud-native solutions and advanced data management strategies.",
+					img4: "/images/service/enterprise-modernization.png",
+				},
+			],
 		},
-		
+
 		{
 			id: "data-analytics",
 			name: "Data & Analytics",
@@ -59,7 +84,32 @@ const Services6 = () => {
 			name: "Cybersecurity Services",
 			title: "Cybersecurity Services",
 			desc: "Protect your digital assets with enterprise-grade security solutions. Our cybersecurity experts implement robust defense strategies, threat detection systems, and compliance frameworks to safeguard your business from threats.",
-			services: getALlServices()?.slice(6, 9),
+			services: [
+				{
+					id: 1,
+					title: "Comprehensive Security Assessment",
+					desc3: "Conduct thorough security audits and vulnerability assessments to identify and mitigate potential threats across your infrastructure.",
+					img4: "/images/service/security-assessment.png",
+				},
+				{
+					id: 2,
+					title: "Operational Security Guidelines",
+					desc3: "Implement robust operational security protocols and best practices to protect daily business operations from cyber threats.",
+					img4: "/images/service/operational-security.png",
+				},
+				{
+					id: 3,
+					title: "Regulatory Compliance",
+					desc3: "Ensure adherence to industry regulations and compliance standards to protect sensitive data and maintain trust.",
+					img4: "/images/service/regulatory-compliance.png",
+				},
+				{
+					id: 4,
+					title: "GRC Consulting",
+					desc3: "Expert Governance, Risk, and Compliance consulting to align security practices with business objectives and regulatory requirements.",
+					img4: "/images/service/grc-consulting.png",
+				},
+			],
 		},
 	];
 

@@ -21,8 +21,8 @@ const ServiceCard7 = ({ service, idx, lastItemIdx }) => {
 					<Image
 						src={img4}
 						alt={title || "Service image"}
-						width={400}
-						height={300}
+						width={300}
+						height={200}
 						quality={85}
 						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 						style={{ width: "100%", height: "auto" }}
