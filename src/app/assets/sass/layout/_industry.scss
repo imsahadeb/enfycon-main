@@ -6,30 +6,6 @@ START: Industry Section CSS
 .industry-section {
     position: relative;
     overflow: hidden;
-
-    .sec-heading-center {
-        text-align: center;
-
-        .sec-title {
-            font-size: 42px;
-            font-weight: var(--tj-fw-bold);
-            color: var(--tj-color-heading-primary);
-            margin-bottom: 0;
-
-            @media #{$md, $sm, $xs} {
-                font-size: 32px;
-            }
-        }
-
-        .sec-desc {
-            font-size: 16px;
-            color: var(--tj-color-text-body);
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.6;
-        }
-    }
 }
 
 .industry-card-link {

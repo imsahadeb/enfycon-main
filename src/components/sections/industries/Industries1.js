@@ -42,18 +42,26 @@ const Industries1 = () => {
     ];
 
     return (
-        <section className="industry-section section-gap bg-light">
+        <section className="industry-section section-top-gap section-bottom-gap">
             <div className="container">
                 <div className="row">
                     <div className="col-12">
-                        <div className="sec-heading sec-heading-center mb-5">
-                            <h2 className="sec-title title-anim">
-                                Industries We Serve
-                            </h2>
-                            <p className="sec-desc mt-3 text-muted">
-                                Business isn't one size fits all. Every industry requires a custom solution.<br />
-                                Learn more about how we've helped businesses in your industry by clicking below.
-                            </p>
+                        <div className="client-content-wrapper text-center mb-5">
+                            <div className="row justify-content-center">
+                                <div className="col-lg-8">
+                                    <div className="sec-heading mb-4">
+                                        <h2 className="sec-title">
+                                            Industries We Serve
+                                        </h2>
+                                    </div>
+                                    <div className="desc">
+                                        <p>
+                                            Business isn't one size fits all. Every industry requires a custom solution.
+                                            Learn more about how we've helped businesses in your industry by clicking below.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
