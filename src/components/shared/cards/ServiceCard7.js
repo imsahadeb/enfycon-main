@@ -31,7 +31,7 @@ const ServiceCard7 = ({ service, idx, lastItemIdx }) => {
 				</Link>
 			</div>
 			<div className="h6-service-content">
-				<h5 className="h6-service-index">{modifyNumber(id)}.</h5>
+				{/* <h5 className="h6-service-index">{modifyNumber(id)}.</h5> */}
 				<div className="h6-service-title-wrap">
 					<h4 className="title">
 						<Link href={`/services/${id}`}>{title}</Link>

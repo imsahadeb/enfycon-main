@@ -4,8 +4,8 @@ import React from "react";
 const HeroInner = ({ title, text, breadcrums = [] }) => {
 	return (
 		<section
-			className="tj-page-header section-gap-x"
-			style={{ backgroundImage: `url('/images/bg/pheader-bg.webp')` }}
+			className="tj-page-header"
+			style={{ backgroundImage: `url('/images/bg/service-banner.jpg')` }}
 		>
 			<div className="container">
 				<div className="row">
@@ -24,15 +24,15 @@ const HeroInner = ({ title, text, breadcrums = [] }) => {
 								</span>
 								{breadcrums?.length
 									? breadcrums?.map(({ name, path }, idx) => (
-											<React.Fragment key={idx}>
-												<span>
-													<Link href={path ? path : "/"}>{name}</Link>
-												</span>
-												<span>
-													<i className="tji-arrow-right"></i>
-												</span>
-											</React.Fragment>
-									  ))
+										<React.Fragment key={idx}>
+											<span>
+												<Link href={path ? path : "/"}>{name}</Link>
+											</span>
+											<span>
+												<i className="tji-arrow-right"></i>
+											</span>
+										</React.Fragment>
+									))
 									: ""}
 								<span>
 									<span>{sliceText(text, 28, true)}</span>

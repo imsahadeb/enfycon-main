@@ -1,7 +1,7 @@
 "use client";
 import ServiceCard from "@/components/shared/cards/ServiceCard7";
 import ServicesSlider3 from "@/components/shared/services/ServicesSlider3";
-import getALlServices from "@/libs/getALlServices";
+import { serviceCategories } from "@/data/servicesData";
 import Link from "next/link";
 import { useState, useRef } from "react";
 
@@ -11,121 +11,7 @@ const Services6 = () => {
 	const prevRef = useRef(null);
 	const nextRef = useRef(null);
 
-	const tabs = [
-		{
-			id: "it-professional-staffing",
-			name: "IT Professional Staffing",
-			title: "IT Professional Staffing",
-			desc: "Connect with top-tier IT talent to power your digital transformation. Our staffing solutions provide skilled professionals across all technology domains, ensuring you have the expertise to drive innovation.",
-			services: [
-				{
-					id: 1,
-					title: "US IT Staffing",
-					desc3: "Access elite US-based IT professionals to strengthen your team with top-tier talent for mission-critical projects.",
-					img4: "/images/service/us-it-staffing.png",
-				},
-				{
-					id: 2,
-					title: "Domestic IT Staffing",
-					desc3: "Connect with skilled domestic IT talent across various technologies to meet your local business requirements.",
-					img4: "/images/service/domestic-it-staffing.png",
-				},
-				{
-					id: 3,
-					title: "Offshore Dedicated Teams",
-					desc3: "Build dedicated offshore development teams that work as an extension of your organization, delivering quality at scale.",
-					img4: "/images/service/offshore-dedicated-teams.png",
-				},
-			],
-		},
-		{
-			id: "ai-allied-services",
-			name: "Custom Professional AI Services",
-			title: "Custom Professional AI Services",
-			desc: "Transform your business with cutting-edge AI solutions. We harness machine learning and emerging technologies to build intelligent systems that automate processes, enhance decision-making, and drive innovation.",
-			services: [
-				{
-					id: 1,
-					title: "AI & Agentic Solutions Service",
-					desc3: "Leverage autonomous AI agents and intelligent systems to automate complex workflows and enhance operational efficiency.",
-					img4: "/images/service/ai-agentic-solutions.jpg",
-				},
-				{
-					id: 2,
-					title: "AI-First Platforms Engineering",
-					desc3: "Design and build AI-native platforms that integrate machine learning capabilities at their core for scalable intelligent solutions.",
-					img4: "/images/service/ai-first-platforms.jpg",
-				},
-				{
-					id: 3,
-					title: "Personalized Customer Engagement",
-					desc3: "Create personalized customer experiences using AI-driven insights and intelligent engagement strategies.",
-					img4: "/images/service/personalized-customer-engagement.jpg",
-				},
-
-			],
-		},
-
-		{
-			id: "data-analytics",
-			name: "Data & Analytics",
-			title: "Data & Analytics",
-			desc: "Unlock the power of your data with advanced analytics solutions. We transform raw data into actionable insights through data engineering, predictive modeling, and visualizations that drive better business decisions.",
-			services: [
-				{
-					id: 1,
-					title: "Data, Cloud & Enterprise Modernization",
-					desc3: "Modernize your enterprise infrastructure with cloud-native solutions and advanced data management strategies.",
-					img4: "/images/service/enterprise-modernization..jpg",
-				},
-				{
-					id: 2,
-					title: "Advanced Analytics & Business Intelligence",
-					desc3: "Transform data into actionable insights with powerful business intelligence dashboards, predictive analytics, and advanced visualization solutions.",
-					img4: "/images/service/advanced-analytics.jpg",
-				},
-				{
-					id: 3,
-					title: "Data Engineering & Pipeline Automation",
-					desc3: "Build robust data pipelines and automated workflows to streamline data processing and ensure data quality.",
-					img4: "/images/service/data-engineering.jpg",
-				},
-			]
-		},
-
-		{
-			id: "cybersecurity-services",
-			name: "Cybersecurity Services",
-			title: "Cybersecurity Services",
-			desc: "Protect your digital assets with enterprise-grade security solutions. Our cybersecurity experts implement robust defense strategies, threat detection systems, and compliance frameworks to safeguard your business from threats.",
-			services: [
-				{
-					id: 1,
-					title: "Comprehensive Security Assessment",
-					desc3: "Conduct thorough security audits and vulnerability assessments to identify and mitigate potential threats across your infrastructure.",
-					img4: "/images/service/security-assessment.jpg",
-				},
-				{
-					id: 2,
-					title: "Operational Security Guidelines",
-					desc3: "Implement robust operational security protocols and best practices to protect daily business operations from cyber threats.",
-					img4: "/images/service/operational-security.jpg",
-				},
-				{
-					id: 3,
-					title: "Regulatory Compliance",
-					desc3: "Ensure adherence to industry regulations and compliance standards to protect sensitive data and maintain trust.",
-					img4: "/images/service/regulatory-compliance.jpg",
-				},
-				{
-					id: 4,
-					title: "GRC Consulting",
-					desc3: "Expert Governance, Risk, and Compliance consulting to align security practices with business objectives and regulatory requirements.",
-					img4: "/images/service/grc-consulting.jpg",
-				},
-			],
-		},
-	];
+	const tabs = serviceCategories;
 
 	return (
 		<section className="h6-service section-gap bg-dark">
