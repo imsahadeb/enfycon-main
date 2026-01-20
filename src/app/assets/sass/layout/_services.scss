@@ -664,3 +664,11 @@ START: Services CSS
 }
 
 /* !END: Services CSS */
+
+@media (min-width: 992px) {
+	.service-details-image {
+		height: 350px !important;
+		object-fit: cover !important;
+		width: 100% !important;
+	}
+}

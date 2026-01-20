@@ -27,8 +27,8 @@ const ServicesDetailsPrimary = ({ option }) => {
 									src={currentItem?.img4 || "/images/service/service-details.webp"}
 									alt={title || "Service Image"}
 									width={870}
-									height={450}
-									style={{ height: "auto" }}
+									height={350}
+									className="service-details-image"
 								/>
 							</div>
 							<h2 className="title title-anim">
