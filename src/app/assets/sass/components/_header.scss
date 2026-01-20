@@ -380,17 +380,15 @@ START: Theme Header CSS
 				display: block;
 				position: absolute;
 				top: 100%;
-				inset-inline-start: 0;
+				inset-inline-start: 50%;
 				width: 220px;
-				top: 100%;
-				inset-inline-start: 0;
 				z-index: 99;
 				text-align: start;
 				background-color: var(--tj-color-common-white);
 				box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
 				border-radius: 10px;
-				transform: scaleY(0);
-				transform-origin: top;
+				transform: translateX(-50%) scaleY(0);
+				transform-origin: top center;
 				opacity: 0;
 				visibility: hidden;
 				gap: 0;
@@ -458,7 +456,7 @@ START: Theme Header CSS
 				>.sub-menu {
 					opacity: 1;
 					visibility: visible;
-					transform: scaleY(1);
+					transform: translateX(-50%) scaleY(1);
 					transition: all 0.5s ease;
 					pointer-events: inherit;
 				}

@@ -103,35 +103,46 @@ const Navbar = ({ headerType, isStickyHeader }) => {
 						<Link href={serviceNav?.path ? serviceNav?.path : "#"}>
 							{serviceNav?.name}
 						</Link>
-						<ul className="sub-menu  mega-menu-service">
-							{serviceNav?.submenu?.length
-								? serviceNav?.submenu?.map((item, idx) => (
-									<li key={idx}>
-										<Link
-											className="mega-menu-service-single"
-											href={item?.path ? item?.path : "/"}
-										>
-											{" "}
-											<span className="mega-menu-service-icon">
-												<i
-													className={
-														item?.icon ? item?.icon : "tji-service-1"
-													}
-												></i>
-											</span>{" "}
-											<span className="mega-menu-service-title">
-												{item?.name
-													? item?.name
-													: "Business process optimization"}
-											</span>{" "}
-											<span className="mega-menu-service-nav">
-												<i className="tji-arrow-right-long"></i>
-												<i className="tji-arrow-right-long"></i>
-											</span>
-										</Link>
-									</li>
-								))
-								: ""}
+						<ul className="sub-menu mega-menu mega-menu-pages">
+							<li>
+								<div className="mega-menu-wrapper">
+									{serviceNav?.submenu?.length
+										? serviceNav?.submenu?.map((category, idx) => (
+											<div key={idx} className="mega-menu-pages-single mega-menu-service-col">
+												<div className="mega-menu-pages-single-inner">
+													<h6 className="mega-menu-title">
+														{category?.name}
+													</h6>
+													<div className="mega-menu-list">
+														{category?.items?.length
+															? category?.items?.map((item, idx2) => (
+																<Link
+																	key={idx2}
+																	href={item?.path ? item?.path : "/"}
+																	className="mega-menu-service-single"
+																>
+																	<span className="mega-menu-service-icon">
+																		<i
+																			className={item?.icon ? item?.icon : "tji-service-1"}
+																		></i>
+																	</span>
+																	<span className="mega-menu-service-title">
+																		{item?.name}
+																	</span>
+																	<span className="mega-menu-service-nav">
+																		<i className="tji-arrow-right-long"></i>
+																		<i className="tji-arrow-right-long"></i>
+																	</span>
+																</Link>
+															))
+															: ""}
+													</div>
+												</div>
+											</div>
+										))
+										: ""}
+								</div>
+							</li>
 						</ul>
 					</li>
 					<li
@@ -141,7 +152,7 @@ const Navbar = ({ headerType, isStickyHeader }) => {
 						<Link href={industriesNav?.path ? industriesNav?.path : "#"}>
 							{industriesNav?.name}
 						</Link>
-						<ul className="sub-menu  mega-menu-service">
+						<ul className="sub-menu mega-menu-service mega-menu-industries">
 							{industriesNav?.submenu?.length
 								? industriesNav?.submenu?.map((item, idx) => (
 									<li key={idx}>
