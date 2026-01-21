@@ -3,12 +3,28 @@ import BlogCard1 from "@/components/shared/cards/BlogCard1";
 import Paginations from "@/components/shared/others/Paginations";
 import BlogSidebar from "@/components/shared/sidebar/BlogSidebar";
 import usePagination from "@/hooks/usePagination";
-import getBlogs from "@/libs/getBlogs";
-import { useEffect, useMemo } from "react";
+import { getAllBlogs } from "@/libs/wpBlogs";
+import { useEffect, useState } from "react";
 
 const BlogsGridPrimary = ({ isSidebar = false }) => {
-	const items = useMemo(() => getBlogs());
+	const [allItems, setAllItems] = useState([]);
+	const [loading, setLoading] = useState(true);
 	const limit = 6;
+
+	useEffect(() => {
+		const fetchBlogs = async () => {
+			try {
+				const blogs = await getAllBlogs();
+				setAllItems(blogs);
+			} catch (error) {
+				console.error("Error fetching grid blogs:", error);
+			} finally {
+				setLoading(false);
+			}
+		};
+		fetchBlogs();
+	}, []);
+
 	// get pagination details
 	const {
 		currentItems,
@@ -20,12 +36,23 @@ const BlogsGridPrimary = ({ isSidebar = false }) => {
 		handleCurrentPage,
 		firstItem,
 		lastItem,
-	} = usePagination(items, limit);
-	const totalItems = items?.length;
+	} = usePagination(allItems, limit);
+
+	const totalItems = allItems?.length;
 	const totalItemsToShow = currentItems?.length;
+
 	useEffect(() => {
 		setCurrentpage(0);
 	}, [totalItems]);
+
+	if (loading) {
+		return (
+			<div className="container section-gap text-center">
+				<h3>Loading Blogs Grid...</h3>
+			</div>
+		);
+	}
+
 	return (
 		<section className="tj-blog-section section-gap">
 			<div className="container">
@@ -34,13 +61,13 @@ const BlogsGridPrimary = ({ isSidebar = false }) => {
 						<div className="row row-gap-4">
 							{currentItems?.length
 								? currentItems?.map((blog, idx) => (
-										<div
-											key={idx}
-											className={`col-md-6 ${isSidebar ? "" : "col-xl-4"}`}
-										>
-											<BlogCard1 blog={blog} idx={idx} />
-										</div>
-								  ))
+									<div
+										key={idx}
+										className={`col-md-6 ${isSidebar ? "" : "col-xl-4"}`}
+									>
+										<BlogCard1 blog={blog} idx={idx} />
+									</div>
+								))
 								: ""}
 						</div>
 						<Paginations

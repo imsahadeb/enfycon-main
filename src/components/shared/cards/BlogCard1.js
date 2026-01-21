@@ -1,21 +1,23 @@
 import makePath from "@/libs/makePath";
 import modifyNumber from "@/libs/modifyNumber";
+import sliceText from "@/libs/sliceText";
 import Image from "next/image";
 import Link from "next/link";
 import ButtonPrimary from "../buttons/ButtonPrimary";
 
 const BlogCard1 = ({ blog, idx }) => {
-	const { title, desc, id, img, category, date, day, month } = blog || {};
+	const { title, featuredImage, id, category, author, day, month } = blog || {};
 	return (
 		<div className="blog-item wow fadeInUp" data-wow-delay={`0.${idx + 1}s`}>
 			<div className="blog-thumb">
 				<Link href={`/blogs/${id}`}>
 					{" "}
 					<Image
-						src={img ? img : "/images/blog/blog-1.webp"}
-						alt="Images"
+						src={featuredImage || "/images/blog/blogs-backdrop.jpg"}
+						alt={title || "Blog Image"}
 						width={870}
 						height={450}
+						unoptimized={true}
 					/>
 				</Link>
 				<div className="blog-date">
@@ -32,12 +34,13 @@ const BlogCard1 = ({ blog, idx }) => {
 						</Link>
 					</span>
 					<span>
-						By <Link href={`/blogs/${id}`}>Ellinien Loma</Link>
+						By <Link href={`/blogs/${id}`}>{author || "enfycon"}</Link>
 					</span>
 				</div>
 				<h4 className="title">
-					<Link href={`/blogs/${id}`}>{title}.</Link>
+					<Link href={`/blogs/${id}`}>{sliceText(title, 45, true)}</Link>
 				</h4>
+
 				<ButtonPrimary
 					text={"Read More"}
 					url={`/blogs/${id}`}
@@ -47,5 +50,6 @@ const BlogCard1 = ({ blog, idx }) => {
 		</div>
 	);
 };
+
 
 export default BlogCard1;

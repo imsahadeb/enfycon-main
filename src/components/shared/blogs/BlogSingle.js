@@ -2,6 +2,7 @@
 import makePath from "@/libs/makePath";
 import makeWowDelay from "@/libs/makeWowDelay";
 import modifyNumber from "@/libs/modifyNumber";
+import sliceText from "@/libs/sliceText";
 import Image from "next/image";
 import Link from "next/link";
 import ButtonPrimary from "../buttons/ButtonPrimary";
@@ -62,8 +63,9 @@ const BlogSingle = ({ blog, idx }) => {
 					</span>
 				</div>
 				<h3 className="title">
-					<Link href={`/blogs/${id}`}>{title}</Link>
+					<Link href={`/blogs/${id}`}>{sliceText(title, 60, true)}</Link>
 				</h3>
+
 				<div
 					className="desc"
 					dangerouslySetInnerHTML={{ __html: desc }}
