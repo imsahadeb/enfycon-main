@@ -4,6 +4,7 @@ import { getAllBlogs } from "@/libs/wpBlogs";
 import { useEffect, useState } from "react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import titleAnim2 from "@/libs/titleAnim2";
 
 const Blogs2 = () => {
 	const [blogs, setBlogs] = useState([]);
@@ -22,6 +23,12 @@ const Blogs2 = () => {
 		};
 		fetchBlogs();
 	}, []);
+
+	useEffect(() => {
+		if (!loading) {
+			titleAnim2();
+		}
+	}, [loading]);
 
 	if (loading) {
 		return (
@@ -42,7 +49,7 @@ const Blogs2 = () => {
 							</span>
 							<div className="heading-wrap-content">
 								<div className="sec-heading style-2">
-									<h2 className="sec-title text-anim">
+									<h2 className="sec-title text-anim ">
 										Strategies and <span>Insights.</span>
 									</h2>
 								</div>
