@@ -12,10 +12,12 @@ export default function Blogs() {
 		<div>
 			<BackToTop />
 			<Header />
+			<Header isStickyHeader={true} />
+
 			<div id="smooth-wrapper">
 				<div id="smooth-content">
 					<main>
-						
+						<HeaderSpace />
 						<BlogMain />
 						<Cta />
 					</main>

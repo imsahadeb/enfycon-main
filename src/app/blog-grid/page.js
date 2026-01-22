@@ -11,10 +11,11 @@ export default function BlogGrid() {
 		<div>
 			<BackToTop />
 			<Header />
+			<Header isStickyHeader={true} />
 			<div id="smooth-wrapper">
 				<div id="smooth-content">
 					<main>
-						<HeroInner title={"Blog grid"} text={"Blog grid"} />
+						<HeroInner title={"Blog Grid"} text={"Blog Grid"} />
 						<BlogsGridPrimary />
 						<Cta />
 					</main>

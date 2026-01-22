@@ -12,7 +12,7 @@ const Logo = ({ headerType, isStickyHeader }) => {
 							headerType === 5 ||
 							headerType === 7 ||
 							headerType === 9) &&
-							!isStickyHeader
+						!isStickyHeader
 
 							? "/images/logos/logo-large.webp"
 							: "/images/logos/logo-2.webp"

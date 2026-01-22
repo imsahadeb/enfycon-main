@@ -4,6 +4,8 @@
 START: Service CSS
 ----------------------------------------*/
 .h6-service {
+	margin: 0 15px 0 15px;
+	border-radius: 16px;
 	&-item {
 		height: 100%;
 		padding: 10px;
@@ -11,6 +13,7 @@ START: Service CSS
 		background-color: var(--tj-color-common-white);
 		border-radius: 10px;
 		overflow: hidden;
+		
 
 		.h6-service {
 			&-thumb {
