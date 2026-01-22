@@ -1,13 +1,12 @@
-import Footer from "@/components/layout/footer/Footer";
 import Footer2 from "@/components/layout/footer/Footer2";
 import Header from "@/components/layout/header/Header";
-import BlogMain from "@/components/layout/main/BlogMain";
+import BlogsGridPrimary from "@/components/sections/blogs/BlogsGridPrimary";
 import Cta from "@/components/sections/cta/Cta";
+import HeroInner from "@/components/sections/hero/HeroInner";
 import BackToTop from "@/components/shared/others/BackToTop";
-import HeaderSpace from "@/components/shared/others/HeaderSpace";
 import ClientWrapper from "@/components/shared/wrappers/ClientWrapper";
 
-export default function Blogs() {
+export default function BlogGrid() {
 	return (
 		<div>
 			<BackToTop />
@@ -15,14 +14,15 @@ export default function Blogs() {
 			<div id="smooth-wrapper">
 				<div id="smooth-content">
 					<main>
-						
-						<BlogMain />
+						<HeroInner title={"Blogs"} text={"Blogs"} />
+						<BlogsGridPrimary />
 						<Cta />
 					</main>
-					<Footer2/>
+					<Footer2 />
 				</div>
 			</div>
 			<ClientWrapper />
 		</div>
 	);
 }
+
