@@ -8,6 +8,7 @@ START: Blog CSS
 		max-width: 550px;
 	}
 	&-2 {
+		background-color: var(--tj-color-theme-bg);
 		.swiper-slide {
 			height: auto;
 		}

@@ -15,7 +15,7 @@ const Portfolios2 = () => {
 					<div className="col-12">
 						<div className="sec-heading style-2 text-center">
 							<span className="sub-title wow fadeInUp" data-wow-delay=".3s">
-								Proud Projects
+								Our Products
 							</span>
 							<h2 className="sec-title text-anim">
 								Breaking Boundaries, Building <span>Dreams.</span>
