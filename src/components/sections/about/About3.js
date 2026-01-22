@@ -21,25 +21,25 @@ const About3 = ({ type }) => {
 							</div>
 							<div className={`box-area ${type === 2 ? "style-2" : ""}`}>
 								<div className="progress-box wow fadeInUp" data-wow-delay=".3s">
-									<h4 className="title">Business Progress</h4>
+									<h4 className="title">Business Impact</h4>
 									<ul className="tj-progress-list">
 										<li>
-											<h6 className="tj-progress-title">Revenue</h6>
+											<h6 className="tj-progress-title">Global Reach</h6>
 											<div className="tj-progress">
-												<span className="tj-progress-percent">82%</span>
+												<span className="tj-progress-percent">100%</span>
 												<div
 													className="tj-progress-bar"
-													data-percent="82"
+													data-percent="100"
 												></div>
 											</div>
 										</li>
 										<li>
-											<h6 className="tj-progress-title">Satisfaction</h6>
+											<h6 className="tj-progress-title">Client Satisfaction</h6>
 											<div className="tj-progress">
-												<span className="tj-progress-percent">90%</span>
+												<span className="tj-progress-percent">98%</span>
 												<div
 													className="tj-progress-bar"
-													data-percent="90"
+													data-percent="98"
 												></div>
 											</div>
 										</li>
@@ -57,11 +57,11 @@ const About3 = ({ type }) => {
 								<h2 className="sec-title title-anim">
 									{type === 2 ? (
 										<>
-											Driving Innovation and Excellence for Sustainable
-											Corporate Success <span>Worldwide.</span>
+											Empowering Enterprises Through AI-Driven Digital
+											Transformation <span>Worldwide.</span>
 										</>
 									) : (
-										"Driving Innovation and Excellence for Sustainable Corporate Success Worldwide."
+										"Empowering Enterprises Through AI-Driven Digital Transformation Worldwide."
 									)}
 								</h2>
 							</div>
@@ -73,18 +73,18 @@ const About3 = ({ type }) => {
 							>
 								<h4 className="title">Our Mission</h4>
 								<p className="desc">
-									our mission is empower businesses through innovate best
-									solution, exceptional service.
+									Enable enterprises to become intelligent, agile, and future-ready
+									by delivering world-class technology and AI-driven solutions.
 								</p>
 								<ul className="list-items">
 									<li>
-										<i className="tji-list"></i>Innovation & Excellence
+										<i className="tji-list"></i>World-Class Technology
 									</li>
 									<li>
-										<i className="tji-list"></i>Exceptional Customer
+										<i className="tji-list"></i>AI-Driven Solutions
 									</li>
 									<li>
-										<i className="tji-list"></i>Business Growth
+										<i className="tji-list"></i>Digital Transformation
 									</li>
 								</ul>
 							</div>
@@ -92,20 +92,20 @@ const About3 = ({ type }) => {
 								className="mission-vision-box wow fadeInRight"
 								data-wow-delay=".5s"
 							>
-								<h4 className="title">Our Vision</h4>
+								<h4 className="title">Our Purpose</h4>
 								<p className="desc">
-									Our vision is to become a global leader in providing
-									transformative business solutions.
+									Create lasting value for clients, employees, partners, and
+									communities using technology responsibly.
 								</p>
 								<ul className="list-items">
 									<li>
-										<i className="tji-list"></i>Global Leadership
+										<i className="tji-list"></i>Drive Growth & Trust
 									</li>
 									<li>
-										<i className="tji-list"></i>Transformative Impact
+										<i className="tji-list"></i>Positive Impact
 									</li>
 									<li>
-										<i className="tji-list"></i>Sustainable Success
+										<i className="tji-list"></i>Responsible Innovation
 									</li>
 								</ul>
 							</div>
