@@ -28,8 +28,8 @@ export default function Home() {
 						<About3 />
 						<Services6 />
 						<Industries1 />
-						
-					<Products2 />
+
+						<Products2 />
 						<Process />
 
 						{/* <Team1 /> */}

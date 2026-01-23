@@ -33,7 +33,7 @@ START: Theme Footer CSS
 
 .footer-main-area {
 	position: relative;
-	padding: 100px 0 90px 0;
+	padding: 30px 0 30px 0;
 
 	@media #{$sm, $xs} {
 		padding: 70px 0;
@@ -566,49 +566,149 @@ START: Theme Footer CSS
 // footer 2
 .tj-footer-section {
 	&.footer-2 {
-		background-color: var(--tj-color-theme-dark);
-		padding-top: 50px;
+		background-color: #050A1E; // Dark navy background
+		padding-top: 0;
 		border-radius: 0;
+		color: var(--tj-color-common-white);
 
-		.footer-widget {
-			.title {
-				color: var(--tj-color-common-white);
+		.footer-top-bar {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 20px 0;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+			@media #{$sm, $xs} {
+				flex-direction: column;
+				gap: 20px;
+				text-align: center;
+				
 			}
 
-			ul {
-				li {
+			.logo-area {
+				max-width: 180px;
+			}
+
+			.social-connect {
+				display: flex;
+				align-items: center;
+				gap: 20px;
+
+				@media #{$xs} {
+					flex-direction: column;
+					gap: 15px;
+				}
+
+				.connect-text {
+					color: var(--tj-color-common-white);
+					font-size: 18px;
+					font-weight: 500;
+				}
+
+				.social-icons {
+					display: flex;
+					gap: 15px;
+
 					a {
-						color: var(--tj-color-text-body-2);
+						color: rgba(255, 255, 255, 0.7);
+						font-size: 18px;
+						transition: 0.3s;
 
 						&:hover {
 							color: var(--tj-color-theme-primary);
+							transform: translateY(-2px);
 						}
 					}
 				}
 			}
 		}
 
-		.footer-col-1 {
-			position: relative;
+		.footer-widget {
+			margin-bottom: 10px;
 
-			&::before {
-				content: "";
-				position: absolute;
-				bottom: -160px;
-				inset-inline-start: -50px;
-				width: 350px;
-				height: 300px;
-				border-radius: 50%;
-				background: var(--tj-color-theme-primary);
-				-webkit-filter: blur(50px);
-				filter: blur(50px);
-				opacity: 0.15;
-				z-index: -1;
+			.title {
+				color: rgba(255, 255, 255, 0.7);
+				font-size: 15px;
+				font-weight: 600;
+				margin-bottom: 25px;
+				position: relative;
+				padding-bottom: 10px; // Space for the line
+				width: fit-content; // Ensure underline corresponds to text width
+
+				&::after {
+					content: "";
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					width: 90%; // 90% of the heading text
+					height: 2px;
+					background: linear-gradient(to right, #0a3c79, #086b86);
+				}
+			}
+
+			ul {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+
+				li {
+					margin-bottom: 12px;
+
+					a {
+						color: rgba(255, 255, 255, 0.7);
+						font-size: 15px;
+						display: inline-block;
+						transition: 0.3s;
+
+						&:hover {
+							color: var(--tj-color-theme-primary);
+							padding-left: 5px;
+						}
+
+						&:active,
+						&.active {
+							color: var(--tj-color-theme-primary);
+
+						}
+					}
+				}
+			}
+
+			&.widget-nav-menu {
+				padding-inline-start: 0; // Reset default padding
 			}
 		}
 
+		.tj-copyright-area-2 {
+			.copyright-content-area {
+				border-top: none;
+				padding: 20px 0 40px;
+
+				.copyright-text {
+					p {
+						color: rgba(255, 255, 255, 0.5);
+						font-size: 14px;
+
+						a {
+							color: var(--tj-color-common-white);
+
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		// Hide the background shapes for clean look
+		.bg-shape-1,
+		.bg-shape-2 {
+			display: none;
+		}
+
 		@media #{$md, $sm, $xs} {
-			padding-top: 60px;
+			padding-top: 0;
 		}
 	}
 }

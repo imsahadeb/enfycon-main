@@ -1,217 +1,155 @@
-import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
-import MarqueeSlider1 from "@/components/shared/marquee/MarqueeSlider1";
+"use client";
 import Link from "next/link";
-import siteConfig from "@/config/siteConfig";
+import { industriesData } from "@/data/industriesData";
+import { footerData } from "@/data/footerData";
+import { usePathname } from "next/navigation";
 
 const Footer2 = () => {
+	const pathname = usePathname();
+
+	// Helper to determine if a link is active
+	const isActive = (path) => pathname === path;
+
 	return (
 		<footer className="tj-footer-section footer-2">
-			<div className="footer-top">
-				<div className="container">
-					<div className="row">
-						<div className="col-12">
-							<div
-								className="footer-subscribe wow fadeInUp"
-								data-wow-delay=".3s"
-							>
-								<div className="subscribe-logo">
-									<img src="/images/logos/enfycon-white.png" alt="" />
-								</div>
-								<div className="subscribe-form">
-									<form action="#">
-										<input
-											type="email"
-											name="email"
-											placeholder="Enter email"
-										/>
-										<ButtonPrimary text={"Send Message"} type="submit" />
-									</form>
+			<div className="container">
+				{/* Top Bar: Connect with us */}
+				<div className="row">
+					<div className="col-12">
+						<div className="footer-top-bar">
+							<div className="logo-area">
+								<Link href="/">
+									<img src="/images/logos/enfycon-white.png" alt="Logos" />
+								</Link>
+							</div>
+							<div className="social-connect">
+								<span className="connect-text">Connect with us</span>
+								<div className="social-icons">
+									{footerData.socialLinks.map((social, index) => (
+										<Link key={index} href={social.link} target="_blank">
+											<i className={social.icon}></i>
+										</Link>
+									))}
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div className="footer-main-area">
-				<div className="container">
-					<div className="row justify-content-between">
-						<div className="col-xl-3 col-md-6">
-							<div
-								className="footer-widget footer-col-1 wow fadeInUp"
-								data-wow-delay=".1s"
-							>
-								<div className="footer-logo">
-									<Link href="/">
-										<img src="/images/logos/enfycon-white.png" alt="Logos" />
-									</Link>
-								</div>
-								<div className="footer-text">
-									<p>
-										Developing personalze our customer journeys to increase
-										satisfaction & loyalty of our expansion.
-									</p>
-								</div>
-								<div className="award-logo-area">
-									<div className="award-logo">
-										<img src="/images/footer/award-logo-white-1.webp" alt="" />
-									</div>
-									<div className="award-logo">
-										<img src="/images/footer/award-logo-white-2.webp" alt="" />
-									</div>
-								</div>
+
+				{/* Main Footer Area */}
+				<div className="footer-main-area">
+					<div className="row">
+						{/* Col 1: Industries */}
+						<div className="col-lg-2 col-md-6">
+							<div className="footer-widget widget-nav-menu">
+								<h5 className="title">Industries</h5>
+								<ul>
+									{industriesData.map((industry) => (
+										<li key={industry.id}>
+											<Link
+												href={`/industries/${industry.id}`}
+												className={isActive(`/industries/${industry.id}`) ? "active" : ""}
+											>
+												{industry.title}
+											</Link>
+										</li>
+									))}
+								</ul>
 							</div>
 						</div>
-						<div className="col-xl-3 col-md-6">
-							<div
-								className="footer-widget footer-col-2 widget-nav-menu wow fadeInUp"
-								data-wow-delay=".3s"
-							>
+
+						{/* Col 2: Services */}
+						<div className="col-lg-3 col-md-6">
+							<div className="footer-widget widget-nav-menu">
 								<h5 className="title">Services</h5>
 								<ul>
-									<li>
-										<Link href="/services/1">Customer Experience</Link>
-									</li>
-									<li>
-										<Link href="/services/2">Training Programs</Link>
-									</li>
-									<li>
-										<Link href="/services/3">Business Strategy</Link>
-									</li>
-									<li>
-										<Link href="/services/4">Training Program</Link>
-									</li>
-									<li>
-										<Link href="/services/5">ESG Consulting</Link>
-									</li>
-									<li>
-										<Link href="/services/6">Development Hub</Link>
-									</li>
+									{footerData.services.map((service, index) => (
+										<li key={index}>
+											<Link
+												href={service.link}
+												className={isActive(service.link) ? "active" : ""}
+											>
+												{service.label}
+											</Link>
+										</li>
+									))}
 								</ul>
 							</div>
 						</div>
-						<div className="col-xl-3 col-md-6">
-							<div
-								className="footer-widget footer-col-3 widget-nav-menu wow fadeInUp"
-								data-wow-delay=".5s"
-							>
-								<h5 className="title">Resources</h5>
+
+						{/* Col 3: Products */}
+						<div className="col-lg-2 col-md-6">
+							<div className="footer-widget widget-nav-menu">
+								<h5 className="title">Products</h5>
 								<ul>
-									<li>
-										<Link href="/contact">Contact us</Link>
-									</li>
-									<li>
-										<Link href="/team">Team Member</Link>
-									</li>
-									<li>
-										<Link href="#">Recognitions</Link>
-									</li>
-									<li>
-										<Link href="/careers">
-											Careers <span className="badge">New</span>
-										</Link>
-									</li>
-									<li>
-										<Link href="/blogs">News</Link>
-									</li>
-									<li>
-										<Link href="#">Feedback</Link>
-									</li>
+									{footerData.products.map((product, index) => (
+										<li key={index}>
+											<Link
+												href={product.link}
+												className={isActive(product.link) ? "active" : ""}
+											>
+												{product.label}
+											</Link>
+										</li>
+									))}
 								</ul>
 							</div>
 						</div>
-						<div className="col-xl-3 col-md-6">
-							<div
-								className="footer-widget widget-contact wow fadeInUp"
-								data-wow-delay=".7s"
-							>
-								<h5 className="title">Our Office</h5>
-								<div className="footer-contact-info">
-									<div className="contact-item">
-										<span>993 Renner Burg, West Rond, MT 94251-030, USA.</span>
-									</div>
-									<div className="contact-item">
-										<Link href={`tel:${siteConfig.phone.link}`}>P: {siteConfig.phone.display}</Link>
-										<Link href={`mailto:${siteConfig.email}`}>
-											M: {siteConfig.email}
-										</Link>
-									</div>
-									<div className="contact-item">
-										<span>
-											<i className="tji-clock"></i> Mon-Fri 10am-10pm
-										</span>
-									</div>
-								</div>
+
+						{/* Col 4: About Us */}
+						<div className="col-lg-2 col-md-6">
+							<div className="footer-widget widget-nav-menu">
+								<h5 className="title">About Us</h5>
+								<ul>
+									{footerData.about.map((item, index) => (
+										<li key={index}>
+											<Link
+												href={item.link}
+												className={isActive(item.link) ? "active" : ""}
+											>
+												{item.label}
+											</Link>
+										</li>
+									))}
+								</ul>
+							</div>
+						</div>
+
+						{/* Col 5: Other Links */}
+						<div className="col-lg-3 col-md-6">
+							<div className="footer-widget widget-nav-menu">
+								<h5 className="title">Other Links</h5>
+								<ul>
+									{footerData.otherLinks.map((item, index) => (
+										<li key={index}>
+											<Link
+												href={item.link}
+												className={isActive(item.link) ? "active" : ""}
+											>
+												{item.label}
+											</Link>
+										</li>
+									))}
+								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			{/* <div className="footer-marquee">
-				<MarqueeSlider1 />
-			</div> */}
-			<div className="tj-copyright-area-2">
-				<div className="container">
+
+				{/* Copyright - kept simple */}
+				<div className="tj-copyright-area-2">
 					<div className="row">
 						<div className="col-12">
-							<div className="copyright-content-area">
+							<div className="copyright-content-area justify-content-center text-center">
 								<div className="copyright-text">
 									<p>
-										&copy; {new Date().getFullYear()} {" "}
-										<Link
-											href="https://enfycon.com"
-											target="_blank"
-										>
-											enfycon
-										</Link>{" "}
-										All right reserved
+										&copy; {new Date().getFullYear()} <Link href="#" target="_blank"> enfycon</Link>. All Rights Reserved.
 									</p>
-								</div>
-								<div className="social-links style-3">
-									<ul>
-										<li>
-											<Link href="https://www.facebook.com/" target="_blank">
-												<i className="fa-brands fa-facebook-f"></i>
-											</Link>
-										</li>
-										<li>
-											<Link href="https://www.instagram.com/" target="_blank">
-												<i className="fa-brands fa-instagram"></i>
-											</Link>
-										</li>
-										<li>
-											<Link href="https://x.com/" target="_blank">
-												<i className="fa-brands fa-x-twitter"></i>
-											</Link>
-										</li>
-										<li>
-											<Link href="https://www.linkedin.com/" target="_blank">
-												<i className="fa-brands fa-linkedin-in"></i>
-											</Link>
-										</li>
-									</ul>
-								</div>
-								<div className="copyright-menu">
-									<ul>
-										<li>
-											<Link href="/contact">Privacy Policy</Link>
-										</li>
-										<li>
-											<Link href="/terms-and-conditions">
-												Terms & Condition
-											</Link>
-										</li>
-									</ul>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div className="bg-shape-1">
-				<img src="/images/shape/pattern-2.svg" alt="" />
-			</div>
-			<div className="bg-shape-2">
-				<img src="/images/shape/pattern-3.svg" alt="" />
 			</div>
 		</footer>
 	);
