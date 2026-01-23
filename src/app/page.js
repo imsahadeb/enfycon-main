@@ -25,9 +25,10 @@ export default function Home() {
 					<main>
 						<Hero2 />
 						<Brands2 />
+						<About3 />
 						<Services6 />
 						<Industries1 />
-						<About3 />
+						
 					<Products2 />
 						<Process />
 
