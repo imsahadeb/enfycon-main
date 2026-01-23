@@ -91,19 +91,49 @@ START: Breadcrumb CSS
 }
 
 .tj-industry-hero {
-	padding-top: 250px;
-	padding-bottom: 250px;
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-color: var(--tj-color-theme-dark);
-	background-blend-mode: luminosity;
+
+	height: 100vh;
+	min-height: 700px;
 	position: relative;
-	overflow: hidden;
-	z-index: 2;
+	z-index: 1;
+	background-color: #0c1e21;
 	margin-top: 80px;
+	padding-top: 10px;
+
+	display: flex;
+	align-items: center;
+
+	.industry-hero-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-position: center;
+		z-index: 0;
+	}
+
+	&::after {
+		position: absolute;
+		content: "";
+		top: 0;
+		inset-inline-start: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+		background: var(--tj-color-theme-hero-gradient);
+	}
+
+	.container {
+		position: relative;
+		z-index: 3;
+	}
 
 	.tj-industry-hero-content {
+		padding: 0;
+		max-width: 800px;
+
 		.tj-industry-hero-breadcrumbs {
 			display: flex;
 			align-items: center;
@@ -127,7 +157,7 @@ START: Breadcrumb CSS
 				}
 
 				i {
-					font-size: 14px;
+					font-size: 16px;
 					color: var(--tj-color-theme-primary);
 				}
 			}
@@ -135,18 +165,19 @@ START: Breadcrumb CSS
 
 		.title {
 			color: var(--tj-color-common-white);
-			font-size: 80px;
-			margin-bottom: 30px;
-			line-height: 1.1;
+			font-size: 64px;
+			line-height: 1.042;
+			letter-spacing: -2.88px;
+			margin-bottom: 20px;
 		}
 
 		.desc {
 			p {
-				color: var(--tj-color-common-white);
-				font-size: 20px;
-				line-height: 1.6;
-				max-width: 900px;
-				margin-bottom: 40px;
+				font-size: 18px;
+				line-height: 1.444;
+				color: var(--tj-color-text-body-2);
+				margin-bottom: 30px;
+				max-width: 600px;
 			}
 		}
 
@@ -159,17 +190,19 @@ START: Breadcrumb CSS
 	}
 
 	@media #{$lg} {
-		padding-top: 200px;
-		padding-bottom: 200px;
+		height: 70vh;
+		min-height: 600px;
 
-		.tj-industry-hero-content .title {
-			font-size: 60px;
+		.tj-industry-hero-content {
+			.title {
+				font-size: 58px;
+			}
 		}
 	}
 
 	@media #{$md} {
-		padding-top: 150px;
-		padding-bottom: 150px;
+		height: 60vh;
+		min-height: 500px;
 
 		.tj-industry-hero-content .title {
 			font-size: 50px;
@@ -177,11 +210,14 @@ START: Breadcrumb CSS
 	}
 
 	@media #{$sm, $xs} {
-		padding-top: 120px;
-		padding-bottom: 120px;
+		height: auto;
+		min-height: auto;
+		padding: 120px 0;
 
-		.tj-industry-hero-content .title {
-			font-size: 40px;
+		.tj-industry-hero-content {
+			.title {
+				font-size: 40px;
+			}
 		}
 	}
 }
@@ -190,7 +226,7 @@ START: Breadcrumb CSS
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	opacity: 0.8;
+	opacity: 0.4;
 	position: absolute;
 	top: 0;
 	inset-inline-start: 0;

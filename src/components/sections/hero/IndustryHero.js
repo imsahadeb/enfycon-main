@@ -3,17 +3,21 @@ import React from "react";
 
 const IndustryHero = ({ title, text, breadcrums = [], image }) => {
     return (
-        <section
-            className="tj-industry-hero"
-            style={{
-                backgroundImage: `url('${image ? image : "/images/bg/service-banner.jpg"}')`,
-            }}
-        >
+        <section className="tj-industry-hero">
+            <div
+                className="industry-hero-bg"
+                style={{
+                    backgroundImage: `url('${image ? image : "/images/bg/service-banner.jpg"}')`,
+                }}
+            ></div>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12">
                         <div className="tj-industry-hero-content">
                             <div className="tj-industry-hero-breadcrumbs">
+                                <span>
+                                    <i className="tji-home"></i>
+                                </span>
                                 <span>
                                     <Link href="/">Home</Link>
                                 </span>
@@ -39,16 +43,12 @@ const IndustryHero = ({ title, text, breadcrums = [], image }) => {
                                 <p>{text}</p>
                             </div>
                             <div className="tj-industry-hero-button">
-                              
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div
-                className="industry-hero-overlay"
-                style={{ backgroundImage: `url('/images/shape/pheader-overlay.webp')` }}
-            ></div>
         </section>
     );
 };
