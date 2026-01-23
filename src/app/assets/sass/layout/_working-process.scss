@@ -4,14 +4,16 @@
 START: Working process CSS
 ----------------------------------------*/
 .tj-working-process {
-	background-color: var(--tj-color-theme-bg);
+	
+	background-color: var(--tj-color-grey-1);
 	position: relative;
 	z-index: 1;
 	border-radius: 12px;
 	.sec-heading-wrap {
 		.sub-title {
 			color: var(--tj-color-theme-primary);
-			background-color: var(--tj-color-common-white);
+			background-color: var(--tj-color-grey-1);
+			
 			border: 0;
 			padding: 7px 10px;
 		}
@@ -28,7 +30,7 @@ START: Working process CSS
 .process-item {
 	max-width: 422px;
 	width: 100%;
-	background-color: var(--tj-color-common-white);
+	background-color: var(--tj-color-grey-1);
 	padding: 25px 28px 40px 28px;
 	position: relative;
 	border-radius: 10px;

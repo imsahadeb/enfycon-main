@@ -2,7 +2,7 @@ import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
 import Image from "next/image";
 const About3 = ({ type }) => {
 	return (
-		<section className="tj-about-section-2 section-gap section-gap-x">
+		<section className="tj-about-section-2 section-gap  ">
 			<div className="container">
 				<div className="row">
 					<div className="col-xl-6 col-lg-6 order-lg-1 order-2">

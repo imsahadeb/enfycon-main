@@ -412,7 +412,7 @@ START: About CSS
 // About 3
 .tj-about-section-2 {
 	background-color: var(--tj-color-theme-bg);
-	border-radius: 12px;
+	// border-radius: 12px;
 	position: relative;
 	z-index: 1;
 }
@@ -461,5 +461,6 @@ START: About CSS
 // User defined styles
 .tj-about-section-2{
 	background-color: var(--tj-color-grey-1);
+	padding-bottom: 50px;
 	
 }

@@ -10,6 +10,7 @@ START: Project CSS
 		flex-wrap: wrap;
 		align-items: end;
 		justify-content: space-between;
+		
 	}
 	.sec-text {
 		max-width: 550px;
@@ -28,6 +29,8 @@ START: Project CSS
 		}
 	}
 	&-2 {
+    	background-color: var(--tj-color-grey-1);
+		
 		overflow: hidden;
 		.container-fluid,
 		.project-wrapper {
@@ -468,6 +471,7 @@ START: Project CSS
 
 // tj-project-section-3
 .project-slider-2 {
+	
 	.project-item {
 		background-color: var(--tj-color-theme-dark-2);
 		.title {

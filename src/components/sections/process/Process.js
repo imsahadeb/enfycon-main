@@ -21,7 +21,8 @@ const Process = () => {
 		},
 	];
 	return (
-		<section className="tj-working-process section-gap section-gap-x">
+		// <section className="tj-working-process section-gap section-gap-x">
+		<section className="tj-working-proces section-gap">
 			<div className="container">
 				<div className="row">
 					<div className="col-12">

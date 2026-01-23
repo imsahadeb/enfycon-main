@@ -4,7 +4,7 @@
 START: Faq CSS
 ----------------------------------------*/
 .tj-faq-section {
-	background-color: var(--tj-color-theme-bg);
+	background-color: var(--tj-color-grey-1);
 	.sec-heading {
 		max-width: 550px;
 		@media #{$md,$sm,$xs} {
