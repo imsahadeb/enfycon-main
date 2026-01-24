@@ -1,0 +1,298 @@
+// @import "../../utils/variables";
+// @import "../../utils/mixins";
+@use "../utilities" as *;
+
+.cookie-consent-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    transition: opacity 0.3s ease;
+
+    // Default Dark Modal
+    .cookie-consent-modal {
+        background-color: #000;
+        color: #fff;
+        padding: 3rem; // Increased padding
+        border-radius: 0.75rem;
+        max-width: 50rem; // Increased width
+        width: 100%;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        border: 1px solid #333;
+        position: relative;
+        animation: fadeInUp 0.5s ease-out forwards;
+
+        &.customize-view {
+            background-color: #fff;
+            color: #1f2937;
+            border: 1px solid #e5e7eb;
+            max-width: 60rem; // Increased width for customize view too
+
+            .logo-wrapper {
+                justify-content: space-between;
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid #e5e7eb;
+                padding-bottom: 1rem;
+                margin-bottom: 1.5rem;
+                width: 100%;
+
+                .close-btn {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    font-size: 2rem; // Larger close button
+                    color: #6b7280;
+                    padding: 0.5rem;
+                    line-height: 1;
+
+                    &:hover {
+                        color: #111;
+                    }
+                }
+            }
+
+            h2 {
+                color: #111;
+                font-size: 1.75rem; // Larger heading
+                margin-bottom: 0.75rem;
+            }
+
+            p {
+                color: #4b5563;
+                font-size: 1rem; // Larger text
+                margin-bottom: 2rem;
+            }
+        }
+
+        .logo-wrapper {
+            width: 100%;
+            margin-bottom: 1.5rem;
+
+            img.dark-logo {
+                display: none;
+            }
+        }
+
+        &.customize-view .logo-wrapper {
+            img.white-logo {
+                display: none;
+            }
+
+            img.dark-logo {
+                display: block;
+                width: 140px; // Slightly larger logo
+                height: auto;
+            }
+        }
+
+        h2 {
+            font-size: 2rem; // Increased heading size
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            color: #fff;
+        }
+
+        p {
+            color: #d1d5db;
+            font-size: 1.1rem; // Increased text size
+            line-height: 1.7;
+            margin-bottom: 2rem;
+
+            a {
+                color: #3b82f6;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        // Cookie Options List
+        .cookie-options {
+            max-height: 60vh; // More height
+            overflow-y: auto;
+            margin-bottom: 2rem;
+            padding-right: 0.75rem;
+
+            &::-webkit-scrollbar {
+                width: 8px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: #888;
+                border-radius: 4px;
+            }
+
+            .cookie-option-item {
+                margin-bottom: 2rem;
+                padding-bottom: 2rem;
+                border-bottom: 1px solid #f3f4f6;
+
+                &:last-child {
+                    border-bottom: none;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+
+                .option-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 0.75rem;
+
+                    h3 {
+                        margin: 0;
+                        font-size: 1.25rem; // Larger option title
+                        font-weight: 600;
+                        color: #111;
+                    }
+
+                    .toggle-wrapper {
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                        font-size: 1rem;
+                        color: #6b7280;
+
+                        .toggle-switch {
+                            position: relative;
+                            display: inline-block;
+                            width: 3.25rem; // Larger toggle
+                            height: 1.75rem;
+
+                            input {
+                                opacity: 0;
+                                width: 0;
+                                height: 0;
+
+                                &:checked+.slider {
+                                    background-color: #2563eb;
+                                }
+
+                                &:focus+.slider {
+                                    box-shadow: 0 0 1px #2563eb;
+                                }
+
+                                &:checked+.slider:before {
+                                    transform: translateX(1.5rem);
+                                }
+
+                                &:disabled+.slider {
+                                    opacity: 0.7;
+                                    cursor: not-allowed;
+                                }
+                            }
+
+                            .slider {
+                                position: absolute;
+                                cursor: pointer;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                background-color: #ccc;
+                                transition: .4s;
+                                border-radius: 1.75rem;
+
+                                &:before {
+                                    position: absolute;
+                                    content: "";
+                                    height: 1.25rem;
+                                    width: 1.25rem;
+                                    left: 0.25rem;
+                                    bottom: 0.25rem;
+                                    background-color: white;
+                                    transition: .4s;
+                                    border-radius: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                p {
+                    margin: 0;
+                    color: #6b7280;
+                    font-size: 0.95rem; // Larger description
+                    line-height: 1.6;
+                }
+            }
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+            justify-content: flex-end;
+
+            @media (min-width: 640px) {
+                flex-direction: row;
+            }
+
+            .btn-customize {
+                color: #fff;
+                font-size: 1rem; // Larger text
+                font-weight: 500;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 0.5rem 1rem;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            // Style override for customize view button
+            &.customize-actions {
+                border-top: 1px solid #e5e7eb;
+                padding-top: 2rem;
+                width: 100%;
+
+                .btn-accept {
+                    margin-left: auto;
+                }
+            }
+
+            .btn-accept {
+                background-color: #2563eb;
+                color: #fff;
+                font-weight: 600;
+                padding: 0.875rem 2rem; // Larger button padding
+                font-size: 1.1rem; // Larger button text
+                border-radius: 0.375rem;
+                border: none;
+                cursor: pointer;
+                transition: background-color 0.2s;
+
+                &:hover {
+                    background-color: #1d4ed8;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}

@@ -39,6 +39,7 @@ export const metadata = {
 };
 
 import { LoadingProvider } from "@/components/shared/others/LoadingProvider";
+import CookieConsent from "@/components/shared/CookieConsent";
 
 export default function RootLayout({ children }) {
 	return (
@@ -46,6 +47,7 @@ export default function RootLayout({ children }) {
 			<body className={`${bodyFont.variable} ${headingFont.variable}`}>
 				<LoadingProvider>
 					{children}
+					<CookieConsent />
 				</LoadingProvider>
 			</body>
 		</html>
