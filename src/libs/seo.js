@@ -1,7 +1,7 @@
 export function constructMetadata({
     title = "enfycon - empowering business with technology",
     description = "enfycon - empowering business with technology",
-    image = "/images/og-image.png", // Make sure to add a default OG image to your public folder
+    image = "/images/og-image.jpg", // Make sure to add a default OG image to your public folder
     icons = "/favicon.ico",
     noIndex = false,
     canonicalUrl,
@@ -27,7 +27,7 @@ export function constructMetadata({
             creator: "@enfycon",
         },
         icons,
-        metadataBase: new URL("https://enfycon.com"),
+        metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://dev.enfyjobs.com"),
         ...(noIndex && {
             robots: {
                 index: false,
