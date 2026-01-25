@@ -1,12 +1,14 @@
 import Footer from "@/components/layout/footer/Footer";
 import Header from "@/components/layout/header/Header";
-import About3 from "@/components/sections/about/About3";
+import FounderStory from "@/components/sections/about/FounderStory";
 import Brands1 from "@/components/sections/brands/Brands1";
 import LocationSection from "@/components/sections/contacts/LocationSection";
 import Cta from "@/components/sections/cta/Cta";
 import Faq2 from "@/components/sections/faq/Faq2";
 import Features from "@/components/sections/features/Features";
-import HeroInner from "@/components/sections/hero/HeroInner";
+import Features3 from "@/components/sections/features/Features3";
+import Funfact3 from "@/components/sections/funfacts/Funfact3";
+import FullScreenHero from "@/components/sections/hero/FullScreenHero";
 import Team1 from "@/components/sections/teams/Team1";
 import Testimonials2 from "@/components/sections/testimonials/Testimonials2";
 import BackToTop from "@/components/shared/others/BackToTop";
@@ -17,7 +19,7 @@ import { constructMetadata } from "@/libs/seo";
 
 export const metadata = constructMetadata({
 	title: "About Us - enfycon",
-	description: "Learn about Enfycon, our mission, vision, and the team driving technological excellence.",
+	description: "Learn about enfycon, our mission, vision, and the team driving technological excellence.",
 	image: "/images/bg/service-banner.jpg",
 });
 
@@ -31,9 +33,19 @@ export default function About() {
 				<div id="smooth-content">
 					<main>
 						{/* <HeaderSpace /> */}
-						<HeroInner title={"About Us"} text={"About Us"} />
-						<Features type={2} id="our-story" />
-						<About3 type={2} id="founders-story" />
+						<FullScreenHero
+							title={"Building Success Together"}
+							text={[
+								"At enfycon, we empower enterprises to navigate the digital future with confidence. Specializing in AI-driven solutions and agentic workflows, we partner with clients globally to drive innovation, modernize legacy systems, and achieve sustainable growth.",
+								"Our commitment to excellence and client success is the cornerstone of everything we build.",
+							]}
+							breadcrums={[{ name: "About Us", path: "/about" }]}
+							image={"/images/bg/service-banner.jpg"}
+							id="building-success-together"
+						/>
+						<FounderStory id="founders-story" />
+						<Features3 id="feature3" />
+
 						<Brands1 type={2} id="partners" />
 						<Testimonials2 type={2} />
 						<Team1 type={3} id="leadership" />

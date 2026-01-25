@@ -1,9 +1,9 @@
 import Link from "next/link";
 import React from "react";
 
-const IndustryHero = ({ title, text, breadcrums = [], image }) => {
+const FullScreenHero = ({ title, text, breadcrums = [], image, id }) => {
     return (
-        <section className="tj-industry-hero">
+        <section id={id} className="tj-industry-hero">
             <div
                 className="industry-hero-bg"
                 style={{
@@ -40,7 +40,13 @@ const IndustryHero = ({ title, text, breadcrums = [], image }) => {
                             </div>
                             <h1 className="title">{title}</h1>
                             <div className="desc">
-                                <p>{text}</p>
+                                {Array.isArray(text) ? (
+                                    text.map((paragraph, index) => (
+                                        <p key={index}>{paragraph}</p>
+                                    ))
+                                ) : (
+                                    <p>{text}</p>
+                                )}
                             </div>
                             <div className="tj-industry-hero-button">
 
@@ -53,4 +59,4 @@ const IndustryHero = ({ title, text, breadcrums = [], image }) => {
     );
 };
 
-export default IndustryHero;
+export default FullScreenHero;

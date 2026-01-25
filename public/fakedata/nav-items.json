@@ -486,7 +486,7 @@
 						"id": 1,
 						"name": "Building Success Together",
 						"icon": "fa-light fa-handshake",
-						"path": "/about#our-story"
+						"path": "/about#building-success-together"
 					},
 					{
 						"id": 2,
@@ -496,9 +496,9 @@
 					},
 					{
 						"id": 3,
-						"name": "Philosophy",
+						"name": "Why enfycon",
 						"icon": "fa-light fa-lightbulb",
-						"path": "/about#founders-story"
+						"path": "/about#feature3"
 					}
 				]
 			},

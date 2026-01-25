@@ -5,34 +5,28 @@ const Features3 = ({ id }) => {
 	const features = [
 		{
 			id: 1,
-			title: "Care",
-			icon: "fa-light fa-hands-holding-heart",
-			desc: "We care for our people, our clients, and our communities, fostering a culture of empathy and support.",
+			title: "Innovative Solutions",
+			icon: "tji-innovative",
+			desc: "We stay ahead of the curve, leveraging cutting-edge technologies and strategies to keep you competitive in a marketplace.",
 		},
 		{
 			id: 2,
-			title: "Openness",
-			icon: "fa-light fa-book-open",
-			desc: "We embrace change and new ideas, believing that transparency and collaboration lead to the best outcomes.",
+			title: "Award-Winning Expertise",
+			icon: "tji-award",
+			desc: "Recognized by industry leaders, our award-winning team has a proven record of delivering excellence across projects.",
 		},
 		{
 			id: 3,
-			title: "Respect",
-			icon: "fa-light fa-handshake",
-			desc: "We treat everyone with dignity and respect, building strong relationships based on trust and mutual understanding.",
+			title: "Expert Team",
+			icon: "tji-team",
+			desc: "Our team is always available to address your concerns, providing quick and solution. to keep you competitive in marketplace.",
 		},
 		{
-			id: 4,
-			title: "Excellence",
-			icon: "fa-light fa-medal",
-			desc: "We strive for excellence in everything we do, setting high standards and continuously improving to deliver the best results.",
+			id: 3,
+			title: "Dedicated Support",
+			icon: "tji-support",
+			desc: "Our team is always available to address your concerns, providing quick and effective solution to keep your business.",
 		},
-		{
-			id: 5,
-			title: "Innovation",
-			icon: "fa-light fa-lightbulb",
-			desc: "We not only adapt to the future but create it, leveraging technology to solve complex challenges.",
-		}
 	];
 	return (
 		<section id={id ? id : "choose"} className="tj-choose-section section-gap ">
@@ -48,19 +42,19 @@ const Features3 = ({ id }) => {
 						<div className="h4-content-wrap text-center">
 							<div className="sec-heading style-4 text-center">
 								<span className="sub-title wow fadeInUp" data-wow-delay=".3s">
-									<i className="tji-box"></i>Why enfycon?
+									<i className="tji-box"></i>Choose the Best
 								</span>
 								<h2 className="sec-title title-anim">
-									Driven by Values, Defined by Excellence.
+									Solutions Built for Business.
 								</h2>
 							</div>
 							<a
 								className="tj-primary-btn wow fadeInUp"
 								data-wow-delay=".5s"
-								href="/contact-us"
+								href="/about"
 							>
 								<span className="btn-text">
-									<span>Partner With Us</span>
+									<span>Learn More</span>
 								</span>
 								<span className="btn-icon">
 									<i className="tji-arrow-right-long"></i>
@@ -86,14 +80,27 @@ const Features3 = ({ id }) => {
 					>
 						<FeatureCard3 feature={features[0]} />
 					</div>
-					<div className="col-lg-4 col-md-6 order-lg-5 order-5 wow fadeInUp" data-wow-delay=".9s">
-						<FeatureCard3 feature={features[4]} />
+					<div className="col-lg-4 col-md-6 order-lg-5 order-5">
+						<div
+							className="countup-item style-2 wow fadeInUp"
+							data-wow-delay=".9s"
+							style={{
+								backgroundImage: "url('/images/choose/choose-img.webp')",
+							}}
+						>
+							<span className="count-icon">
+								<i className="tji-growth"></i>
+							</span>
+							<div className="count-inner">
+								<span className="count-text">Faster Growth</span>
+								<FunfactSingle currentValue={8.5} symbol={"X"} />
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 	);
-
 };
 
 export default Features3;
