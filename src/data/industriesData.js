@@ -4,6 +4,11 @@ export const industriesData = [
         title: "Banking",
         desc: "Empowering banking institutions with secure digital solutions, modern core banking systems, and innovative fintech platforms for enhanced customer experiences.",
         image: "/images/industries/banking.jpg",
+        overviewTitle: "Strategic Banking Transformation",
+        longDesc: [
+            "The banking sector is undergoing a profound transformation, driven by the dual forces of technological innovation and evolving customer expectations. Traditional institutions are no longer competing just with each other but with agile fintech startups and tech giants that have redefined the standard for digital experiences. To stay ahead, banks must modernize legacy systems, ensuring they are not only secure and compliant but also flexible enough to integrate with an ecosystem of modern financial applications.",
+            "Our comprehensive banking solutions bridge the gap between historical reliability and modern agility. By leveraging artificial intelligence for personalized insights and blockchain for secure, transparent transactions, we empower financial institutions to offer seamless, omnichannel experiences. From automated fraud detection that protects assets in real-time to intuitive mobile interfaces that put growing wealth in the palm of a customer's hand, we help you build the bank of the future, today."
+        ],
         icon: "fa-regular fa-building-columns",
         challenges: [
             {
@@ -162,6 +167,10 @@ export const industriesData = [
                 title: "Regulatory Tech (RegTech)",
                 desc: "Advanced compliance tools that automate reporting and monitoring, ensuring adherence to global banking regulations with minimal manual effort.",
                 image: "/images/industries/healthcare.jpg",
+                longDesc: [
+                    "Healthcare is experiencing a digital renaissance, moving away from reactive sick care to proactive, preventative wellness management. The integration of electronic health records, telemedicine, and wearable devices has created a connected health ecosystem, but it has also introduced significant interoperability and data privacy challenges. Providers need systems that communicate seamlessly to provide a holistic view of patient health without compromising the security of sensitive medical information.",
+                    "Our digital healthcare solutions are designed to place the patient at the center of the care continuum. We build interoperable platforms that allow data to flow securely between providers, payers, and patients, ensuring that critical information is available exactly when it's needed. From AI-powered diagnostic tools that assist clinicians in early detection to remote monitoring apps that extend care into the home, we deliver technology that improves outcomes, reduces costs, and ultimately saves lives."
+                ],
                 color: "#7462e1" // Purple
             }
         ],
@@ -189,6 +198,11 @@ export const industriesData = [
         title: "Finance",
         desc: "Transforming financial services with intelligent automation, risk management solutions, and next-generation payment systems for the digital economy.",
         image: "/images/industries/finance.jpg",
+        overviewTitle: "Accelerating Financial Performance",
+        longDesc: [
+            "In the fast-paced world of financial services, data is the new currency. Investment firms, insurance companies, and capital markets are inundated with information that, if properly harnessed, can unlock unprecedented value. However, the challenge lies in processing this volume of data with speed and accuracy while maintaining strict adherence to regulatory standards. The future of finance belongs to those who can turn raw numbers into actionable intelligence instantly.",
+            "We specialize in creating high-performance financial ecosystems that optimize every asset class and interaction. Our solutions range from algorithmic trading platforms that execute millisecond-decisions to predictive risk models that shelter portfolios from market volatility. By integrating advanced analytics and machine learning into the core of your operations, we enable you to anticipate market shifts, customize financial products for every unique client, and drive sustainable growth in a complex global economy."
+        ],
         icon: "fa-regular fa-chart-pie",
         challenges: [
             {
@@ -362,6 +376,11 @@ export const industriesData = [
         title: "Healthcare",
         desc: "Revolutionizing healthcare delivery with digital health platforms, telemedicine solutions, and advanced patient management systems.",
         image: "/images/industries/health-care.jpg",
+        overviewTitle: "Connected Health Ecosystems",
+        longDesc: [
+            "Healthcare is experiencing a digital renaissance, moving away from reactive sick care to proactive, preventative wellness management. The integration of electronic health records, telemedicine, and wearable devices has created a connected health ecosystem, but it has also introduced significant interoperability and data privacy challenges. Providers need systems that communicate seamlessly to provide a holistic view of patient health without compromising the security of sensitive medical information.",
+            "Our digital healthcare solutions are designed to place the patient at the center of the care continuum. We build interoperable platforms that allow data to flow securely between providers, payers, and patients, ensuring that critical information is available exactly when it's needed. From AI-powered diagnostic tools that assist clinicians in early detection to remote monitoring apps that extend care into the home, we deliver technology that improves outcomes, reduces costs, and ultimately saves lives."
+        ],
         icon: "fa-regular fa-heart-pulse",
         challenges: [
             {
@@ -547,6 +566,11 @@ export const industriesData = [
         title: "Human Resource",
         desc: "Streamlining HR operations with intelligent workforce management, talent acquisition platforms, and employee engagement solutions.",
         image: "/images/industries/human-resource.jpg",
+        overviewTitle: "Elevating the Employee Experience",
+        longDesc: [
+            "The modern workplace has evolved beyond the physical office, and with it, the role of Human Resources has shifted from administrative support to strategic leadership. Managing a distributed, hybrid workforce requires tools that go beyond payroll and benefits; it demands platforms that foster engagement, measure productivity, and nurture talent across digital channels. In the war for talent, the employee experience is the decisive battlefield.",
+            "We re-engineer HR operations with intelligent technology that humanizes the workplace experience. Our HCM platforms utilize data analytics to uncover workforce trends, predict retention risks, and identify skills gaps before they become critical. By automating routine administrative tasks and providing self-service tools, we free HR professionals to focus on culture and strategy. Whether it's AI-driven recruitment or personalized learning paths, our solutions help you build a resilient, high-performing workforce."
+        ],
         icon: "fa-regular fa-users-gear",
         challenges: [
             {
@@ -720,6 +744,11 @@ export const industriesData = [
         title: "Legal",
         desc: "Modernizing legal services with case management systems, document automation, and AI-powered legal research platforms.",
         image: "/images/industries/legal.jpg",
+        overviewTitle: "Intelligent Legal Operations",
+        longDesc: [
+            "The legal profession, traditionally reliant on manual processes and billable hours, is at a pivotal inflection point. Clients are demanding more value and transparency, forcing firms to adopt efficiency-driving technologies. The sheer volume of data in modern litigation, from emails to digital contracts, has made manual review obsolete. Law firms must embrace automation to handle discovery, due diligence, and case management or risk being outpaced by tech-savvy competitors.",
+            "Our legal technology solutions bring clarity and speed to the practice of law. We deploy natural language processing to sift through thousands of documents in minutes, identifying risks and relevant precedents with a precision that human review cannot match. By centralizing case data and automating document generation, we reduce administrative overhead and allow attorneys to focus on high-value legal strategy. This digital transformation enables firms to scale their operations and deliver superior client outcomes."
+        ],
         icon: "fa-regular fa-scale-balanced",
         challenges: [
             {
@@ -893,6 +922,11 @@ export const industriesData = [
         title: "Logistics",
         desc: "Optimizing logistics operations with real-time tracking, route optimization, and intelligent fleet management solutions.",
         image: "/images/industries/logistic.jpg",
+        overviewTitle: "Optimizing Global Motion",
+        longDesc: [
+            "Logistics is the backbone of the global economy, but it is currently strained by unprecedented volatility and customer demand for instant gratification. The era of static trade routes is over; today's supply chains must be dynamic, responsive networks capable of adapting to weather events, border delays, and demand spikes in real-time. Visibility alone is no longer enough—companies need the predictive intelligence to act on information before it impacts the bottom line.",
+            "We deliver logistics solutions that turn supply chains into competitive advantages. utilizing IoT sensors and real-time tracking, our platforms provide end-to-end visibility from the warehouse floor to the customer's doorstep. Our route optimization algorithms consider traffic, fuel costs, and delivery windows to ensure maximum efficiency. By digitizing fleet management and inventory flows, we help you deliver on time, every time, while minimizing your environmental footprint and operational costs."
+        ],
         icon: "fa-regular fa-truck-fast",
         challenges: [
             {
@@ -1066,6 +1100,11 @@ export const industriesData = [
         title: "Manufacturing",
         desc: "Driving Industry 4.0 transformation with smart factory solutions, IoT integration, and advanced production management systems.",
         image: "/images/industries/manufacturing.jpg",
+        overviewTitle: "The Smart Factory Revolution",
+        longDesc: [
+            "Manufacturing is entering the era of Industry 4.0, where the lines between the physical and digital worlds blur. Smart factories, powered by the Internet of Things (IoT) and artificial intelligence, are replacing traditional assembly lines. In this new landscape, machines talk to each other to optimize production flow, and equipment predicts its own maintenance needs. The manufacturer of tomorrow uses data as effectively as they use raw materials.",
+            "Our smart manufacturing solutions unlock the hidden potential of your production facilities. By connecting legacy machinery with modern sensors and analytics platforms, we provide real-time dashboards that reveal the true health of your operations. From computer vision systems that detect microscopic defects to digital twins that simulate process changes without downtime, our technology drives zero-defect production. We help you reduce waste, increase throughput, and achieve the agility needed to respond to custom market demands."
+        ],
         icon: "fa-regular fa-industry",
         challenges: [
             {
@@ -1239,6 +1278,11 @@ export const industriesData = [
         title: "Supply Chain",
         desc: "Enhancing supply chain efficiency with end-to-end visibility, predictive analytics, and automated procurement solutions.",
         image: "/images/industries/supply-chain.jpg",
+        overviewTitle: "End-to-End Supply Chain Visibility",
+        longDesc: [
+            "In a globally connected world, the supply chain is more than just a logistical function; it is a critical business driver that can make or break profitability. Recent global disruptions have exposed the fragility of lean supply chains, highlighting the urgent need for resilience and redundancy. Leaders are now prioritizing visibility and risk management, seeking to understand not just their immediate suppliers, but the entire multi-tier network.",
+            "We architect resilient supply chain ecosystems that withstand the shocks of a volatile market. Our solutions integrate disparate data sources—from procurement and inventory to shipping and sales—into a single source of truth. Advanced analytics enable demand sensing that looks beyond historical sales to predict future needs, while automated procurement ensures you are never caught short. By building transparency and intelligence into every link of the chain, we help you navigate uncertainty with confidence."
+        ],
         icon: "fa-regular fa-boxes-packing",
         challenges: [
             {

@@ -20,7 +20,7 @@ const IndustryDetailsPrimary = ({ option }) => {
         prevId,
         nextId,
     } = option || {};
-    const { title, desc, image } = currentItem || {};
+    const { title, desc, longDesc, image } = currentItem || {};
 
     return (
         <section className="tj-service-area" id="industry-details">
@@ -30,13 +30,17 @@ const IndustryDetailsPrimary = ({ option }) => {
                 <div className="row">
                     <div className="col-lg-12">
                         <div className="post-details-wrapper py-5">
-                            <h2 className="title title-anim">
-                                {title}
-                            </h2>
+                            {currentItem.overviewTitle && (
+                                <h3 className="section-title text-primary mb-4 text-3xl">{currentItem.overviewTitle}</h3>
+                            )}
                             <div className="blog-text">
                                 <div className="service-section wow fadeInUp " data-wow-delay=".3s">
-                                    {desc && (
-                                        <p className="mb-4">{desc}</p>
+                                    {longDesc ? (
+                                        longDesc.map((text, i) => (
+                                            <p key={i} className="mb-4 text-lg">{text}</p>
+                                        ))
+                                    ) : (
+                                        desc && <p className="mb-4 text-lg">{desc}</p>
                                     )}
                                 </div>
                             </div>
