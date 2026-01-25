@@ -7,6 +7,8 @@ import { useState } from "react";
 import CtaSidebar from "../cta/CtaSidebar";
 import IconFeatureGrid from "@/components/shared/sections/IconFeatureGrid";
 import CheckListSection from "@/components/shared/sections/CheckListSection";
+import IndustrySplitSection from "@/components/shared/sections/IndustrySplitSection";
+import ImageFeatureGrid from "@/components/shared/sections/ImageFeatureGrid";
 
 const IndustryDetailsPrimary = ({ option }) => {
     const {
@@ -38,7 +40,10 @@ const IndustryDetailsPrimary = ({ option }) => {
                                 </div>
                             </div>
 
-
+                            {/* Working Module (Split Section) */}
+                            {currentItem.workingModule && (
+                                <IndustrySplitSection item={currentItem.workingModule} />
+                            )}
 
                             {/* Challenges Section */}
                             <IconFeatureGrid
@@ -69,6 +74,14 @@ const IndustryDetailsPrimary = ({ option }) => {
                                 items={currentItem.process}
                                 sectionClass="industry-process-section"
                             />
+
+                            {/* Solutions/How We Help (Image Grid) */}
+                            {currentItem.solutions && (
+                                <ImageFeatureGrid
+                                    title={`How We Help ${title} Operations`}
+                                    items={currentItem.solutions}
+                                />
+                            )}
 
                             {/* The Edge Section */}
                             <CheckListSection

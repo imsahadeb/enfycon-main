@@ -140,6 +140,31 @@ export const industriesData = [
             "Customer-Centric Design Philosophy",
             "Scalable Cloud-Native Architecture"
         ],
+        workingModule: {
+            title: "Operations and Risk Mitigation",
+            desc: "Managing networks, mitigating disruptions, and maintaining cost controls are daily challenges for supply chain managers. LSG provides process expertise, technology integration, and talent to optimize logistics processes, improve visibility across your network, and ensure coordination throughout your supply chain.",
+            image: "/images/industries/banking/banking-1.jpg"
+        },
+        solutions: [
+            {
+                title: "Enhanced Network Visibility",
+                desc: "Real-time tracking and monitoring systems provide end-to-end transparency across your entire supply chain, enabling proactive decision-making.",
+                image: "/images/industries/banking/banking-2.jpg",
+                color: "#00dcd3" // Cyan
+            },
+            {
+                title: "Optimized Logistics Processes",
+                desc: "Streamlined workflows and specialized expertise improve coordination between suppliers, warehouses, and distribution channels.",
+                image: "/images/industries/finance.jpg",
+                color: "#ff6b00" // Orange
+            },
+            {
+                title: "Risk Mitigation and Resilience",
+                desc: "Advanced analytics and contingency planning help identify vulnerabilities and implement strategies to maintain business continuity.",
+                image: "/images/industries/healthcare.jpg",
+                color: "#7462e1" // Purple
+            }
+        ],
         cta: {
             title: "Future-Proof Your Banking Operations",
             desc: "Partner with Enfycon to leverage AI for secure, efficient, and customer-first banking solutions.",

@@ -256,6 +256,172 @@ START: Industry Section CSS
     }
 }
 
+
+/**----------------------------------------
+START: Industry Details New Sections CSS
+----------------------------------------*/
+
+/* Split Section (Operations & Risk Mitigation) */
+.industry-split-section {
+    margin-bottom: 60px;
+
+    .split-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+        .image-box {
+            flex: 0 0 50%;
+            position: relative;
+
+            @media #{$md, $sm, $xs} {
+                flex: 0 0 100%;
+                height: 300px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .content-box {
+            flex: 0 0 50%;
+            display: flex;
+            flex-direction: column;
+
+            @media #{$md, $sm, $xs} {
+                flex: 0 0 100%;
+            }
+
+            .title-block {
+                background-color: var(--tj-color-theme-secondary); // Use secondary or primary
+                // fallback if var not available, use explicit color from image is #00aaff blue-ish
+                background-color: #0099ff; // Or use variable
+                padding: 40px;
+                flex: 1;
+                display: flex;
+                align-items: center;
+
+                h3 {
+                    color: var(--tj-color-common-white);
+                    font-size: 32px;
+                    line-height: 1.2;
+                    margin: 0;
+
+                    @media #{$sm, $xs} {
+                        font-size: 24px;
+                    }
+                }
+            }
+
+            .desc-block {
+                background-color: var(--tj-color-common-white);
+                padding: 40px;
+                flex: 1;
+
+                p {
+                    color: var(--tj-color-text-body);
+                    margin: 0;
+                    font-size: 16px;
+                    line-height: 1.6;
+                }
+            }
+        }
+    }
+}
+
+/* Image Feature Grid (How We Help) */
+.image-feature-section {
+    margin-bottom: 60px;
+
+    .section-title {
+        font-size: 36px;
+        margin-bottom: 40px;
+        color: var(--tj-color-heading-primary);
+
+        @media #{$sm, $xs} {
+            font-size: 28px;
+        }
+    }
+}
+
+.image-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    @media #{$md, $sm} {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media #{$xs} {
+        grid-template-columns: 1fr;
+    }
+
+    .image-feature-card {
+        background: var(--tj-color-common-white);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-wrapper {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s ease;
+            }
+        }
+
+        &:hover .image-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .accent-bar {
+            height: 6px;
+            width: 100%;
+        }
+
+        .content {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+
+            .title {
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 15px;
+                color: var(--tj-color-heading-primary);
+            }
+
+            .desc {
+                font-size: 15px;
+                line-height: 1.6;
+                color: var(--tj-color-text-body);
+                margin: 0;
+            }
+        }
+    }
+}
+
 /**----------------------------------------
 END: Industry Section CSS
 ----------------------------------------*/
