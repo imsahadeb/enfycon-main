@@ -10,9 +10,9 @@ const CsrApproach = ({ data }) => {
                 <div className="row justify-content-center mb-4">
                     <div className="col-lg-10">
                         <div className="sec-heading text-center">
-                            <h2 className="sec-title uppercase">
+                            <h3 className="sec-title uppercase">
                                 {data.title}
-                            </h2>
+                            </h3>
                             <p className="desc" style={{
                                 fontSize: '1rem',
                                 lineHeight: '1.7',

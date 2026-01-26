@@ -14,13 +14,11 @@ const CsrProjects = ({ data }) => {
                     <div className="col-lg-8">
                         <div className="sec-heading text-center">
 
-                            <h3 className="sec-title wow fadeInUp" data-wow-delay=".4s">
-                                {data.title}
-                            </h3>
+                        
                             <p className="desc wow fadeInUp" data-wow-delay=".5s">
                                 {data.desc}
                             </p>
-                            <h2 className="sec-title uppercase">{data.title}</h2>
+                            <h3 className="sec-title uppercase">{data.title}</h3>
                             <p className="desc">{data.subtitle}</p>
                         </div>
                     </div>
