@@ -7,7 +7,8 @@ export const csrData = {
     },
     projects: {
         title: "Our CSR Initiatives",
-        subtitle: "Committed to making a difference through sustainable social impact initiatives.",
+        subtitle: "LATEST INITIATIVES",
+        desc: "Committed to making a difference through sustainable social impact initiatives.",
         items: [
             {
                 title: "Food Distribution at Adruta Children Home",

@@ -13,8 +13,13 @@ const CsrProjects = ({ data }) => {
                 <div className="row justify-content-center">
                     <div className="col-lg-8">
                         <div className="sec-heading text-center">
-                            <h2 className="sec-title">{data.title}</h2>
-                            <p className="desc">{data.subtitle}</p>
+                          
+                            <h3 className="sec-title wow fadeInUp" data-wow-delay=".4s">
+                                {data.title}
+                            </h3>
+                            <p className="desc wow fadeInUp" data-wow-delay=".5s">
+                                {data.desc}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -42,34 +47,23 @@ const CsrProjects = ({ data }) => {
                         }}
                         modules={[Pagination, Autoplay]}
                         className="csr-slider"
-                        style={{ paddingBottom: '50px' }}
                     >
                         {data.items.map((item, idx) => (
                             <SwiperSlide key={idx}>
-                                <div className="csr-project-card" style={{
-                                    background: 'white',
-                                    borderRadius: '8px',
-                                    overflow: 'hidden',
-                                    boxShadow: '0 5px 20px rgba(0,0,0,0.05)',
-                                    height: '100%'
-                                }}>
-                                    <div className="image-wrapper" style={{ height: '250px', position: 'relative' }}>
+                                <div className="csr-project-card">
+                                    <div className="image-wrapper">
                                         <Image
                                             src={item.image}
                                             alt={item.title}
                                             fill
-                                            style={{ objectFit: 'cover' }}
                                         />
-                                        <div className="overlay d-flex align-items-end justify-content-end p-3" style={{
-                                            background: 'linear-gradient(to top, rgba(0,0,0,0.5), transparent)',
-                                            position: 'absolute',
-                                            inset: 0
-                                        }}>
-                                        </div>
+                                        <div className="overlay"></div>
                                     </div>
-                                    <div className="content p-4 text-center">
-                                        <h4 className="title mb-3" style={{ fontSize: '20px', fontWeight: '600' }}>{item.title}</h4>
-                                        <p className="desc mb-4" style={{ fontSize: '15px', color: '#666' }}>{item.desc}</p>
+                                    <div className="content">
+                                        <h4 className="title">
+                                            <Link href={item.link}>{item.title}</Link>
+                                        </h4>
+                                        <p className="desc">{item.desc}</p>
                                         <Link href={item.link} className="btn-text">
                                             Read More <i className="fa-regular fa-arrow-right ms-1"></i>
                                         </Link>
