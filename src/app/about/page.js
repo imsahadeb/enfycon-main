@@ -17,6 +17,8 @@ import Testimonials2 from "@/components/sections/testimonials/Testimonials2";
 import BackToTop from "@/components/shared/others/BackToTop";
 import HeaderSpace from "@/components/shared/others/HeaderSpace";
 import ClientWrapper from "@/components/shared/wrappers/ClientWrapper";
+import CsrProjects from "@/components/sections/csr/CsrProjects";
+import { csrData } from "@/data/csrData";
 
 import { constructMetadata } from "@/libs/seo";
 
@@ -47,18 +49,22 @@ export default function About() {
 							id="building-success-together"
 						/>
 						<FounderStory id="founders-story" />
-					
+
 						{/* <About12/> */}
-						<History1/>
-	<Features3 id="feature3" />
+						<History1 />
+						<Features3 id="feature3" />
 						<Brands1 type={2} id="partners" />
 						{/* <Testimonials2 type={2} /> */}
+						{/* CSR Section - Gray BG */}
+						<div className="bg-gray-1">
+							<CsrProjects data={csrData.projects} />
+						</div>
 						<Team1 type={3} id="leadership" />
 						<LocationSection id="locations" />
 						{/* <Faq2 type={3} /> */}
-						
+
 					</main>
-					<Footer2/>
+					<Footer2 />
 				</div>
 			</div>
 
