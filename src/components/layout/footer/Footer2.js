@@ -47,13 +47,7 @@ const Footer2 = () => {
 									</ul>
 								</div>
 
-								<div className="social-icons">
-									{footerData.socialLinks.map((social, index) => (
-										<Link key={index} href={social.link} target="_blank" className="me-3">
-											<i className={social.icon}></i>
-										</Link>
-									))}
-								</div>
+
 							</div>
 						</div>
 
@@ -157,14 +151,31 @@ const Footer2 = () => {
 				</div>
 
 				{/* Copyright - kept simple */}
-				<div className="tj-copyright-area-2">
+				<div className="tj-copyright-area-2" style={{ borderTop: "1px solid rgba(255, 255, 255, 0.1)" }}>
 					<div className="row">
 						<div className="col-12">
-							<div className="copyright-content-area justify-content-center text-center">
+							<div className="copyright-content-area d-flex flex-wrap justify-content-between align-items-center">
 								<div className="copyright-text">
-									<p>
+									<p className="mb-0">
 										&copy; {new Date().getFullYear()} <Link href="#" target="_blank"> enfycon</Link>. All Rights Reserved.
 									</p>
+								</div>
+								<div className="social-icons">
+									{footerData.socialLinks.map((social, index) => (
+										<Link key={index} href={social.link} target="_blank" className="mx-2">
+											<i className={social.icon} style={{ color: 'rgba(255,255,255,0.7)', fontSize: '16px' }}></i>
+										</Link>
+									))}
+								</div>
+								<div className="copyright-menu">
+									<ul className="d-flex list-unstyled m-0 gap-3 align-items-center">
+										<li>
+											<Link href="/privacy-policy" style={{ color: 'rgba(255,255,255,0.7)', fontSize: '14px' }}>Privacy Policy</Link>
+										</li>
+										<li>
+											<Link href="/terms-and-conditions" style={{ color: 'rgba(255,255,255,0.7)', fontSize: '14px' }}>Terms & Condition</Link>
+										</li>
+									</ul>
 								</div>
 							</div>
 						</div>
