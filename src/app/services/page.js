@@ -24,7 +24,7 @@ export default function Services() {
 			<div id="smooth-wrapper">
 				<div id="smooth-content">
 					<main>
-					
+				<HeaderSpace/>
 						<HeroInner title={"Services"} text={"Services"} />
 						<ServicesCategorized />
 						<Contact2 />
