@@ -1,0 +1,85 @@
+.tagsShareWrapper {
+    padding: 20px 0;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .tagsSection {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+
+        span {
+            font-weight: 500;
+            color: #333;
+        }
+
+        a {
+            padding: 6px 16px;
+            background: #f3f4f6;
+            border-radius: 4px;
+            color: #555;
+            font-size: 14px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: #e5e7eb;
+                color: #000;
+            }
+        }
+    }
+
+    .shareSection {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+
+        span {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .socialIcons {
+            display: flex;
+            gap: 0.5rem;
+
+            a {
+                width: 36px;
+                height: 36px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background: #f3f4f6;
+                color: #333;
+                transition: all 0.3s ease;
+
+                &.facebook:hover {
+                    background: #1877f2;
+                    color: #fff;
+                }
+
+                &.twitter:hover {
+                    background: #1da1f2;
+                    color: #fff;
+                }
+
+                &.instagram:hover {
+                    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+                    color: #fff;
+                }
+
+                &.linkedin:hover {
+                    background: #0077b5;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

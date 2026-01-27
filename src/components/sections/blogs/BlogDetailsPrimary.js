@@ -2,7 +2,6 @@ import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
 import BlogSidebar from "@/components/shared/sidebar/BlogSidebar";
 import Image from "next/image";
 import Link from "next/link";
-
 const BlogDetailsPrimary = ({ post, option }) => {
 	const { prevId, nextId, isPrevItem, isNextItem } = option || {};
 	const { title, featuredImage, author, day, month, year, commentCount, avatar, content } = post || {};
@@ -37,6 +36,7 @@ const BlogDetailsPrimary = ({ post, option }) => {
 
 
 							<h2 className="title title-anim">{title}</h2>
+
 							<div
 								className="blog-category-two wow fadeInUp"
 								data-wow-delay=".3s"
@@ -82,6 +82,61 @@ const BlogDetailsPrimary = ({ post, option }) => {
 									data-wow-delay=".3s"
 									dangerouslySetInnerHTML={{ __html: content }}
 								/>
+							</div>
+
+							{/* Tags and Social Share */}
+							<div className="tags-share-wrapper wow fadeInUp" data-wow-delay="0.3s">
+								{/* Tags */}
+								<div className="tags-section">
+									<span>Tags:</span>
+									{post.tags && post.tags.map((tag, index) => (
+										<Link
+											key={index}
+											href={`/blogs/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`}
+										>
+											{tag}
+										</Link>
+									))}
+								</div>
+
+								{/* Social Share */}
+								<div className="share-section">
+									<span>Share:</span>
+									<div className="social-icons">
+										<a
+											href={`https://www.facebook.com/sharer/sharer.php?u=${typeof window !== 'undefined' ? window.location.href : ''}`}
+											target="_blank"
+											rel="noopener noreferrer"
+											className="facebook"
+										>
+											<i className="fa-brands fa-facebook-f"></i>
+										</a>
+										<a
+											href={`https://twitter.com/intent/tweet?url=${typeof window !== 'undefined' ? window.location.href : ''}&text=${title}`}
+											target="_blank"
+											rel="noopener noreferrer"
+											className="twitter"
+										>
+											<i className="fa-brands fa-x-twitter"></i>
+										</a>
+										<a
+											href={`https://www.instagram.com/`}
+											target="_blank"
+											rel="noopener noreferrer"
+											className="instagram"
+										>
+											<i className="fa-brands fa-instagram"></i>
+										</a>
+										<a
+											href={`https://www.linkedin.com/sharing/share-offsite/?url=${typeof window !== 'undefined' ? window.location.href : ''}`}
+											target="_blank"
+											rel="noopener noreferrer"
+											className="linkedin"
+										>
+											<i className="fa-brands fa-linkedin-in"></i>
+										</a>
+									</div>
+								</div>
 							</div>
 
 							<div
