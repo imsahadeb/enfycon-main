@@ -44,6 +44,38 @@ export const productsData = [
                 icon: "fa-regular fa-shield-check"
             }
         ],
+        transforms: [
+            {
+                title: "Seamless Customer Experience",
+                desc: "Instant responses via WhatsApp create frictionless customer interactions.",
+                icon: "fa-regular fa-face-smile"
+            },
+            {
+                title: "Operational Excellence",
+                desc: "Automate 80% of queries, freeing staff for high-value interactions.",
+                icon: "fa-regular fa-gears"
+            },
+            {
+                title: "Scalable Growth",
+                desc: "Handle thousands of simultaneous conversations without adding headcount.",
+                icon: "fa-regular fa-chart-line-up"
+            },
+            {
+                title: "Actionable Insights",
+                desc: "Real-time analytics on customer sentiment and service performance.",
+                icon: "fa-regular fa-lightbulb"
+            },
+            {
+                title: "Enterprise Ready",
+                desc: "Bank-grade security with compliance for regulated industries.",
+                icon: "fa-regular fa-building-shield"
+            },
+            {
+                title: "Future-Proof",
+                desc: "Continuous learning AI that improves with every customer interaction.",
+                icon: "fa-regular fa-rocket"
+            }
+        ],
         howItWorks: [
             {
                 title: "Customer Interface",
@@ -124,121 +156,187 @@ export const productsData = [
     {
         id: "idental-ai",
         title: "iDental.ai",
-        tagline: "Intelligent Dentistry for Modern Practices",
-        desc: "AI-powered dental practice management and diagnostic platform revolutionizing patient care with smart automation and precision.",
+        tagline: "Smart Dental Practice Management System",
+        desc: "Redefining Dentistry with AI-Powered Practice Management. Purpose-built for dentists, clinics, and dental hospitals, integrating administration, patient engagement, clinical workflows, and financial operations into a single AI-enabled cloud platform.",
         image: "/images/product/idental.jpg",
         category: "Healthcare AI",
-        overviewTitle: "Transforming Dental Care with AI",
+        overviewTitle: "Redefining Dentistry with AI-Powered Practice Management",
         longDesc: [
-            "iDental.ai brings cutting-edge artificial intelligence to dental practices, enabling practitioners to deliver superior patient care while streamlining operations. Our platform combines diagnostic AI, practice management, and patient engagement tools into one comprehensive ecosystem designed specifically for modern dental professionals.",
-            "From automated appointment scheduling to AI-assisted radiograph analysis, iDental.ai empowers dentists to focus on what matters most—providing exceptional care. Our intelligent system learns from your practice patterns, optimizes workflows, and ensures that no patient falls through the cracks."
+            "Managing a dental practice today is no easy task. From juggling patient records, scheduling appointments, handling billing, and maintaining treatment histories to ensuring seamless patient communication—the workload can overwhelm even the most efficient clinics.",
+            "iDental.ai changes this narrative. Purpose-built for dentists, clinics, and dental hospitals, it integrates administration, patient engagement, clinical workflows, and financial operations—into a single AI-enabled cloud platform."
         ],
         icon: "fa-regular fa-tooth",
         benefits: [
             {
-                title: "AI-Assisted Diagnostics",
-                desc: "Advanced image analysis for X-rays and scans with early detection of cavities, fractures, and anomalies.",
-                icon: "fa-regular fa-microscope"
+                title: "All-in-One Platform",
+                desc: "Unifies patient registration, history, clinical notes, imaging, billing, and inventory management. Eliminates fragmented systems and streamlines workflows.",
+                icon: "fa-regular fa-layer-group"
             },
             {
-                title: "Automated Scheduling",
-                desc: "Intelligent appointment management that reduces no-shows and optimizes chair time.",
-                icon: "fa-regular fa-calendar-check"
+                title: "WhatsApp Integration",
+                desc: "Native WhatsApp integration enables patients to book/reschedule appointments, receive automated reminders, invoices, prescriptions and follow-ups.",
+                icon: "fa-brands fa-whatsapp"
             },
             {
-                title: "Patient Engagement",
-                desc: "Automated reminders, treatment plans, and educational content via WhatsApp or SMS.",
-                icon: "fa-regular fa-users"
+                title: "AI-Powered Insights",
+                desc: "AI analytics reveal actionable trends, patient visit patterns, revenue performance tracking, and optimized staff and chair time.",
+                icon: "fa-regular fa-chart-line"
             },
             {
-                title: "Treatment Planning",
-                desc: "AI-generated treatment options with cost estimates and timeline projections.",
-                icon: "fa-regular fa-clipboard-list"
+                title: "Tele-Dentistry Support",
+                desc: "Secure virtual consultations with AI-assisted symptom analysis, case sharing (X-rays, reports), and virtual prescriptions.",
+                icon: "fa-regular fa-video"
             },
             {
-                title: "Inventory Management",
-                desc: "Smart tracking of supplies and materials with automated reorder alerts.",
-                icon: "fa-regular fa-boxes-stacked"
+                title: "Enhanced Security",
+                desc: "HIPAA, ISO and GDPR compliant with role-based access controls, end-to-end encryption and audit logs.",
+                icon: "fa-regular fa-shield-check"
             },
             {
-                title: "HIPAA Compliant",
-                desc: "Enterprise-grade security ensuring patient data protection and regulatory compliance.",
-                icon: "fa-regular fa-lock"
+                title: "Measurable ROI",
+                desc: "15–20% higher efficiency, 10–15% revenue growth, reduced billing errors. Achieves ROI within 3–6 months.",
+                icon: "fa-regular fa-chart-pie"
+            }
+        ],
+        transforms: [
+            {
+                title: "Seamless Patient Experience",
+                desc: "Booking and reminders via WhatsApp for effortless patient engagement.",
+                icon: "fa-regular fa-face-smile"
+            },
+            {
+                title: "Operational Efficiency",
+                desc: "Automates repetitive admin tasks so staff can focus on patient care.",
+                icon: "fa-regular fa-gears"
+            },
+            {
+                title: "Clinical Excellence",
+                desc: "Centralized EMR ensures 360° patient view for better treatment decisions.",
+                icon: "fa-regular fa-star"
+            },
+            {
+                title: "Revenue Optimization",
+                desc: "Accurate billing and reduced no-shows boost practice profitability.",
+                icon: "fa-regular fa-coins"
+            },
+            {
+                title: "Scalable & Flexible",
+                desc: "Adapts seamlessly from solo clinics to multi-location chains.",
+                icon: "fa-regular fa-arrows-maximize"
+            },
+            {
+                title: "Future-Ready",
+                desc: "AI chatbot and tele-dentistry support for modern healthcare demands.",
+                icon: "fa-regular fa-rocket"
             }
         ],
         howItWorks: [
             {
-                title: "Patient Registration",
-                desc: "Seamless digital onboarding with automated forms and insurance verification.",
+                title: "Patient Onboarding & Records",
+                desc: "Centralized profiles store complete dental history, treatment plans, and records.",
                 icon: "fa-regular fa-user-plus"
             },
             {
                 title: "Smart Scheduling",
-                desc: "AI optimizes appointment slots based on procedure type and practitioner availability.",
-                icon: "fa-regular fa-calendar-days"
+                desc: "AI-driven appointment booking with WhatsApp reminders to reduce no-shows.",
+                icon: "fa-regular fa-calendar-check"
             },
             {
-                title: "Diagnostic AI",
-                desc: "Upload radiographs for instant AI analysis and second opinion.",
-                icon: "fa-regular fa-x-ray"
-            },
-            {
-                title: "Treatment Records",
-                desc: "Digital charting with voice-to-text note taking during procedures.",
+                title: "Clinical Documentation",
+                desc: "Digital treatment plans, notes, and uploads for comprehensive patient care.",
                 icon: "fa-regular fa-notes-medical"
             },
             {
-                title: "Billing \u0026 Claims",
-                desc: "Automated insurance claims submission and payment tracking.",
+                title: "Billing & Payments",
+                desc: "Automated invoices and real-time payment tracking for faster collections.",
                 icon: "fa-regular fa-file-invoice-dollar"
             },
             {
-                title: "Follow-up Care",
-                desc: "Automated post-treatment check-ins and care instructions.",
-                icon: "fa-regular fa-comment-medical"
+                title: "AI Chatbot Assistance",
+                desc: "AI chatbot for patient queries, appointment booking, and pre-consultation support.",
+                icon: "fa-regular fa-robot"
+            },
+            {
+                title: "Analytics & Insights",
+                desc: "Data-driven decision-making dashboards for practice growth and optimization.",
+                icon: "fa-regular fa-chart-mixed"
             }
         ],
         useCases: [
             {
-                title: "Solo Practitioners",
+                title: "Solo Dentists & Small Clinics",
                 items: [
-                    "Streamline administrative tasks to focus on patient care.",
-                    "AI diagnostic assistance without hiring additional staff.",
-                    "Automated patient communication and follow-ups."
+                    "Automates appointment booking and reminders, reducing no-shows.",
+                    "Single dashboard for patient records, treatment plans, and billing.",
+                    "WhatsApp-based patient engagement without hiring extra staff.",
+                    "Simplified invoice generation and digital payments."
                 ],
                 icon: "fa-regular fa-user-doctor"
             },
             {
-                title: "Multi-Location Clinics",
+                title: "Multi-Location Dental Hospitals",
                 items: [
-                    "Centralized patient records across all locations.",
-                    "Standardized treatment protocols and quality control.",
-                    "Real-time analytics across the entire practice network."
+                    "Centralizes all patient records and EMR across branches.",
+                    "Multi-doctor scheduling with color-coded calendar.",
+                    "Real-time financial insights across all clinics for leadership.",
+                    "Standardized workflows for billing, reporting, and treatment plans."
                 ],
-                icon: "fa-regular fa-building"
+                icon: "fa-regular fa-hospital"
             },
             {
-                title: "Orthodontics",
+                title: "Patient-Centric Care",
                 items: [
-                    "Progress tracking for braces and aligners with photo analysis.",
-                    "Automated adjustment reminders and treatment milestones.",
-                    "3D treatment visualization for patient education."
+                    "Patients book, reschedule, and cancel appointments via WhatsApp.",
+                    "Automated reminders reduce missed appointments.",
+                    "Secure portal for prescriptions, X-rays, invoices, and history.",
+                    "AI chatbot answers FAQs and assists in recall visits."
+                ],
+                icon: "fa-regular fa-heart-pulse"
+            },
+            {
+                title: "Specialized Dental Chains",
+                items: [
+                    "Specialized treatment planning for orthodontic or cosmetic procedures.",
+                    "Patient progress tracking (braces adjustments, whitening sessions).",
+                    "Inventory management for niche supplies (aligners, cosmetic kits).",
+                    "Structured follow-ups for enhanced patient experience."
                 ],
                 icon: "fa-regular fa-teeth"
             },
             {
-                title: "Pediatric Dentistry",
+                title: "Dental Education & Training",
                 items: [
-                    "Child-friendly interface with gamified patient education.",
-                    "Parent communication and consent management.",
-                    "Growth and development tracking over time."
+                    "Hands-on exposure to EMR, billing, and treatment planning systems.",
+                    "Tele-dentistry support for faculty to review and guide students remotely.",
+                    "Case study management with secure sharing of X-rays and CBCT scans.",
+                    "Prepares dental students for digital-first practices."
                 ],
-                icon: "fa-regular fa-child"
+                icon: "fa-regular fa-graduation-cap"
+            },
+            {
+                title: "Tele-Dentistry & Remote Care",
+                items: [
+                    "Virtual consultations with AI-assisted pre-screening.",
+                    "Patients share case files, X-rays, and reports digitally.",
+                    "Secure virtual prescriptions and online follow-ups.",
+                    "Expands clinic reach beyond geography."
+                ],
+                icon: "fa-regular fa-video"
+            },
+            {
+                title: "Administrative & Business Management",
+                items: [
+                    "Real-time analytics on revenue, appointment trends, and satisfaction.",
+                    "Highlights areas for expense reduction and improved efficiency.",
+                    "Role-based dashboards for doctors, receptionists, and management.",
+                    "Enables data-driven decision-making and boosts profitability."
+                ],
+                icon: "fa-regular fa-chart-line-up"
             }
         ],
         cta: {
-            title: "Elevate Your Dental Practice with AI",
-            desc: "Join hundreds of dental professionals using iDental.ai to deliver smarter, faster, and better patient care.",
+            title: "The Future of Dentistry is Digital",
+            desc: "With iDental.ai, dental practices step into a future where administration is effortless, patients are engaged, and clinics operate with unmatched efficiency.",
             buttonText: "Schedule a Demo",
             buttonLink: "/contact-us"
         }
@@ -246,488 +344,716 @@ export const productsData = [
     {
         id: "lexgenie-ai",
         title: "lexGenie.ai",
-        tagline: "Legal Intelligence Unleashed",
-        desc: "AI-powered legal research and document automation platform accelerating legal workflows with precision and intelligence.",
+        tagline: "Smart Legal Solutions for Modern Law Professionals",
+        desc: "AI-powered legal research and document automation platform delivering precision, speed, and intelligent insights for law firms, corporate legal teams, and judiciary professionals.",
         image: "/images/product/lexgen.jpg",
         category: "Legal AI",
-        overviewTitle: "Revolutionizing Legal Practice",
+        overviewTitle: "Empower Your Legal Practice with AI-Powered Precision",
         longDesc: [
-            "lexGenie.ai transforms the practice of law by harnessing the power of artificial intelligence to tackle the most time-consuming tasks: legal research, document review, and contract analysis. Our platform processes thousands of case laws, statutes, and regulations in seconds, delivering relevant precedents with unprecedented accuracy.",
+            "The legal industry is at a digital crossroads—rising caseloads, manual research, and documentation bottlenecks collide with increasing client expectations. LexGenie revolutionizes how legal professionals research, draft, review, and reason.",
             "Built by legal professionals for legal professionals, lexGenie.ai understands the nuances of legal language and reasoning. From due diligence to litigation support, our AI assistant augments your capabilities, allowing you to focus on strategy and client advocacy while we handle the heavy lifting of data analysis."
         ],
         icon: "fa-regular fa-gavel",
         benefits: [
             {
-                title: "Lightning-Fast Research",
-                desc: "Search across millions of cases, statutes, and regulations in seconds with AI-powered relevance ranking.",
+                title: "AI-Powered Legal Research",
+                desc: "Identifies relevant laws, precedents, and judgments within seconds using advanced natural language processing.",
                 icon: "fa-regular fa-magnifying-glass"
             },
             {
-                title: "Contract Intelligence",
-                desc: "Automated clause extraction, risk flagging, and compliance checking in contracts.",
+                title: "Smart Contract Management",
+                desc: "Draft, review, and summarize contracts with AI-powered clause suggestions and risk identification.",
                 icon: "fa-regular fa-file-contract"
             },
             {
-                title: "Document Automation",
-                desc: "Generate legal documents from templates with intelligent field population.",
-                icon: "fa-regular fa-file-pen"
+                title: "Automated Case Summaries",
+                desc: "Generate consistent headnotes, summaries, and case briefs instantly with AI precision.",
+                icon: "fa-regular fa-file-lines"
             },
             {
-                title: "Due Diligence AI",
-                desc: "Review thousands of documents quickly to identify risks and red flags.",
-                icon: "fa-regular fa-shield-exclamation"
+                title: "Significant Time Savings",
+                desc: "Automates research, citations, and document analysis—reducing hours of work to minutes.",
+                icon: "fa-regular fa-clock"
             },
             {
-                title: "Citation Verification",
-                desc: "Automatic validation of case citations and linking to source documents.",
-                icon: "fa-regular fa-link"
+                title: "Knowledge Augmentation",
+                desc: "Acts as an intelligent paralegal, empowering legal teams with instant access to relevant information.",
+                icon: "fa-regular fa-brain"
             },
             {
-                title: "Collaboration Tools",
-                desc: "Secure workspace for teams with version control and comment threads.",
-                icon: "fa-regular fa-users-gear"
+                title: "Multilingual Analysis",
+                desc: "Supports English, Arabic, and multiple languages for global legal operations and cross-border cases.",
+                icon: "fa-regular fa-language"
+            }
+        ],
+        transforms: [
+            {
+                title: "Faster Case Resolution",
+                desc: "Reduce research time from days to minutes with AI-powered legal intelligence.",
+                icon: "fa-regular fa-bolt"
+            },
+            {
+                title: "Enhanced Accuracy",
+                desc: "AI eliminates human errors in citations, references, and document analysis.",
+                icon: "fa-regular fa-bullseye"
+            },
+            {
+                title: "Cost Efficiency",
+                desc: "Reduce billable hours on routine tasks and focus on high-value legal work.",
+                icon: "fa-regular fa-coins"
+            },
+            {
+                title: "Competitive Advantage",
+                desc: "Deliver faster client outcomes with AI-augmented legal services.",
+                icon: "fa-regular fa-trophy"
+            },
+            {
+                title: "Scalable Operations",
+                desc: "Handle more cases without proportionally increasing legal staff.",
+                icon: "fa-regular fa-arrows-maximize"
+            },
+            {
+                title: "Future-Ready Practice",
+                desc: "Stay ahead with continuously learning AI that improves with every interaction.",
+                icon: "fa-regular fa-rocket"
             }
         ],
         howItWorks: [
             {
-                title: "Natural Language Query",
-                desc: "Ask complex legal questions in plain English and get relevant case law instantly.",
-                icon: "fa-regular fa-comment-question"
-            },
-            {
-                title: "AI Legal Research",
-                desc: "Advanced algorithms analyze context, jurisdiction, and recency to rank results.",
-                icon: "fa-regular fa-scale-balanced"
-            },
-            {
                 title: "Document Upload",
-                desc: "Upload contracts, briefs, or discovery materials for automated analysis.",
+                desc: "Upload legal documents, contracts, judgments, or queries in English or Arabic.",
                 icon: "fa-regular fa-cloud-arrow-up"
             },
             {
-                title: "Clause Extraction",
-                desc: "AI identifies and categorizes clauses, highlighting potential issues.",
-                icon: "fa-regular fa-highlighter"
+                title: "AI Analysis & Embedding",
+                desc: "Breaks text into chunks and stores it in a vector database for intelligent semantic search.",
+                icon: "fa-regular fa-microchip"
             },
             {
-                title: "Risk Assessment",
-                desc: "Automated scoring of legal risks based on precedent and regulation.",
-                icon: "fa-regular fa-chart-radar"
+                title: "Smart Query Handling",
+                desc: "Ask questions in natural language and get contextually relevant, accurate results.",
+                icon: "fa-regular fa-comment-question"
             },
             {
-                title: "Report Generation",
-                desc: "Comprehensive reports with citations, summaries, and recommendations.",
-                icon: "fa-regular fa-file-chart-column"
+                title: "AI Response Generation",
+                desc: "Provides summaries, citations, headnotes, and suggested next steps with source references.",
+                icon: "fa-regular fa-wand-magic-sparkles"
+            },
+            {
+                title: "Citation Verification",
+                desc: "Automatic validation and linking of case citations to source documents.",
+                icon: "fa-regular fa-link"
+            },
+            {
+                title: "Continuous Learning",
+                desc: "Improves accuracy and relevance with every interaction and feedback loop.",
+                icon: "fa-regular fa-brain"
             }
         ],
         useCases: [
             {
                 title: "Law Firms",
                 items: [
-                    "Accelerate legal research for briefs and motions.",
-                    "Automate contract review for M\u0026A transactions.",
-                    "Streamline discovery document analysis."
+                    "Automated case research and drafting assistance for faster brief preparation.",
+                    "Client-ready summaries and document comparison for due diligence.",
+                    "Streamline discovery document analysis and litigation support."
                 ],
                 icon: "fa-regular fa-landmark"
             },
             {
                 title: "Corporate Legal Departments",
                 items: [
-                    "Contract lifecycle management and compliance monitoring.",
-                    "Regulatory change tracking and impact assessment.",
-                    "Vendor agreement standardization."
+                    "Instant contract risk identification and clause analysis.",
+                    "Policy compliance checks and automated clause reuse.",
+                    "Regulatory change tracking and impact assessment."
                 ],
                 icon: "fa-regular fa-briefcase"
             },
             {
-                title: "Compliance Teams",
+                title: "Judiciary & Court Staff",
                 items: [
-                    "Automated regulatory monitoring and alerts.",
-                    "Policy document review and update workflows.",
-                    "Audit trail documentation and reporting."
+                    "Summarizes judgments and manages citations efficiently.",
+                    "Context-aware legal reasoning support for case analysis.",
+                    "Reduces backlog with automated case brief generation."
                 ],
-                icon: "fa-regular fa-clipboard-check"
+                icon: "fa-regular fa-scale-balanced"
             },
             {
-                title: "Legal Tech Startups",
+                title: "Government Legal Bodies",
                 items: [
-                    "API access for embedding legal intelligence.",
-                    "White-label solutions for niche legal services.",
-                    "Custom model training for specialized domains."
+                    "Multilingual legislation analysis for cross-border compliance.",
+                    "Policy briefing and compliance monitoring automation.",
+                    "Regulatory document management and version tracking."
                 ],
-                icon: "fa-regular fa-rocket"
+                icon: "fa-regular fa-building-columns"
+            },
+            {
+                title: "Legal Education & Research",
+                items: [
+                    "Interactive case database access for students and researchers.",
+                    "Simulated legal research exercises and moot court preparation.",
+                    "Academic paper research and citation management."
+                ],
+                icon: "fa-regular fa-graduation-cap"
+            },
+            {
+                title: "Banking, Insurance & Finance",
+                items: [
+                    "Legal risk analysis and regulatory review automation.",
+                    "Multi-jurisdictional document summarization for global operations.",
+                    "Contract compliance monitoring for financial agreements."
+                ],
+                icon: "fa-regular fa-bank"
             }
         ],
         cta: {
-            title: "Transform Your Legal Practice with AI",
-            desc: "lexGenie.ai empowers lawyers to work smarter, faster, and with greater precision.",
-            buttonText: "Get Started",
+            title: "Embrace the Future of Law",
+            desc: "LexGenie helps legal professionals operate smarter—not harder. Transform your practice with AI-powered precision.",
+            buttonText: "Schedule a Demo",
             buttonLink: "/contact-us"
         }
     },
     {
         id: "quantfin-ai",
-        title: "quantfin.ai",
-        tagline: "Quantitative Finance Reimagined",
-        desc: "AI-driven quantitative finance platform delivering predictive analytics, algorithmic trading, and risk management for modern financial institutions.",
+        title: "QuantaFin.ai",
+        tagline: "Intelligent Financial Insights Powered by GenAI",
+        desc: "Turn your financial data into actionable intelligence instantly. GenAI-powered platform delivering validated, audit-ready business insights for modern finance teams.",
         image: "/images/product/ifin.jpg",
         category: "Financial AI",
-        overviewTitle: "Next-Generation Financial Intelligence",
+        overviewTitle: "Turn Your Financial Data Into Actionable Intelligence",
         longDesc: [
-            "quantfin.ai brings institutional-grade quantitative finance capabilities to financial professionals through advanced machine learning and real-time market analytics. Our platform processes millions of data points per second to identify trading opportunities, assess risk, and optimize portfolio performance.",
-            "Designed for hedge funds, asset managers, and proprietary trading firms, quantfin.ai combines traditional quant strategies with cutting-edge AI to deliver alpha in volatile markets. From backtesting to live execution, our platform provides the tools you need to stay ahead of the curve."
+            "In the fast-paced world of modern finance, QuantaFin uses Large Language Models (LLMs) and Generative AI to transform raw data into powerful, validated, and audit-ready business insights—instantly.",
+            "Designed for CFOs, finance teams, and business analysts, QuantaFin.ai combines traditional financial analysis with cutting-edge AI to deliver real-time insights that drive strategic decisions. From automated reporting to predictive forecasting, our platform provides the intelligence you need to stay ahead."
         ],
         icon: "fa-regular fa-chart-mixed",
         benefits: [
             {
-                title: "Predictive Analytics",
-                desc: "Machine learning models forecast market movements with high accuracy using alternative data.",
-                icon: "fa-regular fa-crystal-ball"
+                title: "Instant Report Generation",
+                desc: "Generate accurate, on-demand financial reports in seconds with AI-powered automation.",
+                icon: "fa-regular fa-file-chart-column"
             },
             {
-                title: "Algorithmic Trading",
-                desc: "High-frequency trading algorithms execute optimal strategies in microseconds.",
-                icon: "fa-regular fa-microchip"
+                title: "Smart Budgeting & Forecasting",
+                desc: "Create realistic budgets with AI-validated assumptions and predictive models.",
+                icon: "fa-regular fa-chart-line"
             },
             {
-                title: "Risk Management",
-                desc: "Real-time portfolio risk assessment with VaR, stress testing, and scenario analysis.",
-                icon: "fa-regular fa-shield-halved"
+                title: "Audit-Ready Compliance",
+                desc: "Instantly validate financial statements for accuracy and regulatory compliance.",
+                icon: "fa-regular fa-clipboard-check"
             },
             {
-                title: "Alternative Data",
-                desc: "Integration with satellite imagery, social sentiment, and web scraping for edge.",
-                icon: "fa-regular fa-satellite-dish"
+                title: "Real-Time Cash Flow Monitoring",
+                desc: "Track liquidity, cash burn, and working capital in real-time dashboards.",
+                icon: "fa-regular fa-money-bill-wave"
             },
             {
-                title: "Backtesting Engine",
-                desc: "Test strategies against historical data with realistic slippage and commission models.",
-                icon: "fa-regular fa-clock-rotate-left"
+                title: "Performance Analytics",
+                desc: "Evaluate KPIs like EBITDA, ROI, and margins across business units instantly.",
+                icon: "fa-regular fa-chart-pie"
             },
             {
-                title: "Compliance Built-In",
-                desc: "Automated regulatory reporting and trade surveillance for MiFID II and SEC rules.",
-                icon: "fa-regular fa-file-contract"
+                title: "Expense Optimization",
+                desc: "AI identifies inefficiencies and cost-saving opportunities across operations.",
+                icon: "fa-regular fa-piggy-bank"
+            }
+        ],
+        transforms: [
+            {
+                title: "Faster Decision-Making",
+                desc: "Get instant insights instead of waiting days for manual analysis and reports.",
+                icon: "fa-regular fa-bolt"
+            },
+            {
+                title: "Enhanced Accuracy",
+                desc: "AI eliminates human errors in financial calculations and data entry.",
+                icon: "fa-regular fa-bullseye"
+            },
+            {
+                title: "Cost Reduction",
+                desc: "Automate routine financial tasks and reduce manual processing overhead.",
+                icon: "fa-regular fa-coins"
+            },
+            {
+                title: "Strategic Focus",
+                desc: "Free your finance team to focus on strategy instead of data processing.",
+                icon: "fa-regular fa-chess"
+            },
+            {
+                title: "Scalable Operations",
+                desc: "Handle growing data volumes without proportionally increasing staff.",
+                icon: "fa-regular fa-arrows-maximize"
+            },
+            {
+                title: "Future-Ready Finance",
+                desc: "Stay ahead with continuously learning AI that adapts to your business.",
+                icon: "fa-regular fa-rocket"
             }
         ],
         howItWorks: [
             {
-                title: "Data Ingestion",
-                desc: "Real-time market data feeds from exchanges and alternative data sources.",
+                title: "Data Integration",
+                desc: "Connect to ERP, accounting systems, and financial data sources seamlessly.",
                 icon: "fa-regular fa-database"
             },
             {
-                title: "Signal Generation",
-                desc: "AI models analyze patterns and generate trading signals with confidence scores.",
-                icon: "fa-regular fa-signal-stream"
+                title: "AI Analysis",
+                desc: "LLM models analyze financial data patterns, trends, and anomalies.",
+                icon: "fa-regular fa-microchip"
             },
             {
-                title: "Strategy Optimization",
-                desc: "Reinforcement learning optimizes parameters for maximum risk-adjusted returns.",
-                icon: "fa-regular fa-sliders"
+                title: "Insight Generation",
+                desc: "Generate actionable insights, summaries, and recommendations automatically.",
+                icon: "fa-regular fa-lightbulb"
             },
             {
-                title: "Order Execution",
-                desc: "Smart order routing minimizes market impact and execution costs.",
-                icon: "fa-regular fa-bolt"
+                title: "Report Automation",
+                desc: "Create audit-ready reports with validated data and visualizations.",
+                icon: "fa-regular fa-file-chart-column"
             },
             {
-                title: "Performance Attribution",
-                desc: "Detailed analysis of returns broken down by factor exposure and alpha sources.",
-                icon: "fa-regular fa-chart-pie"
+                title: "Forecast Modeling",
+                desc: "Build predictive models for budgeting, cash flow, and revenue projections.",
+                icon: "fa-regular fa-chart-line-up"
             },
             {
-                title: "Risk Monitoring",
-                desc: "Continuous monitoring of portfolio risk with real-time alerts and rebalancing.",
-                icon: "fa-regular fa-gauge-high"
+                title: "Continuous Learning",
+                desc: "AI improves accuracy and relevance with every interaction and feedback.",
+                icon: "fa-regular fa-brain"
             }
         ],
         useCases: [
             {
-                title: "Hedge Funds",
+                title: "Financial Reporting Automation",
                 items: [
-                    "Multi-strategy portfolio optimization across asset classes.",
-                    "Alternative data integration for alpha generation.",
-                    "Automated risk parity and volatility targeting."
+                    "Generate accurate, on-demand reports in seconds.",
+                    "Automated consolidation across business units and subsidiaries.",
+                    "Real-time dashboards for executive decision-making.",
+                    "Customizable report templates for different stakeholders."
                 ],
-                icon: "fa-regular fa-chart-line-up"
+                icon: "fa-regular fa-file-invoice-dollar"
             },
             {
-                title: "Asset Managers",
+                title: "Budgeting & Forecasting",
                 items: [
-                    "ESG-aware portfolio construction and screening.",
-                    "Factor-based investing with dynamic rebalancing.",
-                    "Client reporting with performance attribution."
+                    "Create realistic budgets with AI-validated assumptions.",
+                    "Scenario modeling for best, worst, and likely outcomes.",
+                    "Rolling forecasts that adapt to changing conditions.",
+                    "Variance analysis with root cause identification."
                 ],
-                icon: "fa-regular fa-money-bill-trend-up"
+                icon: "fa-regular fa-calculator"
             },
             {
-                title: "Proprietary Trading",
+                title: "Audit & Compliance",
                 items: [
-                    "Market-making algorithms with inventory management.",
-                    "Statistical arbitrage strategies across markets.",
-                    "Cross-asset volatility trading."
+                    "Instantly validate financial statements for accuracy.",
+                    "Automated compliance checks for regulatory requirements.",
+                    "Audit trail documentation and version control.",
+                    "Risk identification and mitigation recommendations."
                 ],
-                icon: "fa-regular fa-arrows-rotate"
+                icon: "fa-regular fa-shield-check"
             },
             {
-                title: "Crypto Funds",
+                title: "Cash Flow Monitoring",
                 items: [
-                    "24/7 algorithmic trading for digital assets.",
-                    "DeFi yield optimization and liquidity provision.",
-                    "On-chain data analysis for sentiment signals."
+                    "Track liquidity and cash burn in real time.",
+                    "Predictive cash flow forecasting for better planning.",
+                    "Working capital optimization recommendations.",
+                    "Early warning alerts for cash shortfalls."
                 ],
-                icon: "fa-brands fa-bitcoin"
+                icon: "fa-regular fa-money-bill-wave"
+            },
+            {
+                title: "Performance Analysis",
+                items: [
+                    "Evaluate KPIs like EBITDA, ROI, and margins across units.",
+                    "Benchmark performance against industry standards.",
+                    "Trend analysis and performance attribution.",
+                    "Profitability analysis by product, customer, or region."
+                ],
+                icon: "fa-regular fa-chart-mixed"
+            },
+            {
+                title: "Expense Optimization",
+                items: [
+                    "Identify inefficiencies and cost-saving opportunities.",
+                    "Vendor spend analysis and negotiation insights.",
+                    "Automated expense categorization and anomaly detection.",
+                    "ROI tracking for cost reduction initiatives."
+                ],
+                icon: "fa-regular fa-scissors"
             }
         ],
         cta: {
-            title: "Unlock Alpha with Quantitative AI",
-            desc: "quantfin.ai delivers the tools institutional traders need to outperform in any market.",
-            buttonText: "Request Access",
+            title: "Empower Financial Intelligence with AI",
+            desc: "Turn your financial data into a decision-making superpower with QuantaFin.ai.",
+            buttonText: "Schedule a Demo",
             buttonLink: "/contact-us"
         }
     },
     {
         id: "performanceedge-ai",
-        title: "PerformanceEdge.ai",
-        tagline: "Performance Analytics Perfected",
-        desc: "AI-powered performance monitoring and optimization platform delivering actionable insights for enterprise applications and infrastructure.",
+        title: "PerformEdge.ai",
+        tagline: "Intelligent Attendance and Workforce Management",
+        desc: "AI-driven facial recognition attendance system that eliminates proxy punching, tracks absenteeism in real-time, and empowers management with actionable workforce insights.",
         image: "/images/product/performance.jpg",
-        category: "Performance AI",
-        overviewTitle: "Optimize Every Millisecond",
+        category: "Workforce AI",
+        overviewTitle: "Redefining Workforce Management with AI-Driven Accuracy",
         longDesc: [
-            "PerformanceEdge.ai is the intelligent observability platform that transforms raw performance data into strategic business insights. By combining APM, infrastructure monitoring, and user experience analytics, we provide a 360-degree view of system health and performance bottlenecks.",
-            "Our AI engine automatically detects anomalies, predicts capacity issues, and recommends optimizations before they impact end users. Whether you're running microservices in the cloud or legacy monoliths on-premise, PerformanceEdge.ai ensures your systems operate at peak efficiency."
+            "In today's fast-moving business landscape, managing workforce attendance is no longer just about recording entry and exit times—it's about ensuring efficiency, transparency, and productivity. Manual systems and traditional biometric devices often fail to provide real-time visibility, allow manipulation, or create bottlenecks in workforce management.",
+            "Our Facial Recognition-based Attendance Management System revolutionizes attendance tracking by combining AI-driven facial recognition technology with real-time analytics. This modern, intelligent solution not only records attendance with unmatched accuracy but also identifies absenteeism patterns, improves compliance, and empowers management with actionable workforce insights."
         ],
-        icon: "fa-regular fa-gauge-high",
+        icon: "fa-regular fa-face-viewfinder",
         benefits: [
             {
-                title: "Anomaly Detection",
-                desc: "AI identifies performance degradation patterns before they become outages.",
-                icon: "fa-regular fa-triangle-exclamation"
-            },
-            {
-                title: "Root Cause Analysis",
-                desc: "Automated correlation of metrics, logs, and traces to pinpoint issues instantly.",
-                icon: "fa-regular fa-magnifying-glass-chart"
-            },
-            {
-                title: "Capacity Planning",
-                desc: "Predictive models forecast resource needs based on growth trends and seasonality.",
-                icon: "fa-regular fa-chart-area"
-            },
-            {
-                title: "User Experience Tracking",
-                desc: "Real user monitoring (RUM) with session replay and frustration detection.",
+                title: "Accurate Attendance Tracking",
+                desc: "Facial recognition ensures foolproof, real-time identification—eliminating proxy punching and ensuring fairness.",
                 icon: "fa-regular fa-user-check"
             },
             {
-                title: "Cost Optimization",
-                desc: "Identify underutilized resources and right-size infrastructure automatically.",
+                title: "Real-Time Data & Alerts",
+                desc: "Live attendance dashboards with instant alerts for late arrivals, early departures, or absenteeism.",
+                icon: "fa-regular fa-bell"
+            },
+            {
+                title: "Reduced Absenteeism",
+                desc: "Track entry/exit and cafeteria usage to discourage break misuse and absenteeism.",
+                icon: "fa-regular fa-calendar-check"
+            },
+            {
+                title: "Increased Efficiency",
+                desc: "Automation removes manual logs, saving HR hours of reconciliation work.",
+                icon: "fa-regular fa-gauge-high"
+            },
+            {
+                title: "Significant Cost Savings",
+                desc: "Better workforce visibility reduces unnecessary overtime, daily-wage costs, and admin overheads.",
                 icon: "fa-regular fa-piggy-bank"
             },
             {
-                title: "Distributed Tracing",
-                desc: "End-to-end transaction visibility across microservices and third-party APIs.",
-                icon: "fa-regular fa-network-wired"
+                title: "Data Security & Privacy",
+                desc: "Facial data stored securely with encryption and role-based access following data protection standards.",
+                icon: "fa-regular fa-shield-check"
+            }
+        ],
+        transforms: [
+            {
+                title: "From Manual Errors to 100% Accuracy",
+                desc: "Eliminates human dependency and fraud in attendance logging.",
+                icon: "fa-regular fa-bullseye"
+            },
+            {
+                title: "From Delays to Real-Time Insights",
+                desc: "Managers get instant visibility into who's present, absent, or late.",
+                icon: "fa-regular fa-bolt"
+            },
+            {
+                title: "From Guesswork to Data-Driven Action",
+                desc: "Absenteeism patterns and workforce behaviour are tracked with clarity.",
+                icon: "fa-regular fa-chart-line"
+            },
+            {
+                title: "From Reactive to Proactive Management",
+                desc: "HR teams can intervene early to reduce absenteeism and improve productivity.",
+                icon: "fa-regular fa-chess"
+            },
+            {
+                title: "From Overheads to Cost Savings",
+                desc: "Better workforce visibility means reduced reliance on unnecessary contract labour.",
+                icon: "fa-regular fa-coins"
+            },
+            {
+                title: "From Legacy to Future-Ready",
+                desc: "Scalable AI technology that grows with your organizational needs.",
+                icon: "fa-regular fa-rocket"
             }
         ],
         howItWorks: [
             {
-                title: "Agent Deployment",
-                desc: "Lightweight agents collect metrics, traces, and logs from your infrastructure.",
-                icon: "fa-regular fa-sensor"
+                title: "Camera Setup",
+                desc: "High-definition AI cameras deployed at strategic entry, exit, and common points like cafeteria.",
+                icon: "fa-regular fa-camera"
             },
             {
-                title: "Data Collection",
-                desc: "High-cardinality metrics ingested at scale with intelligent sampling.",
-                icon: "fa-regular fa-circle-nodes"
+                title: "Employee Enrolment",
+                desc: "Staff are enrolled with secure facial templates stored in an encrypted database.",
+                icon: "fa-regular fa-user-plus"
             },
             {
-                title: "AI Analysis",
-                desc: "Machine learning models baseline normal behavior and detect deviations.",
-                icon: "fa-regular fa-brain"
+                title: "Real-Time Recognition",
+                desc: "Cameras capture faces upon entry and exit, logging timestamps automatically.",
+                icon: "fa-regular fa-face-viewfinder"
             },
             {
-                title: "Alert Correlation",
-                desc: "Smart grouping of related alerts to reduce noise and alert fatigue.",
-                icon: "fa-regular fa-bell"
+                title: "Absenteeism Detection",
+                desc: "System flags employees who miss check-ins within defined time windows.",
+                icon: "fa-regular fa-user-clock"
             },
             {
-                title: "Visualization",
-                desc: "Customizable dashboards with drill-down capabilities and time-series analysis.",
-                icon: "fa-regular fa-chart-line"
+                title: "Break Monitoring",
+                desc: "Cafeteria cameras ensure employees adhere to allotted break times.",
+                icon: "fa-regular fa-mug-hot"
             },
             {
-                title: "Automated Remediation",
-                desc: "Trigger auto-scaling, restarts, or runbook execution based on conditions.",
-                icon: "fa-regular fa-wand-magic-sparkles"
+                title: "Analytics & Reporting",
+                desc: "Powerful dashboard provides visual reports, trends, and insights on workforce efficiency.",
+                icon: "fa-regular fa-chart-mixed"
             }
         ],
         useCases: [
             {
-                title: "E-Commerce Platforms",
+                title: "Manufacturing & Factories",
                 items: [
-                    "Monitor checkout funnel performance and conversion rates.",
-                    "Detect and resolve payment gateway slowdowns.",
-                    "Optimize page load times for mobile shoppers."
+                    "Automated check-in/out at factory gates with facial recognition.",
+                    "Cafeteria monitoring to prevent extended or unauthorized breaks.",
+                    "Absenteeism detection linked to bus arrival or shift timing.",
+                    "Real-time workforce availability reports for production supervisors."
                 ],
-                icon: "fa-regular fa-bag-shopping"
+                icon: "fa-regular fa-industry"
             },
             {
-                title: "SaaS Applications",
+                title: "Corporate Offices",
                 items: [
-                    "Track API response times and error rates by customer.",
-                    "Monitor multi-tenant resource isolation and fairness.",
-                    "Optimize database query performance."
+                    "Seamless check-in at multiple office entry points.",
+                    "Live dashboards for HR to track in-office and remote employees.",
+                    "Automatic integration with payroll for error-free salary processing.",
+                    "Analytics on department-level attendance patterns."
                 ],
-                icon: "fa-regular fa-cloud"
+                icon: "fa-regular fa-building"
             },
             {
-                title: "Financial Services",
+                title: "Education & Universities",
                 items: [
-                    "Ensure sub-100ms latency for trading platforms.",
-                    "Monitor transaction processing and settlement times.",
-                    "Detect fraud patterns in real-time transaction data."
+                    "Classroom-level attendance tracking using AI cameras.",
+                    "Prevention of proxy or duplicate attendance through facial recognition.",
+                    "Automated reporting for parents and school administration.",
+                    "Faculty attendance monitoring to improve accountability."
                 ],
-                icon: "fa-regular fa-money-bill-transfer"
+                icon: "fa-regular fa-graduation-cap"
             },
             {
-                title: "Gaming \u0026 Media",
+                title: "Healthcare & Hospitals",
                 items: [
-                    "Track video streaming quality and buffering events.",
-                    "Monitor multiplayer game server performance.",
-                    "Optimize CDN performance and cache hit rates."
+                    "Shift-based attendance tracking for medical staff.",
+                    "Alerts for late arrivals or absenteeism in critical departments (ICU, ER).",
+                    "Attendance data linked to duty rosters for better allocation.",
+                    "Integration with compliance systems for healthcare audits."
                 ],
-                icon: "fa-regular fa-gamepad"
+                icon: "fa-regular fa-hospital"
+            },
+            {
+                title: "Retail & Service Industry",
+                items: [
+                    "Attendance tracking across multiple outlets in real time.",
+                    "Department-level workforce insights for better scheduling.",
+                    "Integration with payroll for accurate wage calculation.",
+                    "Reduction of absenteeism in customer-facing roles."
+                ],
+                icon: "fa-regular fa-store"
+            },
+            {
+                title: "Logistics & Warehousing",
+                items: [
+                    "Automated attendance for large-scale workforces.",
+                    "Monitoring of shift changes to ensure proper handovers.",
+                    "Real-time absenteeism detection to optimize staffing.",
+                    "Transparent attendance logs for contract worker payments."
+                ],
+                icon: "fa-regular fa-warehouse"
+            },
+            {
+                title: "Construction & Project Sites",
+                items: [
+                    "On-site cameras capture workforce attendance daily.",
+                    "Prevents misuse or proxy punching in large worker groups.",
+                    "Links attendance to contract worker payroll for accurate wages.",
+                    "Provides site-level absenteeism data for project planning."
+                ],
+                icon: "fa-regular fa-helmet-safety"
             }
         ],
         cta: {
-            title: "Achieve Peak Performance",
-            desc: "PerformanceEdge.ai gives you the visibility and intelligence to optimize every layer of your stack.",
-            buttonText: "Get Started",
+            title: "Build a Smarter, More Accountable Workforce",
+            desc: "PerformEdge.ai transforms attendance tracking into a strategic tool for workforce optimization and cost savings.",
+            buttonText: "Schedule a Demo",
             buttonLink: "/contact-us"
         }
     },
     {
         id: "iwac-ai",
         title: "iWac.ai",
-        tagline: "Web Analytics \u0026 Customer Intelligence",
-        desc: "AI-powered web analytics platform providing deep customer insights, behavior prediction, and conversion optimization for modern businesses.",
+        tagline: "AI Chatbots & WhatsApp Business Integration",
+        desc: "Transform customer engagement with seamless conversations on WhatsApp. Deliver instant, automated, and intelligent customer interactions through the world's most popular messaging app.",
         image: "/images/product/iwac.jpg",
-        category: "Web Analytics",
-        overviewTitle: "Beyond Pageviews: True Customer Intelligence",
+        category: "Conversational AI",
+        overviewTitle: "Transform Customer Engagement with Seamless Conversations",
         longDesc: [
-            "iWac.ai transforms web analytics from mere traffic reporting into a strategic customer intelligence platform. Our AI analyzes visitor behavior, predicts intent, and delivers personalized experiences that drive conversions. Move beyond vanity metrics to understand the 'why' behind every click.",
-            "Built for marketing teams and growth professionals, iWac.ai combines traditional web analytics with machine learning to uncover hidden patterns in user journeys. From first touch to conversion, we provide actionable insights that help you optimize every interaction and maximize ROI."
+            "iWac.ai delivers instant, automated, and intelligent customer interactions through the world's most popular messaging app—WhatsApp. From QR code scans to real-time bookings and AI-powered support, we make customer engagement effortless.",
+            "Built for businesses that want to meet customers where they are, iWac.ai combines WhatsApp Business API with intelligent chatbots to provide personalized, 24/7 customer support, seamless transactions, and instant confirmations—all within a single conversation."
         ],
-        icon: "fa-regular fa-chart-mixed",
+        icon: "fa-brands fa-whatsapp",
         benefits: [
             {
-                title: "Behavior Prediction",
-                desc: "AI predicts user intent and likelihood to convert in real-time for personalization.",
-                icon: "fa-regular fa-brain"
+                title: "Personalized, Instant Engagement",
+                desc: "Real-time, personalized WhatsApp chats build trust and drive customer engagement.",
+                icon: "fa-regular fa-comments"
             },
             {
-                title: "Conversion Funnel AI",
-                desc: "Automated identification of drop-off points and optimization suggestions.",
-                icon: "fa-regular fa-filter"
+                title: "24/7 AI-Powered Support",
+                desc: "Intelligent chatbots offer always-on assistance, reducing missed opportunities.",
+                icon: "fa-regular fa-robot"
             },
             {
-                title: "Customer Segmentation",
-                desc: "ML-powered clustering discovers high-value segments automatically.",
-                icon: "fa-regular fa-users-viewfinder"
+                title: "Seamless Booking & Transactions",
+                desc: "Booking, payments, and confirmations happen inside WhatsApp with ease.",
+                icon: "fa-regular fa-calendar-check"
             },
             {
-                title: "Heatmaps \u0026 Session Replay",
-                desc: "Visualize user interactions with click maps, scroll tracking, and session recordings.",
-                icon: "fa-regular fa-fire-flame-simple"
+                title: "QR Code Integration",
+                desc: "Instant engagement from brochures, packaging, storefronts, and marketing materials.",
+                icon: "fa-regular fa-qrcode"
             },
             {
-                title: "Attribution Modeling",
-                desc: "Multi-touch attribution across channels with data-driven models.",
-                icon: "fa-regular fa-route"
+                title: "Reduced Support Costs",
+                desc: "Automate routine inquiries and free human agents for complex issues.",
+                icon: "fa-regular fa-piggy-bank"
             },
             {
-                title: "Privacy-First",
-                desc: "GDPR and CCPA compliant with cookieless tracking options.",
-                icon: "fa-regular fa-user-shield"
+                title: "Enterprise Security",
+                desc: "WhatsApp's end-to-end encryption ensures secure customer communications.",
+                icon: "fa-regular fa-shield-check"
+            }
+        ],
+        transforms: [
+            {
+                title: "From Waiting to Instant Response",
+                desc: "Customers get immediate answers 24/7 without hold times or delays.",
+                icon: "fa-regular fa-bolt"
+            },
+            {
+                title: "From Friction to Frictionless",
+                desc: "Complete transactions without leaving the WhatsApp conversation.",
+                icon: "fa-regular fa-face-smile"
+            },
+            {
+                title: "From Generic to Personalized",
+                desc: "AI delivers context-aware, personalized responses for each customer.",
+                icon: "fa-regular fa-user-check"
+            },
+            {
+                title: "From Missed to Captured",
+                desc: "24/7 availability means no missed leads or customer opportunities.",
+                icon: "fa-regular fa-bullseye"
+            },
+            {
+                title: "From Manual to Automated",
+                desc: "Automate bookings, confirmations, and routine support tasks.",
+                icon: "fa-regular fa-gears"
+            },
+            {
+                title: "From Local to Scalable",
+                desc: "Handle thousands of conversations simultaneously without adding staff.",
+                icon: "fa-regular fa-rocket"
             }
         ],
         howItWorks: [
             {
-                title: "Tracking Code",
-                desc: "Single line of JavaScript tracks all interactions without impacting performance.",
-                icon: "fa-regular fa-code"
+                title: "Scan QR Code",
+                desc: "Customers scan QR codes from brochures, packaging, or storefronts.",
+                icon: "fa-regular fa-qrcode"
             },
             {
-                title: "Event Collection",
-                desc: "Capture clicks, scrolls, form submissions, and custom business events.",
-                icon: "fa-regular fa-list-check"
+                title: "WhatsApp Launch",
+                desc: "Instant chatbot or appointment flow starts inside WhatsApp.",
+                icon: "fa-brands fa-whatsapp"
             },
             {
-                title: "User Identification",
-                desc: "Cross-device user stitching creates unified customer profiles.",
-                icon: "fa-regular fa-id-card"
+                title: "User Selection",
+                desc: "Customers choose from bookings, inquiries, or support options.",
+                icon: "fa-regular fa-hand-pointer"
             },
             {
-                title: "AI Processing",
-                desc: "Real-time ML models analyze behavior for insights and predictions.",
-                icon: "fa-regular fa-microchip"
+                title: "AI Chatbot",
+                desc: "Personalized, context-aware conversations powered by intelligent AI.",
+                icon: "fa-regular fa-robot"
             },
             {
-                title: "Dashboards",
-                desc: "Customizable real-time dashboards with goal tracking and KPIs.",
-                icon: "fa-regular fa-desktop"
+                title: "Real-Time Confirmation",
+                desc: "Instant booking, payment, or ticket confirmation within the chat.",
+                icon: "fa-regular fa-circle-check"
             },
             {
-                title: "Integrations",
-                desc: "Send insights to CRM, marketing automation, and A/B testing tools.",
-                icon: "fa-regular fa-plug"
+                title: "Analytics & Insights",
+                desc: "Track conversation metrics, customer satisfaction, and engagement rates.",
+                icon: "fa-regular fa-chart-line"
             }
         ],
         useCases: [
             {
-                title: "E-Commerce",
+                title: "Healthcare & Clinics",
                 items: [
-                    "Track product views, cart additions, and checkout completion.",
-                    "Identify high-intent shoppers for remarketing.",
-                    "A/B test pricing and promotional strategies."
+                    "Book appointments directly via WhatsApp conversation.",
+                    "Send automated reminders to reduce no-shows.",
+                    "Share reports and prescriptions securely.",
+                    "Answer FAQs about services and availability."
+                ],
+                icon: "fa-regular fa-hospital"
+            },
+            {
+                title: "Travel & Hospitality",
+                items: [
+                    "Ticket and hotel booking within WhatsApp.",
+                    "Concierge services and travel assistance.",
+                    "Instant booking confirmations and itineraries.",
+                    "Real-time flight and hotel updates."
+                ],
+                icon: "fa-regular fa-plane"
+            },
+            {
+                title: "Retail & E-Commerce",
+                items: [
+                    "Order tracking and delivery updates.",
+                    "Product discovery and recommendations.",
+                    "Loyalty program notifications and rewards.",
+                    "Easy returns and refund processing."
                 ],
                 icon: "fa-regular fa-store"
             },
             {
-                title: "SaaS \u0026 B2B",
+                title: "Restaurants & Food Service",
                 items: [
-                    "Monitor trial activation and feature adoption rates.",
-                    "Predict churn risk based on usage patterns.",
-                    "Optimize onboarding flows and time-to-value."
+                    "Table reservations and menu browsing.",
+                    "Order placement and delivery tracking.",
+                    "Special offers and loyalty rewards.",
+                    "Customer feedback collection."
                 ],
-                icon: "fa-regular fa-laptop"
+                icon: "fa-regular fa-utensils"
             },
             {
-                title: "Media \u0026 Publishing",
+                title: "Banking & Financial Services",
                 items: [
-                    "Measure content engagement and reading depth.",
-                    "Optimize article recommendations for longer sessions.",
-                    "Track subscription conversions and paywall effectiveness."
+                    "Account inquiries and balance checks.",
+                    "Transaction alerts and confirmations.",
+                    "Loan and insurance inquiries.",
+                    "Secure document sharing."
                 ],
-                icon: "fa-regular fa-newspaper"
+                icon: "fa-regular fa-building-columns"
             },
             {
-                title: "Lead Generation",
+                title: "Education & Training",
                 items: [
-                    "Optimize landing pages for maximum form submissions.",
-                    "Score leads based on on-site behavior signals.",
-                    "Personalize CTAs based on traffic source and intent."
+                    "Course inquiries and enrollment support.",
+                    "Class schedules and exam reminders.",
+                    "Assignment submissions and feedback.",
+                    "Parent-teacher communication."
                 ],
-                icon: "fa-regular fa-bullseye-arrow"
+                icon: "fa-regular fa-graduation-cap"
             }
         ],
         cta: {
-            title: "Turn Data into Revenue",
-            desc: "iWac.ai delivers the insights you need to optimize customer experiences and drive growth.",
-            buttonText: "See It In Action",
+            title: "Bring Your Brand Closer to Customers",
+            desc: "iWac.ai makes customer engagement effortless, intelligent, and scalable through WhatsApp.",
+            buttonText: "Schedule a Demo",
             buttonLink: "/contact-us"
         }
     }

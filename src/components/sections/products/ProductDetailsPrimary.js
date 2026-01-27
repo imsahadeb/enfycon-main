@@ -58,23 +58,32 @@ const ProductDetailsPrimary = ({ option }) => {
                 <IconFeatureGrid
                     title="Key Benefits"
                     items={currentItem.benefits}
-                    sectionClass="product-benefits-section bg-gray-1 py-5"
+                    sectionClass="product-benefits-section  py-5"
                     cardClass="gradient-border-card"
+                />
+            )}
+
+            {/* Transforms Section - How it Transforms Your Practice */}
+            {currentItem.transforms && (
+                <IconFeatureGrid
+                    title="How It Transforms Your Practice"
+                    items={currentItem.transforms}
+                    sectionClass="product-transforms-section bg-gray-1  py-5"
                 />
             )}
 
             {/* How It Works Section - Full Width (White Background) */}
             {currentItem.howItWorks && (
-                <IconFeatureGrid
+                <IconFeatureGrid    
                     title="How It Works"
                     items={currentItem.howItWorks}
-                    sectionClass="product-how-it-works-section py-5"
+                    sectionClass="product-how-it-works-section   py-5"
                 />
             )}
 
             {/* Use Cases Section - Gradient Cards */}
             {currentItem.useCases && (
-                <div className="product-use-cases-section bg-gray-1 py-5">
+                <div className="product-use-cases-section bg-gray-1   py-5">
                     <div className="container">
                         <h3 className="section-title text-primary mb-4">Use Cases Across Industries</h3>
                         <div className="row g-4">
@@ -84,7 +93,8 @@ const ProductDetailsPrimary = ({ option }) => {
                                         className="use-case-card h-100 wow fadeInUp"
                                         data-wow-delay={`${0.1 * (idx + 1)}s`}
                                         style={{
-                                            background: 'var(--tj-white)',
+                                            // background: 'var(--tj-white)',
+                                            backgroundColor:'white',
                                             borderRadius: '16px',
                                             padding: '0',
                                             overflow: 'hidden',
