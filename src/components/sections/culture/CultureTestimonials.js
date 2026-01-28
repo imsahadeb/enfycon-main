@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 const testimonialData = [
     {
         id: 1,
-        quote: "Joining Enfycon was the best decision of my career.",
+        quote: "Joining enfycon was the best decision of my career.",
         content: "The culture of innovation and collaboration here is incredible. Every day I'm surrounded by talented people who push me to grow. The leadership truly cares about our development and wellbeing.",
         name: "Priya Sharma",
         role: "Senior Software Engineer",
@@ -26,7 +26,7 @@ const testimonialData = [
     },
     {
         id: 3,
-        quote: "Innovation meets inclusivity at Enfycon.",
+        quote: "Innovation meets inclusivity at enfycon.",
         content: "The diversity of thought and backgrounds here drives amazing solutions. Leadership encourages experimentation and supports us when we take risks. It's empowering to work somewhere that invests in your ideas.",
         name: "Anita Desai",
         role: "UX Design Lead",
