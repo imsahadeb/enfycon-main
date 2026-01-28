@@ -1,10 +1,12 @@
+import siteConfig from "@/config/siteConfig";
+
 export const footerData = {
     socialLinks: [
-        { icon: "fa-brands fa-linkedin-in", link: "https://www.linkedin.com/" },
-        { icon: "fa-brands fa-facebook-f", link: "https://www.facebook.com/" },
-        { icon: "fa-brands fa-x-twitter", link: "https://x.com/" },
-        { icon: "fa-brands fa-youtube", link: "https://www.youtube.com/" },
-        { icon: "fa-brands fa-instagram", link: "https://www.instagram.com/" },
+        { icon: "fa-brands fa-linkedin-in", link: siteConfig.socialLinks.linkedin },
+        { icon: "fa-brands fa-facebook-f", link: siteConfig.socialLinks.facebook },
+        { icon: "fa-brands fa-x-twitter", link: siteConfig.socialLinks.twitter },
+        { icon: "fa-brands fa-youtube", link: siteConfig.socialLinks.youtube },
+        { icon: "fa-brands fa-instagram", link: siteConfig.socialLinks.instagram },
     ],
     services: [
         { label: "AI & Allied Services", link: "/services/ai-allied-services" },

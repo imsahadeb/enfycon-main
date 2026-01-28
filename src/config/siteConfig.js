@@ -14,6 +14,13 @@ export const siteConfig = {
 
     // Social Media & Contact
     email: "office@enfycon.com",
+    socialLinks: {
+        linkedin: "https://www.linkedin.com/company/enfycon-inc/",
+        instagram: "https://www.instagram.com/enfycon.inc",
+        twitter: "https://x.com/EnfyconInc",
+        facebook: "https://www.facebook.com/", // Placeholder
+        youtube: "https://www.youtube.com/" // Placeholder
+    },
 
     // Operating Regions
     regions: ["USA", "India", "UAE"],

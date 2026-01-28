@@ -64,22 +64,22 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
 						<div className="social-links style-3">
 							<ul>
 								<li>
-									<Link href="https://www.facebook.com/" target="_blank">
+									<Link href={siteConfig.socialLinks.facebook} target="_blank">
 										<i className="fa-brands fa-facebook-f"></i>
 									</Link>
 								</li>
 								<li>
-									<Link href="https://www.instagram.com/" target="_blank">
+									<Link href={siteConfig.socialLinks.instagram} target="_blank">
 										<i className="fa-brands fa-instagram"></i>
 									</Link>
 								</li>
 								<li>
-									<Link href="https://x.com/" target="_blank">
+									<Link href={siteConfig.socialLinks.twitter} target="_blank">
 										<i className="fa-brands fa-x-twitter"></i>
 									</Link>
 								</li>
 								<li>
-									<Link href="https://www.linkedin.com/" target="_blank">
+									<Link href={siteConfig.socialLinks.linkedin} target="_blank">
 										<i className="fa-brands fa-linkedin-in"></i>
 									</Link>
 								</li>

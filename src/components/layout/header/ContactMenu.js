@@ -85,22 +85,22 @@ const ContactMenu = ({ isContactOpen, setIsContactOpen }) => {
 						<div className="social-links style-3">
 							<ul>
 								<li>
-									<a href="https://www.facebook.com/" target="_blank">
+									<a href={siteConfig.socialLinks.facebook} target="_blank">
 										<i className="fa-brands fa-facebook-f"></i>
 									</a>
 								</li>
 								<li>
-									<a href="https://www.instagram.com/" target="_blank">
+									<a href={siteConfig.socialLinks.instagram} target="_blank">
 										<i className="fa-brands fa-instagram"></i>
 									</a>
 								</li>
 								<li>
-									<a href="https://x.com/" target="_blank">
+									<a href={siteConfig.socialLinks.twitter} target="_blank">
 										<i className="fa-brands fa-x-twitter"></i>
 									</a>
 								</li>
 								<li>
-									<a href="https://www.linkedin.com/" target="_blank">
+									<a href={siteConfig.socialLinks.linkedin} target="_blank">
 										<i className="fa-brands fa-linkedin-in"></i>
 									</a>
 								</li>
