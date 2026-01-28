@@ -1,0 +1,65 @@
+.impact-section {
+  .impact-image {
+    height: 450px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    overflow: hidden;
+
+    &.impact-image-right {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: 24px;
+      border-bottom-left-radius: 24px;
+    }
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .impact-col-left {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-right: 3rem;
+    padding-left: 0;
+  }
+
+  .impact-col-right {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 3rem;
+    padding-right: 0;
+  }
+
+  .impact-content {
+    padding: 80px 60px;
+    color: white;
+  }
+
+  .content-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: white;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.95;
+  }
+
+  .btn-custom {
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

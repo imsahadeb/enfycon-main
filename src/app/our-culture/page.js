@@ -1,6 +1,7 @@
 import Footer2 from "@/components/layout/footer/Footer2";
 import Header from "@/components/layout/header/Header";
 import EnfyconLife from "@/components/sections/culture/EnfyconLife";
+import ImpactSection from "@/components/sections/culture/ImpactSection";
 import CultureTestimonials from "@/components/sections/culture/CultureTestimonials";
 import BackToTop from "@/components/shared/others/BackToTop";
 import HeaderSpace from "@/components/shared/others/HeaderSpace";
@@ -27,6 +28,20 @@ export default function OurCulture() {
 						{/* Employee Testimonials */}
 						<CultureTestimonials />
 						<SplitImageQuote data={{ image: "/images/culture/steptodown.com882339.jpg", title: "More than just work, we build meaningful connections", icon: "fa-light fa-users" }} />
+
+						<ImpactSection
+							imageSrc="/images/csr/food-distribution-banner.jpg"
+							title="Driving Purposeful Impact"
+							texts={[
+								"At enfycon, we believe technology should serve a greater purpose. As a global leader in AI-driven digital transformation, we are committed to using our innovation to drive positive change. Our culture is built on integrity and responsibility, inspiring our team to create solutions that not only empower businesses but also uplift communities.",
+								"We actively support initiatives that foster digital inclusion, sustainability, and education. Through our corporate social responsibility programs, we empower our employees to contribute to causes they care about, ensuring that the future we build is accessible, equitable, and sustainable for everyone.",
+								"Together, we are shaping a better tomorrow."
+							]}
+							buttonText="Our CSR Initiatives"
+							buttonLink="/csr"
+							backgroundColor="linear-gradient(to right, #0c8b21ff, #797497ff)"
+							
+						/>
 
 						{/* Enfycon Life Section */}
 						<EnfyconLife />
