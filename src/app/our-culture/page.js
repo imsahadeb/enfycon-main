@@ -2,6 +2,7 @@ import Footer2 from "@/components/layout/footer/Footer2";
 import Header from "@/components/layout/header/Header";
 import HeroInner from "@/components/sections/hero/HeroInner";
 import EnfyconLife from "@/components/sections/culture/EnfyconLife";
+import CultureTestimonials from "@/components/sections/culture/CultureTestimonials";
 import BackToTop from "@/components/shared/others/BackToTop";
 import HeaderSpace from "@/components/shared/others/HeaderSpace";
 import ClientWrapper from "@/components/shared/wrappers/ClientWrapper";
@@ -22,9 +23,12 @@ export default function OurCulture() {
 					<main>
 						<HeaderSpace />
 						<HeroInner title={"Our Culture"} text={"Our Culture"} />
-
+{/* Employee Testimonials */}
+						<CultureTestimonials />
 						{/* Enfycon Life Section */}
 						<EnfyconLife />
+
+						
 
 					</main>
 					<Footer2 />
