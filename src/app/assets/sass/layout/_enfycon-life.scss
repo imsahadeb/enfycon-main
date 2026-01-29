@@ -80,7 +80,7 @@
     width: 100%;
     height: auto;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 992px) {
         position: absolute;
         left: 0;
         top: 0;
@@ -95,7 +95,7 @@
     width: 100%;
     height: auto;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 992px) {
         position: absolute;
         right: 0;
         top: 0;
@@ -110,7 +110,7 @@
     width: 100%;
     height: auto;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 992px) {
         position: absolute;
         right: 10%;
         bottom: 0;
@@ -148,17 +148,20 @@
         left: 30px;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 992px) {
         bottom: 40px;
         left: 40px;
     }
 
-    @media (max-width: 767px) {
+
+    @media (max-width: 991px) {
         position: relative;
-        margin-top: 30px;
         bottom: auto;
         left: auto;
         text-align: center;
+        order: -1;
+        margin-bottom: 25px;
+        width: 100%;
     }
 }
 
@@ -174,7 +177,7 @@
         0 1px 3px rgba(0, 0, 0, 0.6);
     letter-spacing: -0.03em;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 992px) {
         font-size: clamp(3.5rem, 5vw, 5.5rem);
     }
 }
@@ -183,13 +186,21 @@
    Mobile Optimizations
    ============================================ */
 
-@media (max-width: 1023px) {
+@media (max-width: 991px) {
+    .enfycon-life__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
 
-    // On mobile/tablet, use simple stacked layout
+    // On mobile/tablet, use grid layout
     .enfycon-life__gallery {
         display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .enfycon-life__image-item--large {
+        grid-column: 1 / -1;
     }
 
     .enfycon-life__image-item--large,
