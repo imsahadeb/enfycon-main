@@ -29,12 +29,12 @@ export default function OurCulture() {
 							title={"A Culture of Innovation & Excellence"}
 							text={"At enfycon, we thrive on collaboration, diversity, and a shared passion for technology. We foster an environment where every idea matters, creativity knows no bounds, and our people are empowered to shape the future."}
 							breadcrums={[{ name: "Our Culture", path: "/our-culture" }]}
-							image={"/images/culture/enfycon.jpg"}
+							image={"/images/culture/culture-banner.jpg"}
 						/>
 						{/* Core Values Section */}
 						<CoreValues />
 						
-						<SplitImageQuote data={{ image: "/images/culture/steptodown.com882339.jpg", title: "More than just work, we build meaningful connections", icon: "fa-light fa-users" }} />
+						<SplitImageQuote data={{ image: "/images/culture/group.jpeg", title: "More than just work, we build meaningful connections", icon: "fa-light fa-users" }} />
 	{/* Enfycon Life Section */}
 						<EnfyconLife />
 						<ImpactSection
