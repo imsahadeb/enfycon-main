@@ -1,6 +1,11 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 // Testimonial data
 const testimonialData = [
@@ -37,7 +42,6 @@ const testimonialData = [
 ];
 
 const CultureTestimonials = () => {
-    const [currentSlide, setCurrentSlide] = useState(0);
     const [isClient, setIsClient] = useState(false);
 
     useEffect(() => {
@@ -47,41 +51,84 @@ const CultureTestimonials = () => {
         });
     }, []);
 
-    const nextSlide = () => {
-        setCurrentSlide((prev) => (prev + 1) % testimonialData.length);
-    };
-
-    const prevSlide = () => {
-        setCurrentSlide((prev) => (prev - 1 + testimonialData.length) % testimonialData.length);
-    };
-
-    const goToSlide = (index) => {
-        setCurrentSlide(index);
-    };
-
-    // Keyboard navigation
-    useEffect(() => {
-        const handleKeyDown = (e) => {
-            if (e.key === "ArrowLeft") prevSlide();
-            if (e.key === "ArrowRight") nextSlide();
-        };
-
-        window.addEventListener("keydown", handleKeyDown);
-        return () => window.removeEventListener("keydown", handleKeyDown);
-    }, []);
-
     if (!isClient) return null;
-
-    const currentTestimonial = testimonialData[currentSlide];
 
     return (
         <section className="culture-testimonials">
             <div className="culture-testimonials__container">
                 <div className="culture-testimonials__slider">
-                    {/* Navigation Arrows */}
+
+                    <Swiper
+                        modules={[Navigation, Pagination, Autoplay]}
+                        spaceBetween={50}
+                        slidesPerView={1}
+                        loop={true}
+                        speed={1000}
+                        autoplay={{
+                            delay: 5000,
+                            disableOnInteraction: false,
+                        }}
+                        navigation={{
+                            prevEl: ".culture-testimonials__arrow--prev",
+                            nextEl: ".culture-testimonials__arrow--next",
+                        }}
+                        pagination={{
+                            el: ".culture-testimonials__dots",
+                            clickable: true,
+                            bulletClass: "culture-testimonials__dot",
+                            bulletActiveClass: "culture-testimonials__dot--active",
+                        }}
+                        className="culture-testimonials-swiper"
+                    >
+                        {testimonialData.map((testimonial) => (
+                            <SwiperSlide key={testimonial.id}>
+                                <div className="culture-testimonials__content-wrapper">
+                                    {/* Left: Testimonial Content */}
+                                    <div className="culture-testimonials__content">
+                                        <div className="d-flex">
+                                            <div className="quote-icon me-3 mt-2">
+                                                <i className="tji-quote" style={{ fontSize: "40px", color: "var(--tj-color-theme-primary)", transform: "rotate(180deg)", display: "inline-block" }}></i>
+                                            </div>
+                                            <div className="testimonial-content-wrapper">
+                                                <h3 className="culture-testimonials__quote mb-3">
+                                                    {testimonial.quote}
+                                                </h3>
+                                                <p className="culture-testimonials__text mb-4">
+                                                    {testimonial.content}
+                                                </p>
+                                                <div className="culture-testimonials__author">
+                                                    <p className="culture-testimonials__author-name">
+                                                        {testimonial.name}
+                                                    </p>
+                                                    <p className="culture-testimonials__author-meta">
+                                                        {testimonial.role} • {testimonial.team} • {testimonial.location}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Right: Portrait Image */}
+                                    <div className="culture-testimonials__image-wrapper">
+                                        <div className="culture-testimonials__image-container">
+                                            <Image
+                                                src={testimonial.image}
+                                                alt={testimonial.name}
+                                                width={900}
+                                                height={1200}
+                                                className="culture-testimonials__image"
+                                                priority
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+
+                    {/* Navigation Arrows - Placed outside map but relative to slider container */}
                     <button
                         className="culture-testimonials__arrow culture-testimonials__arrow--prev"
-                        onClick={prevSlide}
                         aria-label="Previous testimonial"
                     >
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -91,7 +138,6 @@ const CultureTestimonials = () => {
 
                     <button
                         className="culture-testimonials__arrow culture-testimonials__arrow--next"
-                        onClick={nextSlide}
                         aria-label="Next testimonial"
                     >
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -99,64 +145,8 @@ const CultureTestimonials = () => {
                         </svg>
                     </button>
 
-                    {/* Two-column layout */}
-                    <div className="culture-testimonials__content-wrapper">
-                        {/* Left: Testimonial Content */}
-                        <div className="culture-testimonials__content">
-
-
-                            {/* Main quote */}
-                            {/* Main quote */}
-                            <div className="d-flex">
-                                <div className="quote-icon me-3 mt-2">
-                                    <i className="tji-quote" style={{ fontSize: "40px", color: "var(--tj-color-theme-primary)", transform: "rotate(180deg)", display: "inline-block" }}></i>
-                                </div>
-                                <div className="testimonial-content-wrapper">
-                                    <h3 className="culture-testimonials__quote mb-3">
-                                        {currentTestimonial.quote}
-                                    </h3>
-                                    <p className="culture-testimonials__text mb-4">
-                                        {currentTestimonial.content}
-                                    </p>
-                                    <div className="culture-testimonials__author">
-                                        <p className="culture-testimonials__author-name">
-                                            {currentTestimonial.name}
-                                        </p>
-                                        <p className="culture-testimonials__author-meta">
-                                            {currentTestimonial.role} • {currentTestimonial.team} • {currentTestimonial.location}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Right: Portrait Image */}
-                        <div className="culture-testimonials__image-wrapper">
-                            <div className="culture-testimonials__image-container">
-                                <Image
-                                    src={currentTestimonial.image}
-                                    alt={currentTestimonial.name}
-                                    width={900}
-                                    height={1200}
-                                    className="culture-testimonials__image"
-                                    priority
-                                />
-                            </div>
-                        </div>
-                    </div>
-
                     {/* Navigation Dots */}
-                    <div className="culture-testimonials__dots">
-                        {testimonialData.map((_, index) => (
-                            <button
-                                key={index}
-                                className={`culture-testimonials__dot ${index === currentSlide ? "culture-testimonials__dot--active" : ""
-                                    }`}
-                                onClick={() => goToSlide(index)}
-                                aria-label={`Go to testimonial ${index + 1}`}
-                            />
-                        ))}
-                    </div>
+                    <div className="culture-testimonials__dots"></div>
                 </div>
             </div>
         </section>
