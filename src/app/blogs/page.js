@@ -1,4 +1,3 @@
-
 import BlogFeed from "@/components/sections/blogs/BlogFeed";
 import ClientWrapper from "@/components/shared/wrappers/ClientWrapper";
 import Header from "@/components/layout/header/Header";
@@ -24,16 +23,18 @@ export default async function BlogPage(props) {
 
 	if (!postsData) {
 		return (
-			<div className="container mt-5">
-				<p>Failed to load blogs. Please try again later.</p>
+			<div className="container mt-5 pt-5 text-center">
+				<h3>Unable to load blogs</h3>
+				<p>We are experiencing some technical difficulties. Please check back later.</p>
+				<a href="/blogs" className="btn btn-primary mt-3">Refresh Page</a>
 			</div>
 		);
 	}
 
-	const { edges, pageInfo } = postsData;
+	const { nodes, pageInfo } = postsData;
 
 	// Map initial posts to the format expected by BlogCard1
-	const initialPosts = edges.map(({ node }) => mapPostToCard(node, category));
+	const initialPosts = nodes.map((node) => mapPostToCard(node, category));
 
 	return (
 		<div>

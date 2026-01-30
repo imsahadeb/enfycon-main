@@ -31,7 +31,12 @@ export default async function BlogDetails({ params }) {
 }
 
 export async function generateStaticParams() {
-	const items = await getAllBlogs();
-	return items?.map(({ id }) => ({ id: id.toString() }));
+	try {
+		const items = await getAllBlogs();
+		return items?.map(({ id }) => ({ id: id.toString() })) || [];
+	} catch (error) {
+		console.error("Error generating static params for blogs:", error);
+		return [];
+	}
 }
 
