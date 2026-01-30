@@ -1,0 +1,96 @@
+/* Why Us Section */
+.tj-why-us-section {
+    background-color: var(--tj-color-common-white);
+
+    .sec-heading {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .why-us-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        @media (max-width: 991px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .why-us-item {
+        padding: 40px 30px;
+        text-align: center;
+        position: relative;
+        border-right: 1px solid rgba(59, 130, 246, 0.15); // Thin blue border
+        border-bottom: 1px solid rgba(59, 130, 246, 0.15);
+
+        // Icon
+        .icon {
+            font-size: 40px;
+            color: var(--tj-color-theme-primary); // Blue
+            margin-bottom: 20px;
+            line-height: 1;
+        }
+
+        // Title
+        .title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--tj-color-heading-primary);
+
+            .highlight {
+                color: var(--tj-color-theme-primary);
+            }
+        }
+
+        // Desc
+        .desc {
+            font-size: 16px;
+            color: var(--tj-color-text-body);
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        // Border Logic
+
+        // Desktop: 3 cols
+        @media (min-width: 992px) {
+            &:nth-child(3n) {
+                border-right: none;
+            }
+
+            // Last row (items 4,5,6 if total 6) or just last 3
+            &:nth-last-child(-n+3) {
+                border-bottom: none;
+            }
+        }
+
+        // Tablet: 2 cols
+        @media (max-width: 991px) and (min-width: 768px) {
+            &:nth-child(2n) {
+                border-right: none;
+            }
+
+            // Reset 3n from desktop? (No, media queries overlap helps if organized right, or define explicitly)
+            // Here we are inside max-width 991, so desktop rules won't apply if desktop is min-width 992.
+
+            // Last row (items 5,6)
+            &:nth-last-child(-n+2) {
+                border-bottom: none;
+            }
+        }
+
+        // Mobile: 1 col
+        @media (max-width: 767px) {
+            border-right: none;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}

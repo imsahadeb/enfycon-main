@@ -1,0 +1,128 @@
+/* Cyber Security Page Styles */
+
+.cyber-security-wrapper {
+
+    // Methodology Section
+    .methodology-section {
+        .methodology-content {
+            .title {
+                font-weight: 700;
+                color: var(--tj-color-heading);
+            }
+
+            .desc {
+                color: var(--tj-text-body);
+            }
+        }
+
+        .methodology-list {
+            li {
+                transition: transform 0.2s ease;
+
+                &:hover {
+                    transform: translateX(5px);
+                }
+
+                .bullet-point {
+                    width: 6px;
+                    height: 6px;
+                    background-color: var(--tj-color-theme-primary);
+                    border-radius: 50%;
+                    display: inline-block;
+                    flex-shrink: 0;
+                }
+            }
+        }
+    }
+
+    // Approach Section
+    .approach-section {
+        background-color: #f9f9f9; // Light grey background
+        position: relative;
+        z-index: 1;
+
+        .section-head {
+            margin-bottom: 60px;
+            text-align: center; // Keep head centered
+
+            .section-title {
+                font-size: 40px;
+                font-weight: 700;
+                color: var(--tj-color-heading);
+                margin-bottom: 15px;
+            }
+
+            .desc {
+                font-size: 18px;
+                color: var(--tj-text-body);
+                max-width: 700px;
+                margin: 0 auto;
+            }
+        }
+
+        .approach-card {
+            padding: 40px 30px;
+            height: 100%;
+            transition: all 0.3s ease;
+            position: relative;
+            background: #fff;
+            border-radius: 20px; // Soft rounded corners
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); // Soft shadow
+            overflow: hidden;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 4px;
+                background: linear-gradient(90deg, transparent, var(--tj-color-theme-primary), transparent);
+                opacity: 0.8;
+                transition: opacity 0.3s ease;
+            }
+
+            &:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 20px  40px  rgba(0, 0, 0, 0.5); // Harder hover shadow
+
+                &::after {
+                    opacity: 1;
+                    height: 5px;
+                }
+
+                .icon-box {
+                    transform: scale(1.1);
+                    color: var(--tj-color-theme-primary);
+                }
+            }
+
+            .icon-box {
+                font-size: 50px;
+                color: var(--tj-text-body);
+                margin-bottom: 25px;
+                display: inline-block;
+                transition: transform 0.3s ease;
+
+                .icon {
+                    display: block;
+                }
+            }
+
+            .title {
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 15px;
+                color: var(--tj-color-heading);
+            }
+
+            .desc {
+                color: var(--tj-text-body);
+                line-height: 1.7;
+                font-size: 16px;
+            }
+        }
+
+
+    }
+}

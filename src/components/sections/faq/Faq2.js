@@ -5,8 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import siteConfig from "@/config/siteConfig";
 
-const Faq2 = ({ type = 1 }) => {
-	const items = [
+const Faq2 = ({
+	data = [
 		{
 			title: "What services does enfycon Inc offer?",
 			desc: "\tenfycon Inc is a global technology and talent partner specializing in AI-driven digital transformation. We craft intelligent ecosystems that help enterprises operate, scale, and innovate through advanced AI, Web 3.0, and software engineering solutions. Our comprehensive services include Technology Hiring Solutions, AI-driven solutions, and end-to-end digital transformation across the USA, India, and UAE.",
@@ -32,7 +32,22 @@ const Faq2 = ({ type = 1 }) => {
 			desc: "\tGetting started is easy! Simply reach out to us through our contact form or give us a call, and we'll schedule a consultation to discuss your digital transformation needs and how we can best assist you. Our team keeps you informed throughout the entire process, ensuring quality control, transparency, and timely delivery aligned with your business objectives.",
 			initActive: false,
 		},
-	];
+	],
+	title = "Need Help? Start Here...",
+	desc = (
+		<>
+			We stay ahead of curve, leveraging <br /> cutting-edge are technologies
+			and <br /> strategies to competitive
+		</>
+	),
+	type = 1,
+	callBoxText = "Get Started",
+	contactLink,
+	contactText = siteConfig.phone.display,
+	rightTitle,
+	showCallBox = true,
+}) => {
+	const items = data;
 	return (
 		<section
 			className={`tj-faq-section section-gap  ${type === 3 || type === 4 ? "" : "tj-arrange-container-2"
@@ -48,12 +63,11 @@ const Faq2 = ({ type = 1 }) => {
 										<i className="tji-box"></i>Common Questions
 									</span>
 									<h2 className="sec-title title-anim">
-										Need <span>Help?</span> Start Here...
+										{title}
 									</h2>
 								</div>
 								<p className="desc wow fadeInUp" data-wow-delay=".6s">
-									We stay ahead of curve, leveraging <br /> cutting-edge are
-									technologies and <br /> strategies to competitive
+									{desc}
 								</p>
 								<div className="wow fadeInUp" data-wow-delay=".8s">
 									<ButtonPrimary text={"Request a Call"} url={"/contact"} />
@@ -74,26 +88,42 @@ const Faq2 = ({ type = 1 }) => {
 										height={629}
 									/>
 									<h2 className={`title ${type === 4 ? "title-anim" : ""}`}>
-										Need Help? Start Here...
+										{title}
 									</h2>
 								</div>
-								<div className="box-area ">
-									<div className="call-box">
-										<h4 className="title">Get Started Free Call? </h4>
-										<span className="call-icon">
-											<i className="tji-phone"></i>
-										</span>
-										<Link className="number" href={`tel:${siteConfig.phone.link}`}>
-											<span>{siteConfig.phone.display}</span>
-										</Link>
+								{showCallBox && (
+									<div className="box-area ">
+										<div className="call-box">
+											<h4 className="title">{callBoxText}</h4>
+											<span className="call-icon">
+												<i className="tji-phone"></i>
+											</span>
+											{contactLink ? (
+												<Link className="number" href={contactLink}>
+													<span>{contactText}</span>
+												</Link>
+											) : (
+												<Link
+													className="number"
+													href={`tel:${siteConfig.phone.link}`}
+												>
+													<span>{contactText}</span>
+												</Link>
+											)}
+										</div>
 									</div>
-								</div>
+								)}
 							</div>
 						</div>
 					)}
 
 					<div className={`col-lg-${type === 3 ? "8" : "6"}`}>
 						<BootstrapWrapper>
+							{rightTitle && (
+								<div className="sec-heading mb-4">
+									<h3 className="section-title">{rightTitle}</h3>
+								</div>
+							)}
 							<div
 								className={`accordion tj-faq ${type === 2 || type === 4 ? "style-2" : ""
 									} ${type === 3 || type === 4 ? "" : "tj-arrange-item-2"}`}

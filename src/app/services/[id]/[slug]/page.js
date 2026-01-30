@@ -13,6 +13,7 @@ import getALlServices from "@/libs/getALlServices";
 import AIServiceTemplate from "@/components/templates/services/AIServiceTemplate";
 import StaffingServiceTemplate from "@/components/templates/services/StaffingServiceTemplate";
 import DefaultServiceTemplate from "@/components/templates/services/DefaultServiceTemplate";
+import CyberSecurityServiceTemplate from "@/components/templates/services/CyberSecurityServiceTemplate";
 
 const items = getALlServices();
 
@@ -20,6 +21,7 @@ const items = getALlServices();
 const TEMPLATE_MAP = {
     'ai-allied-services': AIServiceTemplate,
     'it-professional-staffing': StaffingServiceTemplate,
+    'cybersecurity-services': CyberSecurityServiceTemplate,
     // Add more mappings here as needed
 };
 

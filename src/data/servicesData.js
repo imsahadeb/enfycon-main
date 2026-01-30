@@ -314,9 +314,98 @@ export const serviceCategories = [
                     { title: "Resource-Intensive Remediation", desc: "Identifying problems is only half the battle. Prioritizing thousands of vulnerabilities and finding the resources to patch them without disrupting operations is a major operational challenge." }
                 ],
                 keyBenefits: [
-                    { title: "Preemptive Threat Mitigation", desc: "Identify and close security gaps before malicious actors can exploit them. Our assessments help you prevent costly data breaches and reputational damage by staying one step ahead of the curve." },
-                    { title: "Clear, Prioritized Action Plan", desc: "Move beyond overwhelming lists of vulnerabilities. We provide a clear, business-focused report that prioritizes risks based on actual exploitability and impact, allowing for efficient resource allocation." },
-                    { title: "Validation of Security Investments", desc: "Determine if your existing security controls (WAFs, Firewalls, EDR) are actually effective. Our penetration tests provide real-world validation of your defense-in-depth strategy." }
+                    {
+                        title: "Preemptive Threat Mitigation",
+                        icon: "fa-light fa-shield-check",
+                        items: [
+                            "Identify security gaps early.",
+                            "Prevent costly data breaches.",
+                            "Stay ahead of malicious actors."
+                        ]
+                    },
+                    {
+                        title: "Clear, Prioritized Action Plan",
+                        icon: "fa-light fa-list-check",
+                        items: [
+                            "Receive business-focused reports.",
+                            "Prioritize risks by impact.",
+                            "Allocate resources efficiently."
+                        ]
+                    },
+                    {
+                        title: "Validation of Security Investments",
+                        icon: "fa-light fa-chart-line-up",
+                        items: [
+                            "Test WAF, Firewall, & EDR efficacy.",
+                            "Validate defense-in-depth strategies.",
+                            "Ensure ROI on security tools."
+                        ]
+                    },
+                    {
+                        title: "Customized Security Frameworks",
+                        icon: "fa-light fa-puzzle-piece",
+                        items: [
+                            "Tailor architecture to business needs.",
+                            "Align protection with risk appetite.",
+                            "Maintain operational agility."
+                        ]
+                    },
+                    {
+                        title: "Continuous Monitoring & Response",
+                        icon: "fa-light fa-radar",
+                        items: [
+                            "24/7 surveillance of assets.",
+                            "Real-time anomaly detection.",
+                            "Immediate threat containment."
+                        ]
+                    },
+                    {
+                        title: "Regulatory Confidence",
+                        icon: "fa-light fa-file-certificate",
+                        items: [
+                            "Simplify compliance navigation.",
+                            "Meet GDPR & SOC2 standards.",
+                            "Automate compliance reporting."
+                        ]
+                    }
+                ],
+                useCases: [
+                    {
+                        title: "M&A Due Diligence",
+                        icon: "fa-light fa-handshake",
+                        items: [
+                            "Uncover hidden cyber risks in target acquisitions.",
+                            "Evaluate intellectual property protection levels.",
+                            "Assess compliance posture before closing deals."
+                        ]
+                    },
+                    {
+                        title: "Cloud Migration Security",
+                        icon: "fa-light fa-cloud-lock",
+                        items: [
+                            "Audit cloud configurations for security gaps.",
+                            "Implement robust IAM policies for access control.",
+                            "Ensure seamless and secure data transfer."
+                        ]
+                    },
+                    {
+                        title: "Compliance Audits",
+                        icon: "fa-light fa-file-contract",
+                        items: [
+                            "Prepare for SOC2, HIPAA, and PCI-DSS audits.",
+                            "Perform comprehensive gap analysis and remediation.",
+                            "Automate compliance reporting and tracking."
+                        ]
+                    },
+                    {
+                        title: "New Product Launch",
+                        icon: "fa-light fa-rocket-launch",
+                        items: [
+                            "Conduct rigorous penetration testing pre-launch.",
+                            "Identify zero-day vulnerabilities in new code.",
+                            "Secure API endpoints and data flows."
+                        ]
+                    }
                 ],
                 whyenfycon: [
                     "Elite team of certified ethical hackers (OSCP, CISSP, CEH).",
@@ -330,6 +419,46 @@ export const serviceCategories = [
                     { question: "What standards do you follow for your security assessments?", answer: "Our methodology is aligned with globally recognized standards including OWASP for applications, NIST for infrastructure, and PTES for penetration testing." },
                     { question: "Do you provide assistance with remediating the found vulnerabilities?", answer: "Absolutely. Along with a detailed report, we provide your engineering teams with specific code-level and architectural guidance to fix the identified issues." }
                 ],
+                methodology: {
+                    title: "Methodology of Comprehensive Security Assessment",
+                    desc: "enfycon's Comprehensive Security Assessment identifies and thoroughly tests potential points of attack to pinpoint vulnerabilities. A typical comprehensive security assessment consists of the following assessment areas:",
+                    items: [
+                        "External assessment",
+                        "VPN assessment",
+                        "War dialing",
+                        "Wireless security assessment",
+                        "Social engineering",
+                        "VoIP security assessment",
+                        "Physical security assessment",
+                        "Server configuration assessment",
+                        "Microsoft® Windows® assessment",
+                        "UNIX environment assessment",
+                        "Network architecture assessment",
+                        "Firewall assessment",
+                        "Mobile security assessment"
+                    ]
+                },
+                approach: {
+                    title: "The enfycon Approach",
+                    desc: "Our assessment and security penetration test will:",
+                    items: [
+                        {
+                            title: "Assess",
+                            desc: "We will conduct assessments and health checks to evaluate your current information security posture. According to your needs and business goal, we also determine if your security program properly and cost-effectively addresses your real risks and threats.",
+                            icon: "fa-light fa-file-magnifying-glass"
+                        },
+                        {
+                            title: "Design",
+                            desc: "We will work with you on strategy development and the architectural design of your networking systems to help protect the confidentiality, integrity and availability of critical data. Then we will provide proof of concepts and deployment recommendations.",
+                            icon: "fa-light fa-pencil-ruler"
+                        },
+                        {
+                            title: "Manage",
+                            desc: "enfycon supports efforts to comply with government and industry regulations. We also assist with cloud migration or provide a hybrid cloud strategy to ensure your cloud security.",
+                            icon: "fa-light fa-sliders"
+                        }
+                    ]
+                },
                 img4: "/images/service/security-assessment.jpg",
                 iconName: "tji-security",
             },
