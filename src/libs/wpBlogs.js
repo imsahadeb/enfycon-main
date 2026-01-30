@@ -1,6 +1,6 @@
 import siteConfig from "@/config/siteConfig";
 
-const API_URL = `${siteConfig.blogApiUrl}graphql`;
+const API_URL = `${siteConfig.blogApiUrl}/graphql`;
 
 async function fetchAPI(query, { variables } = {}) {
   const headers = { "Content-Type": "application/json" };
@@ -73,8 +73,8 @@ export async function getAllBlogs() {
       return {
         id: post.slug,
         featuredImage: post.featuredImage?.node?.sourceUrl || null,
-        title: post.title,
-        desc: post.excerpt,
+        title: post.title || "",
+        desc: post.excerpt || "",
         author: post.author?.node?.name || "enfycon",
         day: date.getDate(),
         month: date.toLocaleString("en-US", { month: "short" }),
