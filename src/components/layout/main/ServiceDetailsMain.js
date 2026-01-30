@@ -1,4 +1,4 @@
-import HeroInner from "@/components/sections/hero/HeroInner";
+import FullScreenHero from "@/components/sections/hero/FullScreenHero";
 import ServicesDetailsPrimary from "@/components/sections/services/ServicesDetailsPrimary";
 import getALlServices from "@/libs/getALlServices";
 import getPreviousNextItem from "@/libs/getPreviousNextItem";
@@ -8,7 +8,7 @@ const ServiceDetailsMain = ({ currentItemId }) => {
 	const currentId = currentItemId;
 	const { prevId, nextId, currentItem, isPrevItem, isNextItem } =
 		getPreviousNextItem(items, currentId);
-	const { title, category, categoryId } = currentItem || {};
+	const { title, category, categoryId, img, img4, desc } = currentItem || {};
 
 	const breadcrums = [
 		{ name: "Services", path: "/services" },
@@ -20,10 +20,11 @@ const ServiceDetailsMain = ({ currentItemId }) => {
 
 	return (
 		<div>
-			<HeroInner
+			<FullScreenHero
 				title={title ? title : "Service Details"}
-				text={title ? title : "Service Details"}
+				text={desc ? desc : (title ? title : "Service Details")}
 				breadcrums={breadcrums}
+				image={img4 || img}
 			/>
 			<ServicesDetailsPrimary
 				option={{
