@@ -16,6 +16,7 @@ import "./assets/css/nice-select2.css";
 import "./assets/css/odometer-theme-default.css";
 import "./globals.scss";
 import "./tailwind.css";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 const bodyFont = Mona_Sans({
@@ -50,6 +51,7 @@ export default function RootLayout({ children }) {
 				<LoadingProvider>
 					{children}
 					<CookieConsent />
+					<SpeedInsights/>
 				</LoadingProvider>
 			</body>
 		</html>
