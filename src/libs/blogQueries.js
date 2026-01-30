@@ -1,6 +1,13 @@
 const GET_POSTS_QUERY = `
-  query GetPosts($first: Int!, $after: String) {
-    posts(first: $first, after: $after) {
+  query GetPosts($first: Int!, $after: String, $categoryName: String) {
+    posts(
+      first: $first
+      after: $after
+      where: { 
+        orderby: { field: DATE, order: DESC }
+        categoryName: $categoryName
+      }
+    ) {
       pageInfo {
         hasNextPage
         endCursor

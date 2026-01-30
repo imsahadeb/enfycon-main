@@ -1,19 +1,25 @@
 
 import GET_POSTS_QUERY, { GET_LATEST_POST_QUERY } from "@/libs/blogQueries";
-import LoadMorePosts from "@/components/sections/blogs/LoadMorePosts";
+import BlogFeed from "@/components/sections/blogs/BlogFeed";
 import { siteConfig } from "@/config/siteConfig";
 import ClientWrapper from "@/components/shared/wrappers/ClientWrapper";
 import Header from "@/components/layout/header/Header";
 import Footer2 from "@/components/layout/footer/Footer2";
 import BackToTop from "@/components/shared/others/BackToTop";
 import HeaderSpace from "@/components/shared/others/HeaderSpace";
-import HeroInner from "@/components/sections/hero/HeroInner";
 import LatestBlogHero from "@/components/sections/blogs/LatestBlogHero";
 
-async function getInitialPosts() {
+async function getInitialPosts(category = null) {
 	const endpoint = siteConfig.blogApiUrl + "/graphql";
 
 	try {
+		// Prepare variables for initial posts query
+		const variables = {
+			first: 15,
+			after: null,
+			categoryName: category || null
+		};
+
 		// Fetch both latest post and initial paginated posts in parallel
 		const [latestRes, initialRes] = await Promise.all([
 			fetch(endpoint, {
@@ -27,7 +33,7 @@ async function getInitialPosts() {
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify({
 					query: GET_POSTS_QUERY,
-					variables: { first: 15, after: null },
+					variables: variables,
 				}),
 				next: { revalidate: 60 },
 			})
@@ -56,11 +62,14 @@ export const metadata = {
 	description: "Explore our latest insights and news",
 };
 
-export default async function BlogPage() {
-	const data = await getInitialPosts();
+export default async function BlogPage(props) {
+	const searchParams = await props.searchParams;
+	const category = searchParams?.category || null;
+
+	const data = await getInitialPosts(category);
 	const latestPost = data?.latestPost;
 	console.log("SERVER LOG: latestPost", JSON.stringify(latestPost ? "Found" : "Null"));
-	if (latestPost) console.log("SERVER LOG: latestPost title", latestPost.title);
+
 	const postsData = data?.posts;
 
 	if (!postsData) {
@@ -106,7 +115,11 @@ export default async function BlogPage() {
 										<h3 className="section-title">Latest Articles</h3>
 									</div>
 								</div>
-								<LoadMorePosts initialPosts={initialPosts} initialPageInfo={pageInfo} />
+								<BlogFeed
+									initialPosts={initialPosts}
+									initialPageInfo={pageInfo}
+									category={category}
+								/>
 							</div>
 						</section>
 					</main>

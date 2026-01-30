@@ -4,7 +4,7 @@ import { siteConfig } from "@/config/siteConfig";
 
 export async function POST(req) {
     try {
-        const { after } = await req.json();
+        const { after, category } = await req.json();
         const endpoint = siteConfig.blogApiUrl + "/graphql";
 
         const response = await fetch(endpoint, {
@@ -17,6 +17,7 @@ export async function POST(req) {
                 variables: {
                     first: 15,
                     after: after || null,
+                    categoryName: category || null,
                 },
             }),
         });
