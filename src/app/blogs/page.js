@@ -6,20 +6,28 @@ import BackToTop from "@/components/shared/others/BackToTop";
 import HeaderSpace from "@/components/shared/others/HeaderSpace";
 import LatestBlogHero from "@/components/sections/blogs/LatestBlogHero";
 import { mapPostToCard } from "@/libs/mappers";
-import { getBlogPageData } from "@/libs/wpBlogs";
+import { getBlogPageData, getCategoryCounts, getAllAuthors } from "@/libs/wpBlogs";
 import BlogHeroEnterprise from "@/components/sections/blogs/BlogHeroEnterprise";
+import BlogFilter from "@/components/sections/blogs/BlogFilter";
 
 export const metadata = {
 	title: "Blogs - enfycon",
 	description: "Explore our latest insights and news",
 };
 
+export const dynamic = 'force-dynamic';
+
 export default async function BlogPage(props) {
 	const searchParams = await props.searchParams;
 	const category = searchParams?.category || null;
 	const author = searchParams?.author || null;
 
-	const data = await getBlogPageData(category, author);
+	const [data, categories, authors] = await Promise.all([
+		getBlogPageData(category, author),
+		getCategoryCounts(),
+		getAllAuthors(),
+	]);
+
 	const latestPost = data?.latestPost;
 	const postsData = data?.posts;
 
@@ -80,11 +88,12 @@ export default async function BlogPage(props) {
 
 						<section className="tj-blog-section section-gap pt-4">
 							<div className="container">
-								<div className="row mb-4">
-									<div className="col-12">
-										<h3 className="section-title">Latest Articles</h3>
-									</div>
-								</div>
+								<BlogFilter
+									categories={categories}
+									authors={authors}
+									initialCategory={category}
+									initialAuthor={author}
+								/>
 								<BlogFeed
 									initialPosts={initialPosts}
 									initialPageInfo={pageInfo}
