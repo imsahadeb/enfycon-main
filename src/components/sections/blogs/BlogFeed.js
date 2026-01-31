@@ -57,12 +57,23 @@ const BlogFeed = ({ initialPosts, initialPageInfo, category }) => {
     };
 
     // 1. ON MOUNT: Trigger first prefetch immediately
+    // 1. ON MOUNT & WHEN PROPS CHANGE: Sync state
     useEffect(() => {
-        if (hasNextPage && !bufferPosts && !isPrefetching) {
-            prefetchNextBatch(currentCursorRef.current);
+        // Reset visible posts when category/filter changes the initial posts
+        setVisiblePosts(initialPosts);
+        setHasNextPage(initialPageInfo?.hasNextPage);
+        currentCursorRef.current = initialPageInfo?.endCursor;
+
+        // Clear buffer as it might be invalid for new category
+        setBufferPosts(null);
+        setBufferPageInfo(null);
+
+        // If new list has next page, trigger prefetch
+        if (initialPageInfo?.hasNextPage) {
+            prefetchNextBatch(initialPageInfo.endCursor);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [initialPosts, initialPageInfo, category]);
     // Only run on mount or when hasNextPage changes effectively, but we control it via refs/state logic below
 
     // PREFETCH FUNCTION

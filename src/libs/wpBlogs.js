@@ -14,7 +14,8 @@ async function fetchAPI(query, { variables } = {}) {
         query,
         variables,
       }),
-      next: { revalidate: 60 }
+      next: { revalidate: 0 },
+      cache: "no-store",
     });
 
     if (!res.ok) {
@@ -399,6 +400,32 @@ export async function getBlogPageData(category = null, author = null) {
   } catch (error) {
     console.error("Error fetching blog data:", error);
     return null;
+  }
+}
+
+export async function getAllAuthors() {
+  try {
+    const data = await fetchAPI(
+      `
+      query GetAllAuthors {
+        users(first: 100, where: { hasPublishedPosts: POST }) {
+          nodes {
+            id
+            name
+            slug
+            avatar {
+              url
+            }
+          }
+        }
+      }
+    `
+    );
+
+    return data?.users?.nodes || [];
+  } catch (error) {
+    console.error("Error fetching authors:", error);
+    return [];
   }
 }
 
