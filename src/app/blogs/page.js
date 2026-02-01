@@ -2,8 +2,8 @@ import BlogHeroEnterprise from "@/components/sections/blogs/BlogHeroEnterprise";
 import LatestBlogHero from "@/components/sections/blogs/LatestBlogHero";
 import { mapPostToCard } from "@/libs/mappers";
 import { getBlogPageData, getCategoryCounts, getAllAuthors } from "@/libs/wpBlogs";
-import BlogFilter from "@/components/sections/blogs/BlogFilter";
-import BlogFeed from "@/components/sections/blogs/BlogFeed";
+import BlogFilter from "@/components/sections/blogs/BlogFilter"; // Consumed by wrapper, but can stay or go depending on tree shaking. Actually wrapper imports it.
+import BlogContentWrapper from "@/components/sections/blogs/BlogContentWrapper";
 
 export const metadata = {
 	title: "Latest Technology & Industry Insights | enfycon Blogs",
@@ -13,6 +13,8 @@ export const metadata = {
 export const dynamic = 'force-dynamic';
 
 export default async function BlogPage(props) {
+	// Temporary delay to verify skeleton
+	await new Promise((resolve) => setTimeout(resolve, 3000));
 	const searchParams = await props.searchParams;
 	const category = searchParams?.category || null;
 	const author = searchParams?.author || null;
@@ -77,16 +79,13 @@ export default async function BlogPage(props) {
 
 			<section className="tj-blog-section section-gap pt-4">
 				<div className="container">
-					<BlogFilter
+					<BlogContentWrapper
 						categories={categories}
 						authors={authors}
 						initialCategory={category}
 						initialAuthor={author}
-					/>
-					<BlogFeed
 						initialPosts={initialPosts}
 						initialPageInfo={pageInfo}
-						category={category}
 					/>
 				</div>
 			</section>

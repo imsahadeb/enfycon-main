@@ -3,24 +3,16 @@
 import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
-const BlogFilter = ({ categories = [], authors = [], initialCategory = "", initialAuthor = "" }) => {
-    const router = useRouter();
+const BlogFilter = ({ categories = [], authors = [], initialCategory = "", initialAuthor = "", onFilter, isParentLoading }) => {
+    // const router = useRouter(); // Handled by parent
     const [selectedCategory, setSelectedCategory] = useState(initialCategory);
     const [selectedAuthor, setSelectedAuthor] = useState(initialAuthor);
-    const [isPending, setIsPending] = useState(false);
+    // const [isPending, setIsPending] = useState(false); // Handled by parent
 
     const handleFilter = () => {
-        setIsPending(true);
-        const params = new URLSearchParams();
-        if (selectedCategory) params.set("category", selectedCategory);
-        if (selectedAuthor) params.set("author", selectedAuthor);
-
-        const queryString = params.toString();
-        const url = queryString ? `/blogs?${queryString}` : "/blogs";
-
-        router.push(url, { scroll: false });
-        router.refresh();
-        setIsPending(false);
+        if (onFilter) {
+            onFilter(selectedCategory, selectedAuthor);
+        }
     };
 
     return (
@@ -69,11 +61,11 @@ const BlogFilter = ({ categories = [], authors = [], initialCategory = "", initi
                         <button
                             className="btn btn-dark rounded-1 px-4 d-flex align-items-center gap-2"
                             onClick={handleFilter}
-                            disabled={isPending}
+                            disabled={isParentLoading}
                             style={{ backgroundColor: "#555" }}
                         >
                             <i className="flaticon-filter"></i>
-                            {isPending ? "Filtering..." : "Filter by"}
+                            {isParentLoading ? "Filtering..." : "Filter by"}
                         </button>
                     </div>
                 </div>
