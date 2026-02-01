@@ -49,7 +49,22 @@ const Loading = () => {
                         <div className="col-lg-8">
                             <div className="post-details-wrapper">
                                 {/* TOC Skeleton */}
-                                <div className="skeleton mb-5" style={{ width: '100%', height: 200, borderRadius: 8 }}></div>
+                                {/* TOC Skeleton */}
+                                <div className="mb-5 p-4" style={{ backgroundColor: '#f9f9f9', borderRadius: 8 }}>
+                                    {/* Header */}
+                                    <div className="d-flex align-items-center gap-2 mb-4">
+                                        <div className="skeleton" style={{ width: 20, height: 20 }}></div>
+                                        <div className="skeleton" style={{ width: 140, height: 24 }}></div>
+                                    </div>
+                                    {/* List Items */}
+                                    <div className="d-flex flex-column gap-3">
+                                        <div className="skeleton" style={{ width: '85%', height: 16 }}></div>
+                                        <div className="skeleton" style={{ width: '90%', height: 16, marginLeft: 20 }}></div>
+                                        <div className="skeleton" style={{ width: '80%', height: 16, marginLeft: 20 }}></div>
+                                        <div className="skeleton" style={{ width: '75%', height: 16 }}></div>
+                                        <div className="skeleton" style={{ width: '85%', height: 16, marginLeft: 20 }}></div>
+                                    </div>
+                                </div>
 
                                 {/* Text Paragraph Skeletons */}
                                 {[1, 2, 3].map(i => (
