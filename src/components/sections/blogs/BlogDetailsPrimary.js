@@ -10,7 +10,7 @@ const BlogDetailsPrimary = ({ post, option, relatedPosts }) => {
 			<div className="container">
 				<div className="row row-gap-5">
 					<div className="col-lg-8">
-						<div className="post-details-wrapper">
+						<div className="post-details-wrapper" id="blog-content-area">
 
 
 

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./blog-hero-enterprise.module.scss";
 import calculateReadTime from "@/libs/calculateReadTime";
+import BlogPDFDownload from "@/components/elements/BlogPDFDownload";
 
 const BlogHeroEnterprise = ({ post, customTitle, breadcrumbOverride, backgroundOverride }) => {
     // If post is provided, extract data from it.
@@ -99,6 +100,12 @@ const BlogHeroEnterprise = ({ post, customTitle, breadcrumbOverride, backgroundO
                         <div className={styles.metaItem}>
                             <i className="flaticon-clock"></i>
                             <span>{readTime || (content ? `${calculateReadTime(content)} mins` : "4 mins")} Read</span>
+                        </div>
+
+                        <div className={styles.separator}></div>
+
+                        <div className={styles.metaItem}>
+                            <BlogPDFDownload blogTitle={title} className={styles.categoryLink} />
                         </div>
                     </div>
                 )}
